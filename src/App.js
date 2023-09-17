@@ -1,13 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
+import ProgressTracker from './pages/ProgressTracker/ProgressTracker';
+import StudentProfiles from './pages/StudentProfiles/StudentProfiles';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        Team 4 Initialized
-      </header>
+      <ProgressTracker></ProgressTracker>
+      <StudentProfiles></StudentProfiles>
     </div>
   );
 }
