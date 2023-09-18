@@ -4,7 +4,7 @@
 }
 
 .menuContainer {
-  border: 2px solid green;
+  /* border: 2px solid green; */
   background-color: #43c0f6;
   width: 15vw;
   display: flex;
