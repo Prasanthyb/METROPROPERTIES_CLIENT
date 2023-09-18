@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.menuContainer {
+  border: 2px solid green;
+  background-color: #43c0f6;
+  width: 15vw;
+  display: flex;
+  transition: 0.5s ease-in-out;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.inActive {
+  width: 5vw;
+}
+
+.teacherProfileImage {
+  display: flex;
+  justify-content: center;
+  margin: 33px 0 10px 0;
+}
+
+.teacherProfileImage img {
+  height: 79px;
+  width: 79px;
+}
+
+.menuIcon {
+  height: 25px;
+  width: 25px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.menuLinksContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.menuLinks {
+  font-size: 14px;
+  color: white;
+  font-weight: bold;
+  line-height: 1.9;
+  padding: 0;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+}
+
+.menuLinks li {
+    margin: 17px 0;
+    list-style: none;
+}
+
+.menuCrumbs {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.menuCrumIcon {
+    height: 12.58px;
+    width: 12.58px;
+}
+
+.menuBtn {
+  display: flex;
+  justify-content: flex-end;
+}
