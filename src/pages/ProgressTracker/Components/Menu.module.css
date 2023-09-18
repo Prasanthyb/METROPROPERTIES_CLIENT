@@ -17,6 +17,10 @@
   width: 5vw;
 }
 
+.menuTextEl {
+  display: none;
+}
+
 .teacherProfileImage {
   display: flex;
   justify-content: center;
@@ -36,8 +40,8 @@
 }
 
 .menuLinksContainer {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .menuLinks {
@@ -46,14 +50,12 @@
   font-weight: bold;
   line-height: 1.9;
   padding: 0;
-  /* display: flex;
-  flex-direction: column;
-  align-items: center; */
 }
 
 .menuLinks li {
-    margin: 17px 0;
-    list-style: none;
+  margin: 17px 0;
+  list-style: none;
+  display: flex;
 }
 
 .menuCrumbs {
@@ -65,12 +67,30 @@
   margin-bottom: 20px;
 }
 
+.menuCrumbsCollapsed {
+  display: flex;
+  flex-direction: column;
+}
+
 .menuCrumIcon {
-    height: 12.58px;
-    width: 12.58px;
+  height: 12.58px;
+  width: 12.58px;
+}
+
+.menuBtnContainer {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .menuBtn {
-  display: flex;
-  justify-content: flex-end;
+  background-color: #b2e4fa;
+  border: none;
+  border-top-left-radius: 10px; 
+  border-bottom-left-radius: 10px; 
+  border-top-right-radius: 0; 
+  border-bottom-right-radius: 0;
+  margin: 0;
+  padding: 18px 23px 18px 23px;
+  cursor: pointer;
+  /* outline: none; */
 }

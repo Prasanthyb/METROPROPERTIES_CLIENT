@@ -9,12 +9,19 @@ import ProjectLibraryIcon from "../../../assets/TeacherDashboard/projectLibrary.
 import ProfileIcon from "../../../assets/profile.png";
 import SettingsIcon from "../../../assets/settings.png";
 import LogoutIcon from "../../../assets/logout.png";
+import ArrowLeft from "../../../assets/arrowLeft.png";
 
 export default function Menu() {
   const [inActive, setInActive] = useState(false);
+  const [menuText, setMenuText] = useState(false);
+  const [menuIcons, setMenuIcons] = useState(false);
+  const [arrowLeft, setArrowLeft] = useState(false); // Carry on from here, function needs to change arrowLeft to arrowRight
 
   const toggleMenu = () => {
     setInActive(!inActive);
+    setMenuText(!menuText);
+    setMenuIcons(!menuIcons);
+    setArrowLeft(!arrowLeft); // Carry on from here, function needs to change arrowLeft to arrowRight
   };
 
   return (
@@ -37,7 +44,9 @@ export default function Menu() {
                   src={ProgressTrackerIcon}
                   alt="Progress tracker icon"
                 />
-                PROGRESS TRACKER
+                <p className={`${menuText ? Styles.menuTextEl : ""}`}>
+                  PROGRESS TRACKER
+                </p>
               </li>
               <li>
                 <img
@@ -45,7 +54,9 @@ export default function Menu() {
                   src={StudentProfilesIcon}
                   alt="Student profiles icon"
                 />
-                STUDENT PROFILES
+                <p className={`${menuText ? Styles.menuTextEl : ""}`}>
+                  STUDENT PROFILES
+                </p>
               </li>
               <li>
                 <img
@@ -53,7 +64,9 @@ export default function Menu() {
                   src={HelpRequestIconIcon}
                   alt="Help requests icon"
                 />
-                HELP REQUESTS
+                <p className={`${menuText ? Styles.menuTextEl : ""}`}>
+                  HELP REQUESTS
+                </p>
               </li>
               <li>
                 <img
@@ -61,7 +74,9 @@ export default function Menu() {
                   src={ProjectSubmissionsIcon}
                   alt="Project Submissions icon"
                 />
-                PROJECT SUBMISSIONS
+                <p className={`${menuText ? Styles.menuTextEl : ""}`}>
+                  PROJECT SUBMISSIONS
+                </p>
               </li>
               <li>
                 <img
@@ -69,42 +84,48 @@ export default function Menu() {
                   src={ProjectLibraryIcon}
                   alt="Project library icon"
                 />
-                PROJECT LIBRARY
+                <p className={`${menuText ? Styles.menuTextEl : ""}`}>
+                  PROJECT LIBRARY
+                </p>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className={Styles.menuBtn}>
-          <button onClick={toggleMenu}>toggle menu</button>
+        <div className={Styles.menuBtnContainer}>
+          <button className={Styles.menuBtn}onClick={toggleMenu}><img src={ArrowLeft} alt="Arrow left icon" /></button>
         </div>
 
         <div>
-          <ul className={Styles.menuCrumbs}>
+          <ul
+            className={`${Styles.menuCrumbs} ${
+              menuIcons ? Styles.menuCrumbsCollapsed : ""
+            }`}
+          >
             <li>
               <img
-              className={Styles.menuCrumIcon} 
-              src={ProfileIcon} 
-              alt="" 
+                className={Styles.menuCrumIcon}
+                src={ProfileIcon}
+                alt="Profile icon"
               />
-              <p>Profile</p>
-              </li>
-            <li>
-              <img 
-              className={Styles.menuCrumIcon}
-              src={SettingsIcon} 
-              alt="" 
-              />
-            <p>Settings</p>
+              <p className={`${menuText ? Styles.menuTextEl : ""}`}>Profile</p>
             </li>
             <li>
-              <img 
-              className={Styles.menuCrumIcon}
-              src={LogoutIcon} 
-              alt="" 
+              <img
+                className={Styles.menuCrumIcon}
+                src={SettingsIcon}
+                alt="Settings icon"
               />
-              <p>Log Out</p>
-              </li>
+              <p className={`${menuText ? Styles.menuTextEl : ""}`}>Settings</p>
+            </li>
+            <li>
+              <img
+                className={Styles.menuCrumIcon}
+                src={LogoutIcon}
+                alt="Logout icon"
+              />
+              <p className={`${menuText ? Styles.menuTextEl : ""}`}>Log Out</p>
+            </li>
           </ul>
         </div>
       </div>
