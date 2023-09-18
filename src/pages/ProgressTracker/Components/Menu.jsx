@@ -10,18 +10,19 @@ import ProfileIcon from "../../../assets/profile.png";
 import SettingsIcon from "../../../assets/settings.png";
 import LogoutIcon from "../../../assets/logout.png";
 import ArrowLeft from "../../../assets/arrowLeft.png";
+import ArrowRight from "../../../assets/arrowRight.png";
 
 export default function Menu() {
   const [inActive, setInActive] = useState(false);
   const [menuText, setMenuText] = useState(false);
   const [menuIcons, setMenuIcons] = useState(false);
-  const [arrowLeft, setArrowLeft] = useState(false); // Carry on from here, function needs to change arrowLeft to arrowRight
+  const [arrowRight, setArrowRight] = useState(false); // Carry on from here, function needs to change arrowLeft to arrowRight
 
   const toggleMenu = () => {
     setInActive(!inActive);
     setMenuText(!menuText);
     setMenuIcons(!menuIcons);
-    setArrowLeft(!arrowLeft); // Carry on from here, function needs to change arrowLeft to arrowRight
+    setArrowRight(!arrowRight); // Carry on from here, function needs to change arrowLeft to arrowRight
   };
 
   return (
@@ -92,8 +93,23 @@ export default function Menu() {
           </div>
         </div>
 
-        <div className={Styles.menuBtnContainer}>
-          <button className={Styles.menuBtn}onClick={toggleMenu}><img src={ArrowLeft} alt="Arrow left icon" /></button>
+        <div
+          className={`${Styles.menuBtnContainer} ${
+            arrowRight ? Styles.menuContainerCollapsed : ""
+          }`}
+        >
+          <button
+            className={`${Styles.menuBtn} ${
+              arrowRight ? Styles.menuBtnClicked : ""
+            }`}
+            onClick={toggleMenu}
+          >
+            {arrowRight ? (
+              <img src={ArrowRight} alt="Arrow right icon" />
+            ) : (
+              <img src={ArrowLeft} alt="Arrow left icon" />
+            )}
+          </button>
         </div>
 
         <div>
