@@ -2,7 +2,6 @@ import React from "react";
 import Styles from "./Overview.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faReply, faCheck } from "@fortawesome/free-solid-svg-icons";
-import PerfectScrollbar from 'perfect-scrollbar';
 
 export default function Overview() {
   return (
@@ -52,7 +51,7 @@ export default function Overview() {
 
             <div className={Styles.individualStudent}>
               <div className={Styles.studentImgContainer}>
-              <img src="/images/students/AidenAndrews.png" alt="Student profile" />
+              <img src="/images/students/AliceKindellan.png" alt="Student profile" />
               <p>STUDENT needs help with their project</p>
               </div>
 
@@ -71,7 +70,7 @@ export default function Overview() {
 
             <div className={Styles.individualStudent}>
               <div className={Styles.studentImgContainer}>
-              <img src="/images/students/AidenAndrews.png" alt="Student profile" />
+              <img src="/images/students/CourtneyBristol.png" alt="Student profile" />
               <p>STUDENT needs help with their project</p>
               </div>
 
@@ -90,7 +89,7 @@ export default function Overview() {
 
             <div className={Styles.individualStudent}>
               <div className={Styles.studentImgContainer}>
-              <img src="/images/students/AidenAndrews.png" alt="Student profile" />
+              <img src="/images/students/HanuNepe.png" alt="Student profile" />
               <p>STUDENT needs help with their project</p>
               </div>
 
@@ -109,7 +108,7 @@ export default function Overview() {
 
             <div className={Styles.individualStudent}>
               <div className={Styles.studentImgContainer}>
-              <img src="/images/students/AidenAndrews.png" alt="Student profile" />
+              <img src="/images/students/HarryMcGrath.png" alt="Student profile" />
               <p>STUDENT needs help with their project</p>
               </div>
 
@@ -128,7 +127,7 @@ export default function Overview() {
 
             <div className={Styles.individualStudent}>
               <div className={Styles.studentImgContainer}>
-              <img src="/images/students/AidenAndrews.png" alt="Student profile" />
+              <img src="/images/students/JavierFuego.png" alt="Student profile" />
               <p>STUDENT needs help with their project</p>
               </div>
 
@@ -147,7 +146,7 @@ export default function Overview() {
 
             <div className={Styles.individualStudent}>
               <div className={Styles.studentImgContainer}>
-              <img src="/images/students/AidenAndrews.png" alt="Student profile" />
+              <img src="/images/students/LisaHoran.png" alt="Student profile" />
               <p>STUDENT needs help with their project</p>
               </div>
 
@@ -166,7 +165,7 @@ export default function Overview() {
 
             <div className={Styles.individualStudent}>
               <div className={Styles.studentImgContainer}>
-              <img src="/images/students/AidenAndrews.png" alt="Student profile" />
+              <img src="/images/students/LuciaMendez.png" alt="Student profile" />
               <p>STUDENT needs help with their project</p>
               </div>
 
@@ -185,7 +184,7 @@ export default function Overview() {
 
             <div className={Styles.individualStudent}>
               <div className={Styles.studentImgContainer}>
-              <img src="/images/students/AidenAndrews.png" alt="Student profile" />
+              <img src="/images/students/MarkOLeary.png" alt="Student profile" />
               <p>STUDENT needs help with their project</p>
               </div>
 
