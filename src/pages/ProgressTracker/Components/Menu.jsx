@@ -1,6 +1,7 @@
 import React from "react";
 import Styles from "./Menu.module.css";
 import { useState } from "react";
+// ------------------------ ICON AND IMG IMPORTS FROM SRC FOLDER
 import ProgressTrackerIcon from "../../../assets/TeacherDashboard/progressTracker.png";
 import StudentProfilesIcon from "../../../assets/TeacherDashboard/studentProfiles.png";
 import HelpRequestIconIcon from "../../../assets/TeacherDashboard/helpRequests.png";
@@ -11,18 +12,20 @@ import SettingsIcon from "../../../assets/settings.png";
 import LogoutIcon from "../../../assets/logout.png";
 import ArrowLeft from "../../../assets/arrowLeft.png";
 import ArrowRight from "../../../assets/arrowRight.png";
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 export default function Menu() {
   const [inActive, setInActive] = useState(false);
   const [menuText, setMenuText] = useState(false);
   const [menuIcons, setMenuIcons] = useState(false);
-  const [arrowRight, setArrowRight] = useState(false); // Carry on from here, function needs to change arrowLeft to arrowRight
+  const [arrowRight, setArrowRight] = useState(false);
 
   const toggleMenu = () => {
-    setInActive(!inActive);
-    setMenuText(!menuText);
-    setMenuIcons(!menuIcons);
-    setArrowRight(!arrowRight); // Carry on from here, function needs to change arrowLeft to arrowRight
+    // toggleMenu function is applied to red arrow button within the menu
+    setInActive(!inActive); // Adjusts with width of menu container when red arrow is clicked
+    setMenuText(!menuText); // Hides menu text when menu container is collapsed
+    setMenuIcons(!menuIcons); // Changes menu crumbs from row to column when menu is collapsed
+    setArrowRight(!arrowRight); // Changes red arrow from flex-end to flex start, border radius from left to right side, and img of arrow pointing left to pointing right when menu is collapsed.
   };
 
   return (
@@ -31,14 +34,19 @@ export default function Menu() {
         className={`${Styles.menuContainer} ${inActive ? Styles.inActive : ""}`}
       >
         <div>
+          {/* ---------------- Teacher profile image */}
           <div className={Styles.teacherProfileImage}>
             <img
               src="/images/teachers/JasminaSalvador.png"
               alt="Teacher profile"
             />
           </div>
+          {/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */}
+
+          {/* ---------------- Menu Links container */}
           <div className={Styles.menuLinksContainer}>
             <ul className={Styles.menuLinks}>
+              {/* ------------- Progress Tracker link */}
               <li>
                 <img
                   className={Styles.menuIcon}
@@ -49,6 +57,8 @@ export default function Menu() {
                   PROGRESS TRACKER
                 </p>
               </li>
+              {/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */}
+              {/* ------------- Student Profiles link */}
               <li>
                 <img
                   className={Styles.menuIcon}
@@ -59,6 +69,8 @@ export default function Menu() {
                   STUDENT PROFILES
                 </p>
               </li>
+              {/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */}
+              {/* ------------- Help Requests link link */}
               <li>
                 <img
                   className={Styles.menuIcon}
@@ -69,6 +81,8 @@ export default function Menu() {
                   HELP REQUESTS
                 </p>
               </li>
+              {/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */}
+              {/* ------------- Project Submissions link */}
               <li>
                 <img
                   className={Styles.menuIcon}
@@ -79,6 +93,8 @@ export default function Menu() {
                   PROJECT SUBMISSIONS
                 </p>
               </li>
+              {/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */}
+              {/* ------------- Project Library link */}
               <li>
                 <img
                   className={Styles.menuIcon}
@@ -89,10 +105,13 @@ export default function Menu() {
                   PROJECT LIBRARY
                 </p>
               </li>
+              {/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */}
             </ul>
           </div>
+          {/* ^^^^^^^^^^^^^^^^ END of Menu Links container */}
         </div>
 
+        {/* ^^^^^^^^^^^^^^^^ Collapse menu button container */}
         <div
           className={`${Styles.menuBtnContainer} ${
             arrowRight ? Styles.menuContainerCollapsed : ""
@@ -111,7 +130,9 @@ export default function Menu() {
             )}
           </button>
         </div>
+        {/* ---------------- END Collapse menu button container */}
 
+        {/* ---------------- Menu crumbs container */}
         <div>
           <ul
             className={`${Styles.menuCrumbs} ${
@@ -144,6 +165,7 @@ export default function Menu() {
             </li>
           </ul>
         </div>
+        {/* ^^^^^^^^^^^^^^^^ END Menu crumbs container */}
       </div>
     </>
   );

@@ -1,8 +1,12 @@
+/* ------ Body */
 * {
+  /* Reseting default margin, padding and box-sizing */
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
-
+/* ^^^^^^^^^^^^^^^^^^^^^^ */
+/* -------- Menu container holding all menu content */
 .menuContainer {
   /* border: 2px solid green; */
   background-color: #43c0f6;
@@ -12,15 +16,8 @@
   flex-direction: column;
   justify-content: space-between;
 }
-
-.inActive {
-  width: 5vw;
-}
-
-.menuTextEl {
-  display: none;
-}
-
+/* ^^^^^^^^^^^^^^^^^^^^^^ */
+/* -------- Teacher Profile img */
 .teacherProfileImage {
   display: flex;
   justify-content: center;
@@ -31,17 +28,18 @@
   height: 79px;
   width: 79px;
 }
+/* ^^^^^^^^^^^^^^^^^^^^^^ */
+/* ------- Project Tracker, Student Profiles, Help Requests, Project Submissions, Project Library links */
+.menuLinksContainer {
+  display: flex;
+  justify-content: center;
+}
 
 .menuIcon {
   height: 25px;
   width: 25px;
   margin-right: 8px;
   vertical-align: middle;
-}
-
-.menuLinksContainer {
-  display: flex;
-  justify-content: center;
 }
 
 .menuLinks {
@@ -57,7 +55,8 @@
   list-style: none;
   display: flex;
 }
-
+/* ^^^^^^^^^^^^^^^^^^^^^^ */
+/* -------- Menu crumbs at bottom of menu */
 .menuCrumbs {
   list-style: none;
   display: flex;
@@ -67,24 +66,15 @@
   margin-bottom: 20px;
 }
 
-.menuCrumbsCollapsed {
-  display: flex;
-  flex-direction: column;
-}
-
 .menuCrumIcon {
   height: 12.58px;
   width: 12.58px;
 }
-
+/* ^^^^^^^^^^^^^^^^^^^^^^ */
+/* -------- Arrow menu button */
 .menuBtnContainer {
   display: flex;
   justify-content: flex-end;
-}
-
-.menuContainerCollapsed {
-  display: flex;
-  justify-content: flex-start;
 }
 
 .menuBtn {
@@ -97,9 +87,9 @@
   margin: 0;
   padding: 18px 23px 18px 23px;
   cursor: pointer;
-  /* outline: none; */
 }
-
+/* ^^^^^^^^^^^^^^^^^^^^^^ */
+/* --------- CSS class applied when toggleMenu function is called as a result of collapsing menu from clicking arrow button */
 .menuBtnClicked {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
@@ -107,6 +97,22 @@
   border-bottom-right-radius: 10px;
 }
 
-/* .arrowRight {
-    
-} */
+.menuContainerCollapsed {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.inActive {
+  /* Width applied when menu is collapsed */
+  width: 5vw;
+}
+
+.menuTextEl {
+  display: none;
+}
+
+.menuCrumbsCollapsed {
+  display: flex;
+  flex-direction: column;
+}
+/* ^^^^^^^^^^^^^^^^^^^^^^ */

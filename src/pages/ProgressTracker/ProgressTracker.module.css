@@ -1,10 +1,12 @@
 .pageContainer {
-    background-color: #B2E4FA;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
+  /* PageContainer holds all of the components imported in ProgressTracker.jsx */
+  background-color: #b2e4fa;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
 .MenuAndOverviewContainer {
-    display: flex;
+  /* MenuAndOverviewContainer holds the Menu and Overview component imports*/
+  display: flex;
 }
