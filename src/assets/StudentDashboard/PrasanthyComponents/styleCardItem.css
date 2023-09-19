@@ -1,0 +1,16 @@
+
+  .listItem-wrap header {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 0 5px 6rem;
+    align-items: center;
+    
+   }
+  .listItem-wrap footer {
+    margin:1rem 0 5px 6rem;
+  }
+  .listItem-wrap img{
+    height:200px;
+    border-radius:20px;
+  }
+  

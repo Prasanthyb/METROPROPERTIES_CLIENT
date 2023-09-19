@@ -1,0 +1,23 @@
+.searchBar-wrap{
+    display:flex;
+    align-items:center;
+   
+    padding:1.5rem 1rem;
+    margin-left:240px;
+
+
+}
+
+
+ .projectbar{
+    margin:50px 10px 1px 255px
+ }   
+    
+ .projectbar p h5
+ {
+    margin-top:10px
+ }
+ .buttonbar{
+    margin-left:400px
+
+ }
