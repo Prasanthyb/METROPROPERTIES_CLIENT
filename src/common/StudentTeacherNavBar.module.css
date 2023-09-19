@@ -8,8 +8,8 @@
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^ */
 /* ------- Company logo */
 .levelUpWorksLogoContainer {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .levelUpWorksLogoContainer img {
@@ -49,13 +49,13 @@
 /* ^^^^^^^^^^^^^^^^^^^^^^ */
 /* ------ Country flag styles */
 .flagsContainer {
-    display: flex;
-    align-self: flex-start;
+  display: flex;
+  align-self: flex-start;
 }
 
 .flagsContainer img {
-    height: 12px;
-    width: 24px;
-    margin: 10px 5px 0 0;
+  height: 12px;
+  width: 24px;
+  margin: 10px 5px 0 0;
 }
 /* ^^^^^^^^^^^^^^^^^^^^^^ */
