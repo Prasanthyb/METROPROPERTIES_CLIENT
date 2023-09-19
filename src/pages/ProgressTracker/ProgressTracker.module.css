@@ -1,6 +1,10 @@
 .pageContainer {
     background-color: #B2E4FA;
     display: flex;
+    flex-direction: column;
     height: 100vh;
-    
+}
+
+.MenuAndOverviewContainer {
+    display: flex;
 }
