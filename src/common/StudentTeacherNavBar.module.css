@@ -1,10 +1,12 @@
+/* ------ StudentTeacherNavBarContainer holds all content within navBar */
 .StudentTeacherNavBarContainer {
   display: flex;
   justify-content: space-between;
   background-color: white;
   height: 65px;
 }
-
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+/* ------- Company logo */
 .levelUpWorksLogoContainer {
     display: flex;
     align-items: center;
@@ -14,7 +16,8 @@
   height: 60px;
   width: 145.99px;
 }
-
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+/* -------- StudentTeacherNavBar buttons */
 .StudentTeacherNavBarBtnsContainer {
   margin: 0 20px 0 0;
   display: flex;
@@ -43,7 +46,8 @@
 .moreProjectsBtn {
   background-color: #43c0f6;
 }
-
+/* ^^^^^^^^^^^^^^^^^^^^^^ */
+/* ------ Country flag styles */
 .flagsContainer {
     display: flex;
     align-self: flex-start;
@@ -54,3 +58,4 @@
     width: 24px;
     margin: 10px 5px 0 0;
 }
+/* ^^^^^^^^^^^^^^^^^^^^^^ */

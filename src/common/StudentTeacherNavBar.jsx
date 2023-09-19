@@ -1,8 +1,12 @@
 import React from "react";
 import Styles from "./StudentTeacherNavBar.module.css";
+// ---------------- Logo image import
 import LevelUpWorksLogoBlue from "../assets/NavBar/LevelUpWorks-blue.png";
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+// ---------------- Country flag image imports
 import NZflag from "../assets/NavBar/NZFlag.png";
 import MaoriFlag from "../assets/NavBar/MaoriFlag.png";
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 export default function navBar() {
   return (

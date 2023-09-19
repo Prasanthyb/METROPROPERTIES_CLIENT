@@ -5,7 +5,6 @@ import { faCopyright } from "@fortawesome/free-regular-svg-icons"; // Import the
 
 export default function Footer() {
   return (
-    // <div style={{height: '55px', backgroundColor: '#FFF'}}>Footer</div>
     <div className={Styles.footer}>
       <p><FontAwesomeIcon icon={faCopyright} className={Styles.copyRightIcon}/>LevelUp Works 2020</p>
     </div>
