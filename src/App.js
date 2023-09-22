@@ -1,13 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
+import HelpRequests from './pages/HelpRequests/HelpRequests';
+// import StudentProfiles from './pages/StudentProfiles/StudentProfiles';
+import React from 'react';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        Team 4 Initialized
-      </header>
+      <HelpRequests />
+      {/* There is something wrong with the below file path, delete and try again */}
+      {/* <StudentProfiles /> */}
     </div>
   );
 }
