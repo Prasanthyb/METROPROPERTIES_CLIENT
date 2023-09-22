@@ -1,0 +1,13 @@
+#listHeader {
+    background-color: #FFFFFF;
+    margin-left: 10%;
+}
+
+#listHeader > h2 {
+    color: #707070;
+    font-weight: 600;
+}
+
+#listButtons {
+    display: flex;
+}
