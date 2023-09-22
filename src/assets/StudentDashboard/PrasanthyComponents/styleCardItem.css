@@ -2,12 +2,12 @@
   .listItem-wrap header {
     display: flex;
     justify-content: space-between;
-    margin: 0px 0 5px 6rem;
+    margin: 0px 0 5px 5rem;
     align-items: center;
     
    }
   .listItem-wrap footer {
-    margin:1rem 0 5px 6rem;
+    margin:0 0 5px 5rem;
   }
   .listItem-wrap img{
     height:200px;

@@ -3,9 +3,9 @@ import './styleCard.css';
 import CardItem from './CardItem';
 
 
-const Card = ({ item }) => (
+const Card = ({ list}) => (
   <div className='list-wrap'>
-    {item.map((val) => (
+    {list.map((val) => (
       <CardItem key={val.id} val={val} />
     ))}
   </div>

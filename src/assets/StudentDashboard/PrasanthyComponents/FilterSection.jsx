@@ -1,7 +1,9 @@
 import React from 'react';
 import  './styleFilterSection.css';
-import {ActivityType,Subscription,SubjectMatter,YearLevel} from './ProjectList';
-import FilterActivityType from './FilterActivityType';
+
+import FilterCommon from './FilterCommon';
+
+
 
 
 
@@ -18,9 +20,9 @@ const FilterSection = ({projectsSM,changeCheckedSM,projectsYL,
   
     <div className="filter">
  <div className="input-group">
-    <p className="label">SUBSCRIPTION</p>
+    <p className="label">SUBSCRIPTION</p>    
     {projectsS.map((project) => (
-        <FilterActivityType
+        <FilterCommon
           key={project.id}
           project={project}
           changeChecked={changeCheckedS}
@@ -34,7 +36,7 @@ const FilterSection = ({projectsSM,changeCheckedSM,projectsYL,
     <div className="input-group">
     <p className="label">ACTIVITY TYPE</p>
     {projects.map((project) => (
-        <FilterActivityType
+        <FilterCommon
           key={project.id}
           project={project}
           changeChecked={changeChecked}
@@ -44,7 +46,7 @@ const FilterSection = ({projectsSM,changeCheckedSM,projectsYL,
      <div className="input-group">
     <p className="label">YEAR-LEVEL</p>
     {projectsYL.map((project) => (
-        <FilterActivityType
+        <FilterCommon
           key={project.id}
           project={project}
           changeChecked={changeCheckedYL}
@@ -55,7 +57,7 @@ const FilterSection = ({projectsSM,changeCheckedSM,projectsYL,
      <div className="input-group">
     <p className="label">SUBJECT MATTER</p>
     {projectsSM.map((project) => (
-        <FilterActivityType
+        <FilterCommon
           key={project.id}
           project={project}
           changeChecked={changeCheckedSM}

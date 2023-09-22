@@ -265,14 +265,31 @@ const ActivityType= [
             id:4,
             checked:false,
             label:"Augmented Reality",
-          }
-        
+          }     
 
 
     
 ];
+const ButtonsList=[
+    {
+        id: 1,
+        value: 'BEGINNER',
+        label: 'BEGINNER',
+      },
+      {
+        id: 2,
+        value: 'INTERMEDIATE',
+        label: 'INTERMEDIATE',
+      },
+      {
+        id: 3,
+        value: 'ADVANCED',
+        label: 'ADVANCED',
+      },
+]
+
 export default ProjectList; 
-export {ActivityType,Subscription,SubjectMatter,YearLevel};
+export {ActivityType,Subscription,SubjectMatter,YearLevel,ButtonsList};
 
 
 

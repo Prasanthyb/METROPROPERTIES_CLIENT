@@ -7,12 +7,12 @@ const CardItem = ({
   <div className='listItem-wrap'>
     <img src={img} alt='' />
     <header>
-      <h5>{title}</h5>
+      <h4>{title}</h4>
       
     </header>
     <footer>
       <p>
-        <h6>{level}|{type}</h6> 
+        <h5>{level}|{type}</h5> 
       </p>
       
     </footer>

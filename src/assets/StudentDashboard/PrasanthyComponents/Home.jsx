@@ -4,21 +4,22 @@ import ProjectList  from './ProjectList';
 import Card from './Card'
 import Buttons from './Buttons' ; 
 import FilterSection from './FilterSection';
-import './styleProducts.css';
+import './styleHome.css';
 import {ActivityType,Subscription,SubjectMatter,YearLevel} from './ProjectList';
-
+import EmptyView from './EmptyView'
 
 const Home = () => {
-  const [item,setItems]=useState (ProjectList)
-  const menuItems=[...new Set(ProjectList.map((val)=>val.level))]
-  const filterItems=(cat)=>{
-  const newItems=ProjectList.filter((newval)=>newval.level===cat)
-  setItems(newItems)
-  }
-  
+  const [selectedCategory, setSelectedCategory] = useState(null);
 
 
-const[projects,setProjects]=useState(ActivityType);   
+  const [list, setList] = useState(ProjectList);
+  const [resultsFound, setResultsFound] = useState(true);
+
+
+const[projects,setProjects]=useState(ActivityType); 
+
+const handleSelectCategory = (event, value) =>
+    !value ? null : setSelectedCategory(value);
   
   const handleChangeChecked=id=>{
   const projectsStateList = projects;
@@ -59,7 +60,14 @@ const[projectsSM,setProjectsSM]=useState(SubjectMatter)
 
 
 const applyFilters=()=>{
+  
 let updatedList=ProjectList;
+
+if (selectedCategory) {
+  updatedList = updatedList.filter(
+    (item) => item.level === selectedCategory
+  );
+}
 
 
    const projectCheckedS=projectsS
@@ -108,30 +116,22 @@ let updatedList=ProjectList;
   }
 
 
-setItems(updatedList);
-}
+setList(updatedList);
+!updatedList.length ? setResultsFound(false) : setResultsFound(true);
+};
+
 useEffect(()=>{
 applyFilters();
 },
-[projects,projectsS,projectsYL,projectsSM]
+[selectedCategory,projects,projectsS,projectsYL,projectsSM]
 );
 
 
 
-  return (
-    
-    <div className="home">
+  return  (
+    <div>
 
-    <Buttons menuItems={menuItems}
-    filterItems={filterItems}
-    setItems={setItems}
-    />
-
-    
-
-   
-    <div className="home_panelList-wrap">
-    <div className="home_panel-wrap">
+    <div className="filter">
 
     <FilterSection
 
@@ -145,21 +145,39 @@ applyFilters();
     changeCheckedYL={handleChangeCheckedYL}
 
     projectsSM={projectsSM}
-    changeCheckedSM={handleChangeCheckedSM}
-    />
-    </div>
+    changeCheckedSM={handleChangeCheckedSM}/>
+
+    </div>  
+    
+
+    
+
    
+   
+
+    <div className="list">
+
+    <Buttons 
+    
+    selectedCategory={selectedCategory}
+            selectCategory={handleSelectCategory}
+    setList={setList}
+    
+    />
+    
+    </div>
+
     
     
-    <div className="list-items"  >
-    <Card item={item}/>
-     </div>
+    {resultsFound ? <Card list={list} /> : <EmptyView />}
+    
 
   
      
-     </div>
-
+   
     </div>
+
+   
     
     
     
