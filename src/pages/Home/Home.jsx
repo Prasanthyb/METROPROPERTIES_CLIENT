@@ -2,6 +2,8 @@ import styles from './Home.module.css';
 import SlideShowScreen from './components/SlideShowScreen';
 import SlideShowButtons from './components/SlideShowButtons';
 import SlideShowDots from './components/SlideShowDots';
+import ImageGallery from './components/ImageGallery';
+import ListButtons from './components/ListButtons';
 import { useState } from 'react';
 
 export default function Home() {
@@ -20,6 +22,10 @@ export default function Home() {
             {/* Could do with a redesign as it makes the CSS inefficient. For example nearly every div is offset
             using margin-left: 10% when it could be applied to one containing div that doesn't affect the
             hero background image. */}
+
+            {/* Would be best to split the top section into a grid containing nothing but empty space on the right
+                currently every CSS issue is caused by just the background image in the top section needing to stretch
+                the whole page */}
 
             {/* <Header></Header> */}
 
@@ -41,6 +47,9 @@ export default function Home() {
             {/* <--SLIDESHOW SECTION--> */}
             {/* Using a grid for layout I can use individual components for the buttons, markers and screen.
             A useState in the Home component can track which picture should be visible on the screen. */}
+
+            {/* On Reuben's advice, it makes more sense to contain the entire slideshow in one component and
+                then use a CSS module to arrange the media queries and grid etc from within that component */}
             <div id={styles['slideShowDiv']}>
                 <div id={styles['slideShowText']}>
                     <h2>What we offer</h2>
@@ -55,9 +64,20 @@ export default function Home() {
                     <SlideShowButtons handleScreenChange={handleScreenChange}></SlideShowButtons>
                 </div>
                 <div id={styles['slideShowDots']}>
-                    <SlideShowDots></SlideShowDots>
-                </div>
-                
+                    <SlideShowDots currentScreen={currentScreen} handleScreenChange={handleScreenChange}></SlideShowDots>
+                </div>              
+            </div>
+
+            {/* <-- IMAGES SECTION --> */}
+            {/* Handling this in a React component so the CSS media queries are easier to read. So much for a series of divs */}
+            <ImageGallery></ImageGallery>
+
+            {/* LIST SECTION */}
+            {/* Similar to Slide Show area, a div will contain the components to save on using subfolders*/}
+            {/* Having  generic button components probably would have been useful by this point. Learning why React is good */}
+            <div id={styles['listSection']}>
+                <ListButtons></ListButtons>
+
             </div>
 
             {/* <Footer></Footer> */}
