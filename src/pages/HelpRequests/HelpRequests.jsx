@@ -1,7 +1,7 @@
 import React from "react";
 import Menu from "./Components/Menu";
 import Overview from "./Components/Overview";
-import Styles from "./ProgressTracker.module.css";
+import Styles from "./HelpRequests.module.css";
 // ####### COMMON COMPONENTS IMPORTS #######
 import StudentTeacherNavBar from "../../common/StudentTeacherNavBar";
 import Footer from "../../common/Footer";
