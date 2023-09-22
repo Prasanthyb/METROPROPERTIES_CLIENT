@@ -7,6 +7,8 @@ import FilterSection from './FilterSection';
 import './styleHome.css';
 import {ActivityType,Subscription,SubjectMatter,YearLevel} from './ProjectList';
 import EmptyView from './EmptyView'
+import BackToTopButton from './BackToTopButton';
+
 
 const Home = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -167,21 +169,21 @@ applyFilters();
     
     </div>
 
-    
+    <div >
     
     {resultsFound ? <Card list={list} /> : <EmptyView />}
     
+    </div>
+    <div>
+    <footer>
+    <BackToTopButton/>
+    </footer>
+    </div>
+    
+   
+   </div>
 
   
-     
-   
-    </div>
-
-   
-    
-    
-    
-    
     
     
   );
