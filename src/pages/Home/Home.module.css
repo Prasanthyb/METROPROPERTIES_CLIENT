@@ -1,0 +1,120 @@
+/* TOP "HERO" SECTION */
+
+#heroBackground {
+    background-image: url("../../assets/Home/hero.png");
+    background-color: #EFEFF1; /* Placeholder colour taken from the hero image */
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 300px;
+}
+
+#heroText {
+    margin-left: 10%;
+    padding-top: 8px;
+    width: 30%;
+}
+
+#heroButtons {
+    display: flex;
+    justify-content: flex-end;
+    width: 30%;
+    margin-left: 10%;
+}
+
+/* For setting uniform size, do not confuse with the containing div above */
+.heroButton {
+    width: 100px;
+    height: 25px;
+    margin-right: 12px;
+}
+
+#futureSpan {
+    color: #42C0F6;
+    font-weight: 900;
+}
+
+#learnMoreButton {
+    border: solid #59C6F5;
+    border-radius: 8px;
+    color: #767676;
+}
+
+#signUpButton {
+    border: solid #F91C85;
+    border-radius: 8px;
+    color: white;
+    background-color: #F91C85;
+}
+
+#freeSignUpText {
+    font-size: x-small;
+    margin-left: 10%;
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+/* SLIDESHOW SECTION */
+#slideShowDiv {
+    display: grid;
+    gap: 8px;
+    margin-left: 10%;
+    margin-right: 20%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    background-color: #ffffff;
+}
+
+#slideShowText {
+    grid-column: 1/2;
+    grid-row: 1/3;
+}
+
+#slideShowScreen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 2/3;
+    grid-row: 1/4;
+}
+
+#slideShowButtons {
+    display: flex;
+    align-items: flex-start;
+    grid-column: 1/2;
+    grid-row: 3/6;
+}
+
+#slideShowDots {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    grid-column: 2/3;
+    grid-row: 4/5;
+}
+
+/* FULL PAGE SETTINGS */
+
+h1 {
+    color: #767676;
+    font-weight: 600;
+}
+
+h2, h3 {
+    color: #767676;
+    font-weight: 700;
+}
+
+p {
+    color: #767676;
+    font-weight: 600;
+}
+
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 425px) {
+    
+}
