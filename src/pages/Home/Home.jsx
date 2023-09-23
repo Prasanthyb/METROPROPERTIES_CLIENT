@@ -14,7 +14,7 @@ export default function Home() {
     }
 
     return (
-        <div>
+        <div id={styles['homeGrid']}>
             {/* I considered using grid or even a series of components with their own components inside but */}
             {/* decided instead on just using divs for simplicity since the home page has relatively */}
             {/* simple functionality. */}
@@ -36,8 +36,8 @@ export default function Home() {
                     <p>Let us help you advance students in Digital Technologies and other learning areas with our project-based learning program</p>
                 </div>
                 <div id={styles['heroButtons']}>
-                    <button className={styles.heroButton} id={styles['learnMoreButton']}>Learn More</button>
-                    <button className={styles.heroButton} id={styles['signUpButton']}>Sign Up</button>
+                    <button className={`${styles.heroButton} ${styles.blueButton}`}>Learn More</button>
+                    <button className={`${styles.heroButton} ${styles.pinkButton}`}>Sign Up</button>
                 </div>
                 <div id={styles['freeSignUpText']}>
                     <p>*Basic subscription includes the first 15 projects free of charge</p>
@@ -70,14 +70,16 @@ export default function Home() {
 
             {/* <-- IMAGES SECTION --> */}
             {/* Handling this in a React component so the CSS media queries are easier to read. So much for a series of divs */}
-            <ImageGallery></ImageGallery>
+            {/* 23/09/23 wrapping in div to grid the home page */}
+            <div id={styles['imageGallery']}>
+                <ImageGallery></ImageGallery>
+            </div>
 
             {/* LIST SECTION */}
             {/* Similar to Slide Show area, a div will contain the components to save on using subfolders*/}
             {/* Having  generic button components probably would have been useful by this point. Learning why React is good */}
             <div id={styles['listSection']}>
                 <ListButtons></ListButtons>
-
             </div>
 
             {/* <Footer></Footer> */}
