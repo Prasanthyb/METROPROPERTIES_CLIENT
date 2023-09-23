@@ -1,4 +1,5 @@
 import styles from './Home.module.css';
+import HeroSection from './components/HeroSection';
 import SlideShowScreen from './components/SlideShowScreen';
 import SlideShowButtons from './components/SlideShowButtons';
 import SlideShowDots from './components/SlideShowDots';
@@ -14,7 +15,7 @@ export default function Home() {
     }
 
     return (
-        <div id={styles['homeGrid']}>
+        <div id={styles['home']}>
             {/* I considered using grid or even a series of components with their own components inside but */}
             {/* decided instead on just using divs for simplicity since the home page has relatively */}
             {/* simple functionality. */}
@@ -30,20 +31,8 @@ export default function Home() {
             {/* <Header></Header> */}
 
             {/* <--HERO IMAGE SECTION--> */}
-            <div id={styles['heroBackground']}>
-                <div id={styles['heroText']}>
-                    <h1>Prepare young minds<br/>for a better <span id={styles['futureSpan']}>future.</span></h1>
-                    <p>Let us help you advance students in Digital Technologies and other learning areas with our project-based learning program</p>
-                </div>
-                <div id={styles['heroButtons']}>
-                    <button className={`${styles.heroButton} ${styles.blueButton}`}>Learn More</button>
-                    <button className={`${styles.heroButton} ${styles.pinkButton}`}>Sign Up</button>
-                </div>
-                <div id={styles['freeSignUpText']}>
-                    <p>*Basic subscription includes the first 15 projects free of charge</p>
-                </div>
-            </div>
-
+            {/* Look who came crawling back to React */}
+            <HeroSection></HeroSection>
             {/* <--SLIDESHOW SECTION--> */}
             {/* Using a grid for layout I can use individual components for the buttons, markers and screen.
             A useState in the Home component can track which picture should be visible on the screen. */}

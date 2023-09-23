@@ -1,73 +1,17 @@
-/* TOP "HERO" SECTION */
-
-#homeGrid {
-    
-}
-
-#heroBackground {
-    background-image: url("../../assets/Home/hero.png");
-    background-color: #EFEFF1; /* Placeholder colour taken from the hero image */
-    background-repeat: no-repeat;
-    background-size: contain;
-    min-height: 300px;
-}
-
-#heroText {
-    margin-left: 10%;
-    padding-top: 8px;
-    width: 30%;
-}
-
-#heroButtons {
+#home {
     display: flex;
-    justify-content: flex-end;
-    width: 30%;
-    margin-left: 10%;
-}
-
-/* For setting uniform size, do not confuse with the containing div above */
-.heroButton {
-    width: 100px;
-    height: 25px;
-    margin-right: 12px;
-}
-
-#futureSpan {
-    color: #42C0F6;
-    font-weight: 900;
-}
-
-.blueButton {
-    border: solid #59C6F5;
-    border-radius: 8px;
-    color: #767676;
-}
-
-.pinkButton {
-    border: solid #F91C85;
-    border-radius: 8px;
-    color: white;
-    background-color: #F91C85;
-}
-
-#freeSignUpText {
-    font-size: x-small;
-    margin-left: 10%;
-    width: 30%;
-    display: flex;
-    justify-content: flex-end;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* SLIDESHOW SECTION */
 #slideShowDiv {
     display: grid;
     gap: 8px;
-    margin-left: 10%;
-    margin-right: 20%;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(4, 1fr);
     background-color: #ffffff;
+    padding: 5% 10%;
 }
 
 #slideShowText {
@@ -114,11 +58,6 @@ p {
     color: #767676;
     font-weight: 600;
 }
-
-#listSection {
-    margin-left: 10%;
-}
-
 
 
 /* MEDIA QUERIES */

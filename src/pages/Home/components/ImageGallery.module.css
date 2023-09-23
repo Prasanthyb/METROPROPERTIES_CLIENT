@@ -1,9 +1,9 @@
 #imageGallery {
     background-color: #FFFFFF;
-    display: block;
-    text-align: center;
-    width: 60%;
-    margin-left: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5% 10%;
 }
 
 #imageGallery > h2, h3 {
