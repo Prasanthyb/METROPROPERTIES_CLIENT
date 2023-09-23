@@ -1,10 +1,16 @@
 import './App.css';
-import Home from './pages/Home/Home';
+import HelpRequests from './pages/HelpRequests/HelpRequests';
+// import StudentProfiles from './pages/StudentProfiles/StudentProfiles';
+import React from 'react';
+import StudentProjects from './assets/StudentDashboard/PrasanthyComponents/StudentProjects';
 
 function App() {
   return (
     <div className="App">
-      <Home></Home>
+      <HelpRequests />
+      <StudentProjects/> 
+      {/* There is something wrong with the below file path, delete and try again */}
+      {/* <StudentProfiles /> */}
     </div>
   );
 }

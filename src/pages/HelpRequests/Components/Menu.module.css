@@ -1,0 +1,118 @@
+/* ------ Body */
+* {
+  /* Reseting default margin, padding and box-sizing */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* ^^^^^^^^^^^^^^^^^^^^^^ */
+/* -------- Menu container holding all menu content */
+.menuContainer {
+  /* border: 2px solid green; */
+  background-color: #43c0f6;
+  width: 15vw;
+  display: flex;
+  transition: 0.3s ease-in-out;
+  flex-direction: column;
+  justify-content: space-between;
+}
+/* ^^^^^^^^^^^^^^^^^^^^^^ */
+/* -------- Teacher Profile img */
+.teacherProfileImage {
+  display: flex;
+  justify-content: center;
+  margin: 33px 0 10px 0;
+}
+
+.teacherProfileImage img {
+  height: 79px;
+  width: 79px;
+}
+/* ^^^^^^^^^^^^^^^^^^^^^^ */
+/* ------- Project Tracker, Student Profiles, Help Requests, Project Submissions, Project Library links */
+.menuLinksContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.menuIcon {
+  height: 25px;
+  width: 25px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.menuLinks {
+  font-size: 14px;
+  color: white;
+  font-weight: bold;
+  line-height: 1.9;
+  padding: 0;
+}
+
+.menuLinks li {
+  margin: 17px 0;
+  list-style: none;
+  display: flex;
+}
+/* ^^^^^^^^^^^^^^^^^^^^^^ */
+/* -------- Menu crumbs at bottom of menu */
+.menuCrumbs {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.menuCrumIcon {
+  height: 12.58px;
+  width: 12.58px;
+}
+/* ^^^^^^^^^^^^^^^^^^^^^^ */
+/* -------- Arrow menu button */
+.menuBtnContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menuBtn {
+  background-color: #b2e4fa;
+  border: none;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  margin: 0;
+  padding: 18px 23px 18px 23px;
+  cursor: pointer;
+}
+/* ^^^^^^^^^^^^^^^^^^^^^^ */
+/* --------- CSS class applied when toggleMenu function is called as a result of collapsing menu from clicking arrow button */
+.menuBtnClicked {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.menuContainerCollapsed {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.inActive {
+  /* Width applied when menu is collapsed */
+  width: 5vw;
+}
+
+.menuTextEl {
+  display: none;
+}
+
+.menuCrumbsCollapsed {
+  display: flex;
+  flex-direction: column;
+}
+/* ^^^^^^^^^^^^^^^^^^^^^^ */
