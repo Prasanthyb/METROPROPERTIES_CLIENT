@@ -5,6 +5,14 @@ import SlideShowButtons from './components/SlideShowButtons';
 import SlideShowDots from './components/SlideShowDots';
 import ImageGallery from './components/ImageGallery';
 import ListButtons from './components/ListButtons';
+import EnquireSection from './components/EnquireSection';
+// ^^^ STYLES AND CHILD COMPONENTS ^^^
+
+import Footer from '../../common/Footer';
+import Header from '../../common/Header/Header';
+
+//^^^ COMMON COMPONENTS ^^^
+
 import { useState } from 'react';
 
 export default function Home() {
@@ -16,23 +24,16 @@ export default function Home() {
 
     return (
         <div id={styles['home']}>
-            {/* I considered using grid or even a series of components with their own components inside but */}
-            {/* decided instead on just using divs for simplicity since the home page has relatively */}
-            {/* simple functionality. */}
-
-            {/* Could do with a redesign as it makes the CSS inefficient. For example nearly every div is offset
-            using margin-left: 10% when it could be applied to one containing div that doesn't affect the
-            hero background image. */}
-
-            {/* Would be best to split the top section into a grid containing nothing but empty space on the right
-                currently every CSS issue is caused by just the background image in the top section needing to stretch
-                the whole page */}
-
-            {/* <Header></Header> */}
+            <div id={styles['headerDiv']}>
+                {/* Wrapped so it can be fixed to the top of the screen */}
+                <Header></Header>
+            </div>
 
             {/* <--HERO IMAGE SECTION--> */}
             {/* Look who came crawling back to React */}
+
             <HeroSection></HeroSection>
+            
             {/* <--SLIDESHOW SECTION--> */}
             {/* Using a grid for layout I can use individual components for the buttons, markers and screen.
             A useState in the Home component can track which picture should be visible on the screen. */}
@@ -60,6 +61,7 @@ export default function Home() {
             {/* <-- IMAGES SECTION --> */}
             {/* Handling this in a React component so the CSS media queries are easier to read. So much for a series of divs */}
             {/* 23/09/23 wrapping in div to grid the home page */}
+            {/* Changed back from grid but keeps code cleaner anyway */}
             <div id={styles['imageGallery']}>
                 <ImageGallery></ImageGallery>
             </div>
@@ -71,7 +73,11 @@ export default function Home() {
                 <ListButtons></ListButtons>
             </div>
 
-            {/* <Footer></Footer> */}
+            <div id={styles['enquireSection']}>
+                <EnquireSection></EnquireSection>
+            </div>
+
+            <Footer></Footer>
         </div>
     );
 }

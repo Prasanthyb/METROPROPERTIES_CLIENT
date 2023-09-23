@@ -1,4 +1,4 @@
-.dot {
+#dot {
     height: 20px;
     width: 20px;
     border-radius: 50%;
@@ -9,7 +9,7 @@
     margin: 0px 6px;
 }
 
-.dot:hover {
+#dot:hover {
     cursor: pointer;
     background-color: #707070;
 }

@@ -3,7 +3,7 @@ import styles from './Dot.module.css';
 
 export default function Dot(props) {
     return(
-        <div className={styles.dot}>
+        <div id={styles['dot']} className={`${props.isActive? "active" : ""}`}>
         </div>
     );
 }

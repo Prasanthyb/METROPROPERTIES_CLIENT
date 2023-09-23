@@ -21,6 +21,7 @@
     border-radius: 8px;
     color: #767676;
     padding: 2px 8px;
+    cursor: pointer;
 }
 
 #listDisplay {
