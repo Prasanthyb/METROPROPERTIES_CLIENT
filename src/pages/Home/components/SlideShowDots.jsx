@@ -1,24 +1,30 @@
-import Dot from './Dot';
+import styles from './SlideShowDots.module.css';
 
 export default function SlideShowDots(props) {
+    const dots = [0, 1, 2, 3];
 
     return (
         <>
-            {/* I can't directly handle onClick with the Dot component itself */}
-            {/* There is probably a better way to handle this instead of wrapping components in a div. */}
+            {/* The fastest fix to this mess I created that I can think of is to remove the Dot component and just handle this
+                with HTML/JS. Refactoring these three sections into one component will be somewhat time consuming and
+                having to pass a state/props down to a grandchild component is getting complicated. */}
+            
+            {/* I'll map divs to set active using an array matched to the screen id passed down */}
 
-            {/* Potential solutions to handle tracking active dot:
-                1 - Hold the entire divs in a mapped array, use index as the value to pass to handleScreenChange and
-                change the active class in its associated dot. 
-                2 - Array of booleans to track each dot. Check it on each screen change and pass the active class
-                down to the Dot component
-                3 - useEffect? Side effect when SlideShowDots updates
-                4 - Rig it with pure JS and an id for each Dot div. Most inefficient but known solution*/}
-
-            <div onClick={() => props.handleScreenChange(0)}><Dot></Dot></div>
-            <div onClick={() => props.handleScreenChange(1)}><Dot></Dot></div>
-            <div onClick={() => props.handleScreenChange(2)}><Dot></Dot></div>
-            <div onClick={() => props.handleScreenChange(3)}><Dot></Dot></div>
+            {/* After all the pain I went through with these dots it turned out I was just forgetting how to properly
+                access styles within the ternary operator... */}
+                {/* className={`${styles.dot} ${props.currentScreen===dot? "active" : ""}`} */}
+            
+            {dots.map(function(dot) {
+                console.log(`${dot}, ${props.currentScreen}, ${props.currentScreen===dot}`)
+                return (
+                <div
+                    key={dot}
+                    className={`${styles.dot} ${props.currentScreen===dot? styles.active : styles.inactive}`} 
+                    onClick={() => props.handleScreenChange(dot)}
+                ></div>
+                );
+            })}
         </>
     );
 }
