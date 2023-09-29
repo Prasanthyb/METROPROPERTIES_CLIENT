@@ -22,6 +22,8 @@ export default function Home() {
         setCurrentScreen(newScreen);
     }
 
+    // ^^^ STATES/LOGIC USED TO HANDLE THE SCREEN SLIDESHOW ^^^
+
     return (
         <div id={styles['home']}>
             <div id={styles['headerDiv']}>
@@ -33,7 +35,7 @@ export default function Home() {
             {/* Look who came crawling back to React */}
 
             <HeroSection></HeroSection>
-            
+
             {/* <--SLIDESHOW SECTION--> */}
             {/* Using a grid for layout I can use individual components for the buttons, markers and screen.
             A useState in the Home component can track which picture should be visible on the screen. */}

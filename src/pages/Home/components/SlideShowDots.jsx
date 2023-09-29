@@ -16,7 +16,7 @@ export default function SlideShowDots(props) {
                 {/* className={`${styles.dot} ${props.currentScreen===dot? "active" : ""}`} */}
             
             {dots.map(function(dot) {
-                console.log(`${dot}, ${props.currentScreen}, ${props.currentScreen===dot}`)
+                // console.log(`${dot}, ${props.currentScreen}, ${props.currentScreen===dot}`)
                 return (
                 <div
                     key={dot}

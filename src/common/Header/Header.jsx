@@ -28,6 +28,8 @@ export default function Header() {
                     <img alt='Maori' src={maoriFlag}></img>
                     <img alt='English UK' src={nzFlag}></img>
                 </div>
+                {/* On reviewing design spec. special attention will be needed in this area to handle logging in etc.
+                    For example a ternary could potentially be used i.e !signedIn? && <loginDiv>  */}
                 <div id={styles['loginButtons']}>
                     <FontAwesomeIcon icon={faUserCircle} size='xl'/>
                     REGISTER | LOGIN

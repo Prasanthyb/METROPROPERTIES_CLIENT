@@ -10,7 +10,7 @@ import styles from './SlideShowScreen.module.css';
 export default function SlideShowScreen(props) {
     const screens = [animScreen, gameScreen, chatScreen, augScreen];
     const screenToShow = screens[props.currentScreen];
-    console.log(screenToShow);
+    // console.log(screenToShow);
 
     return (
         <div id={styles['slideShowScreen']}>
