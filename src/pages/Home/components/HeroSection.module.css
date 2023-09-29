@@ -1,0 +1,72 @@
+#heroGrid
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 300px;
+    margin-top: 40px;
+}
+
+#heroBackground {
+    background-image: url("../../../assets/Home/hero.png");
+    background-color: #EFEFF1; /* Placeholder colour taken from the hero image */
+    background-repeat: no-repeat;
+    background-size: contain;
+    grid-column: 1/3;
+    grid-row: 1/2;
+    /* z-index: -1; */
+}
+
+#heroContent {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    padding: 5% 10%;
+}
+
+#heroClearSpace {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    padding: 5% 10%;
+}
+
+#heroText {
+    padding-top: 8px;
+}
+
+#heroButtons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* For setting uniform size, do not confuse with the containing div above */
+.heroButton {
+    width: 100px;
+    height: 25px;
+    margin-right: 12px;
+}
+
+#futureSpan {
+    color: #42C0F6;
+    font-weight: 900;
+}
+
+.blueButton {
+    border: solid #59C6F5;
+    border-radius: 8px;
+    color: #767676;
+    cursor: pointer;
+}
+
+.pinkButton {
+    border: solid #F91C85;
+    border-radius: 8px;
+    color: white;
+    background-color: #F91C85;
+    cursor: pointer;
+}
+
+#freeSignUpText {
+    font-size: x-small;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
