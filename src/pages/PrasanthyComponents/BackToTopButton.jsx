@@ -2,11 +2,11 @@ import React from 'react';
 import {useState,useEffect} from 'react';
 
 const BackToTopButton = () => {
-    const [backToTopButton, setBackToTopButton]=useState(false)
+    const [BackToTopButton, setBackToTopButton]=useState(false)
     useEffect(()=>{
 window.addEventListener("scroll",()=>{
 
-    if(window.scrollY>100){
+    if(window.scrollY>50){
         setBackToTopButton(true)
     }else{
         setBackToTopButton(false)
@@ -18,7 +18,7 @@ window.addEventListener("scroll",()=>{
 
     const scrollUp=()=>{
         window.scrollTo({
-            top:0,
+            top:650,
             behaviour:"smooth"
         })
     }
@@ -27,17 +27,24 @@ window.addEventListener("scroll",()=>{
     <div className="App">
     {BackToTopButton && (
         <button style={{
-            position:"fixed",
-            bottom:"50px",
-            right:"50px",
-            height:"50px",
-            width:"50px",
-            fontSize:"50px",
+            left:"30px",
+            backgroundColor: "yellow",
+            right:"25px",
+            height:"20px",
+            width:"112px",
+            fontSize:"15 px",
+            cursor:"pointer",
+            border: "1px solid black",
+            borderRadius: "5px",
+            color: "black",
+            filter: 'drop-shadow(5px 8px 9px rgb(42, 116, 126))'
+           
 
         }}
+      
         onClick={scrollUp}
         >
-        ^
+        Back To Top
         </button>
     )}
       

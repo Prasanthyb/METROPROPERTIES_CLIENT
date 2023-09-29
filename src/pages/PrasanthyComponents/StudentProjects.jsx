@@ -1,24 +1,37 @@
 import React from 'react';
 import {useEffect,useState} from 'react';
-import ProjectList  from './ProjectList';
+import data from './Projects.json';
 import Card from './Card'
 import Buttons from './Buttons' ; 
 import FilterSection from './FilterSection';
-import './styleHome.css';
-import {ActivityType,Subscription,SubjectMatter,YearLevel} from './ProjectList';
+import './styleStudentProjects.css';
+
 import EmptyView from './EmptyView'
 import BackToTopButton from './BackToTopButton';
+import NavBar from'./NavBar'
+import Footer from './Footer';
 
 
-const Home = () => {
+
+
+
+
+
+
+
+
+
+
+
+const StudentProjects = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
 
 
-  const [list, setList] = useState(ProjectList);
+  const [list, setList] = useState(data.ProjectList);
   const [resultsFound, setResultsFound] = useState(true);
 
 
-const[projects,setProjects]=useState(ActivityType); 
+const[projects,setProjects]=useState(data.ActivityType); 
 
 const handleSelectCategory = (event, value) =>
     !value ? null : setSelectedCategory(value);
@@ -32,7 +45,7 @@ const handleSelectCategory = (event, value) =>
   };
 
 
-const[projectsS,setProjectsS]=useState(Subscription)
+const[projectsS,setProjectsS]=useState(data.Subscription)
   const handleChangeCheckedS=id=>{
   const projectsStateListS = projectsS;
   const changeCheckedProjectsS=projectsStateListS.map(item=>item.id===id?
@@ -41,7 +54,7 @@ const[projectsS,setProjectsS]=useState(Subscription)
 };
 
 
-const[projectsYL,setProjectsYL]=useState(YearLevel)
+const[projectsYL,setProjectsYL]=useState(data.YearLevel)
   const handleChangeCheckedYL=id=>{
   const projectsStateListYL = projectsYL;
   const changeCheckedProjectsYL=projectsStateListYL.map(item=>item.id===id?
@@ -51,7 +64,7 @@ const[projectsYL,setProjectsYL]=useState(YearLevel)
 
 
 
-const[projectsSM,setProjectsSM]=useState(SubjectMatter)
+const[projectsSM,setProjectsSM]=useState(data.SubjectMatter)
   const handleChangeCheckedSM=id=>{
   const projectsStateListSM = projectsSM;
   const changeCheckedProjectsSM=projectsStateListSM.map(item=>item.id===id?
@@ -63,7 +76,7 @@ const[projectsSM,setProjectsSM]=useState(SubjectMatter)
 
 const applyFilters=()=>{
   
-let updatedList=ProjectList;
+let updatedList=data.ProjectList;
 
 if (selectedCategory) {
   updatedList = updatedList.filter(
@@ -132,6 +145,14 @@ applyFilters();
 
   return  (
     <div>
+    <div className="div">
+
+
+    <div className="navbar">
+   
+   <NavBar/>
+     </div>
+
 
     <div className="filter">
 
@@ -169,26 +190,35 @@ applyFilters();
     
     </div>
 
-    <div >
+    <div className="listp" >
     
     {resultsFound ? <Card list={list} /> : <EmptyView />}
     
     </div>
-    <div>
-    <footer>
+
+   <div className="outer-box">
+    <div className="footer">    
     <BackToTopButton/>
-    </footer>
     </div>
     
-   
-   </div>
+    
+    </div>
+    
+    
 
+   </div>
+   <div>
+    <div className="footerone">
+           <Footer/>
+           </div>
+           </div>
+           </div>
   
     
     
   );
 };
-export default Home;
+export default StudentProjects;
 
 
 

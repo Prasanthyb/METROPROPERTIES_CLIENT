@@ -1,8 +1,8 @@
 import React from 'react';
-import ProjectList from './ProjectList';
+import data from './Projects.json';
 import './styleButton.css';
 import ButtonToggle from './ButtonToggle';
-import {ButtonsList} from './ProjectList';
+
 
 const Buttons = ({selectedCategory,
   selectCategory,setList}) => 
@@ -17,25 +17,27 @@ const Buttons = ({selectedCategory,
     
         
       <ButtonToggle
-        options={ButtonsList}
+        options={data.ButtonsList}
         value={selectedCategory}
         selectToggle={selectCategory}
       />
         
-    
-    <button className="buttonbar"
-     onClick={()=>setList(ProjectList.slice(10))}>
+    <div className="buttoncontainer">
+
+
+    <button type="submit" className="sort"
+     onClick={()=>setList(data.ProjectList.slice(10))}>
     5
     </button>
-    <button className="button"
-    onClick={()=>setList(ProjectList.slice(5))}>
+    <button type="submit" className="sort"
+    onClick={()=>setList(data.ProjectList.slice(5))}>
     10
     </button>
-    <button className="button"
-    onClick={()=>setList(ProjectList)}>
+    <button type="submit" className="sort"
+    onClick={()=>setList(data.ProjectList)}>
     All
     </button>
-
+</div>
     
 
 
