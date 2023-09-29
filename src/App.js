@@ -4,17 +4,26 @@ import HelpRequests from './pages/HelpRequests/HelpRequests';
 import React from 'react';
 import StudentProjects from './pages/PrasanthyComponents/StudentProjects';
 import StudentProfileViewer from './pages/PrasanthyComponents/StudentProfileViewer';
+import {BrowserRouter as Router , Routes , Route} from "react-router-dom";
+import ErrorPage from './pages/PrasanthyComponents/ErrorPage';
+import Features from './pages/PrasanthyComponents/Features';
 
 
 function App() {
   return (
-    <div className="App">
-      <HelpRequests />
-      <StudentProjects/> 
-      <StudentProfileViewer/>
-      {/* There is something wrong with the below file path, delete and try again */}
-      {/* <StudentProfiles /> */}
-    </div>
+    <Router>
+    <Routes>
+
+
+      <Route path = "/helprequests" element={<HelpRequests />} />
+      <Route path = "/studentprojects" element={<StudentProjects />} />
+      <Route path = "/studentprofileviewer" element={<StudentProfileViewer/>} />
+      <Route path = "/features" element={<Features />} />
+      <Route path = "*" element={<ErrorPage/>} />
+       
+      
+      </Routes>
+      </Router>
   );
 }
 

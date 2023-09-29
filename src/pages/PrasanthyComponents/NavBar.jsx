@@ -1,5 +1,6 @@
 import React from "react";
 import Styles from "./styleNavBar.module.css";
+import {NavLink} from "react-router-dom";
 // ---------------- Logo image import
 import LevelUpWorksblue from "../../assets/NavBar/LevelUpWorks-white.png";
 // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -16,7 +17,9 @@ const Navbar = () => {
 
       <div className={Styles.StudentTeacherNavBarBtnsContainer}>
       <button className={Styles.homeBtn}>HOME</button>
-      <button className={Styles.featuresBtn}>FEATURES</button>
+
+     <NavLink to="/features">FEATURES</NavLink>
+
         <button className={Styles.helpCentreBtn}>TEACHERS</button>
        
         <div className={Styles.container}>
