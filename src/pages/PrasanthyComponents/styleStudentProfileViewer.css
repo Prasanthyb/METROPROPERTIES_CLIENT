@@ -1,0 +1,150 @@
+.parent
+{
+ margin-top:0;
+ text-align: center;
+  
+}
+.img{
+  height:150px;
+  width:150px;
+}
+.edit{
+  margin-top:20px;
+}
+.photo{
+  margin-top:20px;
+}
+ .editprofilebutton{
+  width: 150px;
+   height: 30px;
+  background-color: #3498db;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  font-size:12px;
+  font-weight:bold;
+  text-align:center;
+  
+}
+.editprofilebutton:hover {
+  background-color: #2980b9;
+}
+.editprofilebutton:disabled {
+  background-color: #ccc; 
+  cursor: not-allowed; 
+}
+.changephotobutton{
+  width: 150px;
+   height: 30px;
+  background-color: #3498db;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  font-size:12px;
+  font-weight:bold;
+  text-align:center;
+  
+}
+.changephotobutton:hover {
+  background-color: #2980b9;
+}
+.changephotobutton:disabled {
+  background-color: #ccc; 
+  cursor: not-allowed; 
+}
+
+.outerDiv {
+  background-color: white;
+  color: #fff;
+  height: 400px;
+  width: 800px;
+  margin: 50px 50px 100px 200px;
+  padding: 5px;
+}
+.leftDiv {
+  background-color: #efefef;
+  color: #000;
+  height: 300px;
+  width: 25%;
+  float: left;
+  border:solid;
+  border-radius:20px;
+  
+}
+.rightDiv {
+  background-color: #efefef;
+  color: #000;
+  height: 400px;
+  width: 65%;
+  float: right;
+  border-radius:20px;
+  border:solid;
+}
+.clear
+{
+  clear:both;
+}
+
+.container {
+  
+  display: flex;
+text-align:left;
+margin-left:20px;
+font-weight:600;
+}
+
+.item-list {
+  gap:20px;
+  list-style: none;
+  padding: 0;
+  margin-top:50px;
+  flex-direction:column;
+  display: flex;
+  justify-content: flex-start;
+  
+}
+
+.item-list li {
+  
+  margin: 5px 0; 
+}
+
+
+.custom-button {
+  background-color: red;
+  color: white; 
+  padding: 5px 10px; 
+  border: none;
+  border-radius: 20px; 
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  cursor: pointer;
+  margin-top:20px;
+  margin-left:650px;
+  filter:drop-shadow(5px 8px 9px orange);
+}
+
+.custom-button:hover {
+  background-color: darkred;
+}
+.navbar{
+  
+  margin-top:0;
+ 
+}
+.footer{
+    
+  margin-bottom:200px;
+  float:right;
+  margin-top:0;
+  
+  width:100%
+ 
+  
+}

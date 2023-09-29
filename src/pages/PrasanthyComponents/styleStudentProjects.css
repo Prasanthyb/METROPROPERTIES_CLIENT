@@ -1,0 +1,52 @@
+*{
+
+  padding:0;
+  box-sizing:border-box;  
+
+}
+.div{
+  margin-top:0
+}
+
+ .filter{
+    width:250px;
+    float:left;
+    margin-top:35px;
+    margin-left:10px;    
+
+  }
+  .listp{
+    margin-bottom:50px
+  }
+  .outer-box {
+    width: 125px;
+    height: 35px;
+    background-color:rgb(62, 172, 240);
+    margin-top:5px;
+    float:right;
+    margin-right:180px;
+    margin-bottom:0;
+    padding: 5px;
+      border:solid orange;
+     
+    
+    border-radius:60px;
+}
+  .footer{
+    margin-top:0;
+    float:right;
+    margin-right:1px;
+    
+    width:100%;
+  }
+
+  .footerone{
+    
+    margin-bottom:200px;
+    float:right;
+    margin-top:50px;
+    
+    width:100%
+   
+    
+  }
