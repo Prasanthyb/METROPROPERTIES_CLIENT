@@ -10,9 +10,16 @@ const ButtonToggle = ({ options, value, selectToggle }) => {
 
   const ToggleButton = styled(MuiToggleButton)({
     "&.Mui-selected, &.Mui-selected:hover": {
-      color: "secondary",
-      backgroundColor: 'skyblue'
-    }
+      color: 'white',
+      backgroundColor: 'blue'
+    },
+    '&:hover:not(.Mui-selected)': {
+      backgroundColor: 'brown',
+      color: 'white', 
+    },
+    color: 'black',            
+    backgroundColor: 'white'
+
   });
 
 
@@ -34,9 +41,13 @@ const ButtonToggle = ({ options, value, selectToggle }) => {
           border: '2px solid black', 
           fontWeight: 800,
           width: '115px', 
-          height:'25px',            
+          height:'30px',            
           fontSize: '12px', 
           borderRadius: '15px',
+          
+          
+         
+          
           
           
   }}

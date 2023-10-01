@@ -16,11 +16,9 @@ const Navbar = () => {
       </div>
 
       <div className={Styles.StudentTeacherNavBarBtnsContainer}>
-      <button className={Styles.homeBtn}>HOME</button>
-
-     <NavLink to="/features">FEATURES</NavLink>
-
-        <button className={Styles.helpCentreBtn}>TEACHERS</button>
+      <NavLink className={Styles.navbar} to="/">HOME</NavLink>
+     <NavLink className={Styles.navbar}  to="/features">FEATURES</NavLink>
+     <NavLink  className={Styles.navbar} to="/teachers">TEACHERS</NavLink>
        
         <div className={Styles.container}>
         <div className={Styles.flagsContainer}>

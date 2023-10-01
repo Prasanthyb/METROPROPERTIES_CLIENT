@@ -8,6 +8,11 @@ import StudentProjects from './pages/PrasanthyComponents/StudentProjects';
 import StudentProfileViewer from './pages/PrasanthyComponents/StudentProfileViewer';
 import ErrorPage from './pages/PrasanthyComponents/ErrorPage';
 import Features from './pages/PrasanthyComponents/Features';
+import Teachers from './pages/PrasanthyComponents/Teachers';
+import EditProfile from './pages/PrasanthyComponents/EditProfile';
+import ChangePhoto from './pages/PrasanthyComponents/ChangePhoto';
+import DashBoard from './pages/PrasanthyComponents/DashBoard';
+
 
 
 function App() {
@@ -18,7 +23,12 @@ function App() {
       <Route path = "/helprequests" element={<HelpRequests />} />
       <Route path = "/studentprojects" element={<StudentProjects />} />
       <Route path = "/studentprofileviewer" element={<StudentProfileViewer/>} />
+
+      <Route path = "/teachers" element={<Teachers />} />
+      <Route path = "/editprofile" element={<EditProfile />} />
+      <Route path = "/changephoto" element={<ChangePhoto/>} />
       <Route path = "/features" element={<Features />} />
+      <Route path = "/dashboard" element={<DashBoard />} />
       <Route path = "*" element={<ErrorPage/>} />
        
       

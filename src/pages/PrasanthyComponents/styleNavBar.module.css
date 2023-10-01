@@ -27,37 +27,36 @@
 
 
   
-  .StudentTeacherNavBarBtnsContainer button {
-    /* background: none; */
-    border: none;
-    border-radius: 10px;
-    padding: 0;
-    margin: 0 90px 0 90px;
   
-    cursor: pointer;
-    outline: none;
-    height: 30px;
-    width: 100px;
-    font-weight: bold;
-    color: white;
-  }
-  .homeBtn {
-    background-color: rgb(62, 172, 240);
-  }
-  .featuresBtn {
-    background-color: rgb(62, 172, 240);
+
+
+  .navbar{
+    &:link,
+    &:visited
+    {
+      display:flex;
+      gap:4rem;
+      display:inline-block;
+      font-size:1rem;
+      font-weight:500;
+      text-tranform:uppercase;
+      color:white;
+      transition: color 0.3s linear;
+      margin:0 100px 0 20px ;
+      text-decoration:none;
+
+    }
+    color:white;
+
+
+&:hover,
+&:active{
+  color:blue;
+}
+
   }
   
-  .helpCentreBtn {
-    background-color:  rgb(62, 172, 240);
-  }
   
-  .moreProjectsBtn {
-    background-color: rgb(62, 172, 240);
-    
-  }
-  /* ^^^^^^^^^^^^^^^^^^^^^^ */
-  /* ------ Country flag styles */
   .flagsContainer {
     display: flex;
     align-self: flex-start;

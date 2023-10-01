@@ -10,41 +10,47 @@
 
 
  .projectbar{
-    margin:50px 10px 1px 275px
- }   
+    margin:50px 10px 1px 265px;
     
+ }   
+ p{
+  color:black;
+  
+ }   
  .projectbar p h5
  {
-    margin-top:10px
+    margin-top:10px;
+    color:black;
  }
  .buttoncontainer{
-   margin-left:400px;
+   margin-left:560px;
+   margin-top:10px;
  }
- .buttonbar{
-    
-   background-color: white; 
-  color: black; 
-  border-width:thin ;
-  padding: 2px 15px; 
-  border-radius: 5px; 
-  cursor: pointer;
-  transition: background-color 0.3s ease; 
+ 
 
- }
+
  .sort
  {
   filter: drop-shadow(5px 8px 9px rgb(42, 116, 126));
-  height: 20px;
+  height: 18px;
   width: 40px;
   background-color: white;
   border-radius: 5px;
   font-weight:bold;
+  cursor: pointer;
+  
  }
- 
+ .sort:hover {
+  
+  color: white;
+  background-color:brown;
+  
+}
+
 
   button:focus{
-    color:mediumvioletred;
-    background-color:skyblue;
+    color:white;
+    background-color:blue;
 
    }
 

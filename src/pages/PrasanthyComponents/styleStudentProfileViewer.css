@@ -1,8 +1,7 @@
 .parent
 {
  margin-top:0;
- text-align: center;
-  
+ text-align: center;  
 }
 .img{
   height:150px;
@@ -29,7 +28,7 @@
   
 }
 .editprofilebutton:hover {
-  background-color: #2980b9;
+  background-color: lightblue;
 }
 .editprofilebutton:disabled {
   background-color: #ccc; 
@@ -50,12 +49,38 @@
   
 }
 .changephotobutton:hover {
-  background-color: #2980b9;
+  background-color: lightblue;
 }
 .changephotobutton:disabled {
   background-color: #ccc; 
   cursor: not-allowed; 
 }
+
+
+
+
+
+.navbar{
+  &:link,
+  &:visited
+  {
+    
+    color:white;
+    transition: color 0.3s linear;
+   
+    text-decoration:none;
+
+  }
+  color:white;
+
+
+&:hover,
+&:active{
+color:blue;
+}
+
+}
+
 
 .outerDiv {
   background-color: white;
@@ -84,6 +109,9 @@
   border-radius:20px;
   border:solid;
 }
+h2{
+  color:black;
+}
 .clear
 {
   clear:both;
@@ -92,9 +120,9 @@
 .container {
   
   display: flex;
-text-align:left;
-margin-left:20px;
-font-weight:600;
+  text-align:left;
+  margin-left:20px;
+  font-weight:600;
 }
 
 .item-list {
@@ -115,7 +143,7 @@ font-weight:600;
 
 
 .custom-button {
-  background-color: red;
+  background-color:crimson;
   color: white; 
   padding: 5px 10px; 
   border: none;
@@ -131,7 +159,8 @@ font-weight:600;
 }
 
 .custom-button:hover {
-  background-color: darkred;
+  background-color: skyblue;
+  
 }
 .navbar{
   

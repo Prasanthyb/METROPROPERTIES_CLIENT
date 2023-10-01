@@ -12,7 +12,7 @@ const CardItem = ({
     </header>
     <footer>
       <p>
-        <h5>{level}|{type}</h5> 
+        <h6>{level}|{type}</h6> 
       </p>
       
     </footer>
