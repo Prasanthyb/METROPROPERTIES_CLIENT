@@ -21,7 +21,7 @@ const useStyles = styled({
     marginLeft:0,
   },
   label: {
-    fontSize: '0.8rem',
+    fontSize: '1px',
     fontFamily: `'Raleway', sans-serif`,
   },
 });
@@ -31,7 +31,9 @@ const FilterCommon = ({ project,changeChecked}) => {
   const { checked, label, id } = project;
   return (
     <div >
-      <FormControlLabel
+      <FormControlLabel         
+                     
+
         classes={{
           label: classes.label,
           root: classes.wrap,
@@ -46,8 +48,10 @@ const FilterCommon = ({ project,changeChecked}) => {
             checked={checked}
             onChange={() => changeChecked(id)}
             inputProps={{ 'aria-label': 'checkbox with small size' }}
+            
           />
         }
+        
         
         label={label}
       

@@ -1,0 +1,85 @@
+.StudentTeacherNavBarContainer {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(62, 172, 240);
+    height: 65px;
+    width:100%
+  }
+  /* ^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+  /* ------- Company logo */
+  .levelUpWorksLogoContainer {
+    display: flex;
+    align-items: center;
+  }
+  
+  .levelUpWorksLogoContainer img {
+    height: 60px;
+    width: 145.99px;
+   
+  }
+  /* ^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+  /* -------- StudentTeacherNavBar buttons */
+  .StudentTeacherNavBarBtnsContainer {
+    margin: 0 80px 0 0;
+    display: flex;
+    align-items: center;
+  }
+
+
+  
+  .StudentTeacherNavBarBtnsContainer button {
+    /* background: none; */
+    border: none;
+    border-radius: 10px;
+    padding: 0;
+    margin: 0 90px 0 90px;
+  
+    cursor: pointer;
+    outline: none;
+    height: 30px;
+    width: 100px;
+    font-weight: bold;
+    color: white;
+  }
+  .homeBtn {
+    background-color: rgb(62, 172, 240);
+  }
+  .featuresBtn {
+    background-color: rgb(62, 172, 240);
+  }
+  
+  .helpCentreBtn {
+    background-color:  rgb(62, 172, 240);
+  }
+  
+  .moreProjectsBtn {
+    background-color: rgb(62, 172, 240);
+    
+  }
+  /* ^^^^^^^^^^^^^^^^^^^^^^ */
+  /* ------ Country flag styles */
+  .flagsContainer {
+    display: flex;
+    align-self: flex-start;
+    color:white;
+    font-weight:500;
+    gap:10px;
+    font-size: 12px;
+    margin-top:1px;
+    
+  }
+  
+  .StudentTeacherNavBarBtnsContainer button.flagsContainer img {
+    height: 12px;
+    width: 10px;
+    margin: 20px 100px 0 0;
+  }
+  /* ^^^^^^^^^^^^^^^^^^^^^^ */
+  .langBtn {
+
+    background-color:  rgb(62, 172, 240);
+  }
+  .linkButton{
+    margin:20px 10px 0 10px;
+  }
+

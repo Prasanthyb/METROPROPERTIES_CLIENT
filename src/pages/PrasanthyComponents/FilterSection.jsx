@@ -22,7 +22,7 @@ const FilterSection = ({projectsSM,changeCheckedSM,projectsYL,
  <div className="input-group">
     <p className="label">SUBSCRIPTION</p>    
     {projectsS.map((project) => (
-        <FilterCommon
+        <FilterCommon 
           key={project.id}
           project={project}
           changeChecked={changeCheckedS}
