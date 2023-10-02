@@ -10,14 +10,14 @@ const BackToTopButton = () => {
 
   return (
     <div className="App">
-      <div className="button-container" style={{ display: 'flex', justifyContent: 'space-between' }}>
+      <div className="button-container" style={{ display: 'flex', justifyContent: 'space-between', }}>
         <div className="outer" style={{
           border: '3px solid red',
           padding: '10px',
           height: '35px',
           display: 'flex',
           alignItems: 'center',          
-
+          marginLeft:'160px'
           
           
           
@@ -33,7 +33,7 @@ const BackToTopButton = () => {
           height: '35px',
           display: 'flex',
           alignItems: 'center',  
-          marginLeft:'30px'
+          marginLeft:'20px'
          
         }}>
         <NavLink to="/dashboard">

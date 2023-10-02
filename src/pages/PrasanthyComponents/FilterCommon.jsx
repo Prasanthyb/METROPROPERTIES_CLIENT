@@ -20,24 +20,27 @@ const useStyles = styled({
     alignItems: 'center',
     marginLeft:0,
   },
-  label: {
-    fontSize: '1px',
-    fontFamily: `'Raleway', sans-serif`,
-  },
+  
 });
 
 const FilterCommon = ({ project,changeChecked}) => {
   const classes = useStyles();
   const { checked, label, id } = project;
+
+
+
+  const labelStyle = {
+    color: 'black', 
+    fontSize: '16px',
+    fontWeight: 'bold',
+    
+  };
   return (
     <div >
       <FormControlLabel         
                      
 
-        classes={{
-          label: classes.label,
-          root: classes.wrap,
-        }}
+        
         control={
           <Checkbox
             classes={{
@@ -53,7 +56,7 @@ const FilterCommon = ({ project,changeChecked}) => {
         }
         
         
-        label={label}
+        label={<span style={labelStyle}>{label}</span>}
       
       />
     </div>

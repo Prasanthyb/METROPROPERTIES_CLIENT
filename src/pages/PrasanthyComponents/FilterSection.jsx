@@ -19,6 +19,7 @@ const FilterSection = ({projectsSM,changeCheckedSM,projectsYL,
 
   
     <div className="filter">
+    <div className="filter1">
  <div className="input-group">
     <p className="label">SUBSCRIPTION</p>    
     {projectsS.map((project) => (
@@ -63,6 +64,7 @@ const FilterSection = ({projectsSM,changeCheckedSM,projectsYL,
           changeChecked={changeCheckedSM}
     />
     ))}
+     </div>
      </div>
 
 
