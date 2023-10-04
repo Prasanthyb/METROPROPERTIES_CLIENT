@@ -2,16 +2,16 @@ import React from "react";
 import Styles from "./Menu.module.css";
 import { useState } from "react";
 // ------------------------ ICON AND IMG IMPORTS FROM SRC FOLDER
-import ProgressTrackerIcon from "../../../assets/TeacherDashboard/progressTracker.png";
-import StudentProfilesIcon from "../../../assets/TeacherDashboard/studentProfiles.png";
-import HelpRequestIconIcon from "../../../assets/TeacherDashboard/helpRequests.png";
-import ProjectSubmissionsIcon from "../../../assets/TeacherDashboard/projectSubmissions.png";
-import ProjectLibraryIcon from "../../../assets/TeacherDashboard/projectLibrary.png";
-import ProfileIcon from "../../../assets/profile.png";
-import SettingsIcon from "../../../assets/settings.png";
-import LogoutIcon from "../../../assets/logout.png";
-import ArrowLeft from "../../../assets/arrowLeft.png";
-import ArrowRight from "../../../assets/arrowRight.png";
+import ProgressTrackerIcon from "../assets/TeacherDashboard/progressTracker.png";
+import StudentProfilesIcon from "../assets/TeacherDashboard/studentProfiles.png";
+import HelpRequestIconIcon from "../assets/TeacherDashboard/helpRequests.png";
+import ProjectSubmissionsIcon from "../assets/TeacherDashboard/projectSubmissions.png";
+import ProjectLibraryIcon from "../assets/TeacherDashboard/projectLibrary.png";
+import ProfileIcon from "../assets/profile.png";
+import SettingsIcon from "../assets/settings.png";
+import LogoutIcon from "../assets/logout.png";
+import ArrowLeft from "../assets/arrowLeft.png";
+import ArrowRight from "../assets/arrowRight.png";
 // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 export default function Menu() {

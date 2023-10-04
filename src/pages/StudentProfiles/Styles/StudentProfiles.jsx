@@ -1,10 +1,10 @@
 import React from "react";
-import Menu from "../../HelpRequests/Components/Menu"
-import Overview from "../Components/Overview"
+import Menu from "../../../common/Menu";
+import Overview from "../Components/Overview";
 import Styles from "./StudentProfiles.module.css";
 // ####### COMMON COMPONENTS IMPORTS #######
 import StudentTeacherNavBar from "../../../common/StudentTeacherNavBar";
-import Footer from "../../../common/Footer"
+import Footer from "../../../common/Footer";
 
 export default function StudentProfiles() {
   return (
