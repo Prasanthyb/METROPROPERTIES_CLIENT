@@ -4,7 +4,7 @@ import Overview from "./Components/Overview";
 import Styles from "./HelpRequests.module.css";
 // ####### COMMON COMPONENTS IMPORTS #######
 import StudentTeacherNavBar from "../../common/StudentTeacherNavBar";
-import Footer from "../../common/Footer";
+import Footer from "../../common/Footer"; 
 
 export default function StudentProfiles() {
   return (
