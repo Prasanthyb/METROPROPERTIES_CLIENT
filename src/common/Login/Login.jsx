@@ -1,5 +1,9 @@
 import styles from './Login.module.css';
 
+// Import forms
+import LoginForm from './components/LoginForm';
+import SignupForm from './components/SignupForm';
+
 //Import MUI components
 import Modal from '@mui/material/Modal';
 import Box from '@mui/material/Box';
@@ -42,16 +46,19 @@ export default function Login(props) {
                             <h3 onClick={()=>handleSuChange(false)} className={`${styles.loginButton} ${styles.lsButton} ${suSelected? null : styles.active}`}>LOG IN</h3>
                             <h3 onClick={()=>handleSuChange(true)} className={`${styles.signupButton} ${styles.lsButton} ${suSelected? styles.active : null}`}>SIGN UP</h3>
                         </div>
+                        {/* Using a "calledFrom" property that tells the form if it was called from the student or teacher side. */}
+                        {!suSelected && (<LoginForm calledFrom='student'></LoginForm>)}
+                        {suSelected && (<SignupForm calledFrom='student'></SignupForm>)}
                     </div>
                     <div id={styles['teacherLoginDiv']}>
                         <img alt='Teachers' src={teacherImg}></img>
                         <h1>Teachers</h1>
                         <div className={`${styles.lsButtonContainer}`}>
-                            {/* Using h3 mostly because I am lazy and it has the text styling I'm after.
-                                All it does is swap out the forms so no big deal probably */}
                             <h3 onClick={()=>handleSuChange(false)} className={`${styles.loginButton} ${styles.lsButton} ${suSelected? null : styles.active}`}>LOG IN</h3>
                             <h3 onClick={()=>handleSuChange(true)} className={`${styles.signupButton} ${styles.lsButton} ${suSelected? styles.active : null}`}>SIGN UP</h3>
                         </div>
+                        {!suSelected && (<LoginForm calledFrom='teacher'></LoginForm>)}
+                        {suSelected && (<SignupForm calledFrom='teacher'></SignupForm>)}
                     </div>
                 </div>
             </Box>
