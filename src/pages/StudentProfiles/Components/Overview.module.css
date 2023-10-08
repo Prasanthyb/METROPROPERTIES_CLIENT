@@ -30,6 +30,29 @@
   padding-right: 40px;
 }
 /* ^^^^^^^^^^^^^^^^^^^^^ */
+/* -------- Card container */
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+/* ^^^^^^^^^^^^^^^^^^^^^ */
+/* ------ Student card */
+.student-image {
+  width: 85px;
+}
+
+.card {
+  background-color: blueviolet;
+  text-align: center;
+  width: 145px;
+  padding: 25px;
+  margin: 20px;
+  border-radius: 10px;
+  color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+/* ^^^^^^^^^^^^^^^^^^^^^ */
 
 /* --------   SCROLL BAR  FOR INDIVIDUAL HELP REQUESTS CONTAINER  */
 
