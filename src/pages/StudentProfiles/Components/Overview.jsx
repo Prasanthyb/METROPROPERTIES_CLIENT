@@ -32,13 +32,12 @@ export default function Overview() {
     <div className={Styles.OverviewContainer}>
       {/* ------------------------ helpRequestsContainer holds all content displayed within the overContainer */}
       <div className={Styles.StudentProfilesContainer}>
-        <h1>STUDENT PROFILES CONTAINER</h1>
         <div className={Styles.container}>
           {users &&
             users.map(function (user) {
               return (
                 <div key={user.student_id} className={Styles.card}>
-                  <img src={user.profile_pic} alt="students" className="student-image" />
+                  <img src={user.profile_pic} alt="students" className={Styles.studentImage} />
                   <p>{user.name}</p>
                 </div>
               );
