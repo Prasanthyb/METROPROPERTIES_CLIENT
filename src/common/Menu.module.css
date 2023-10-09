@@ -52,6 +52,7 @@
   margin: 17px 10px;
   list-style: none;
   display: flex;
+
 }
 
 .menuLinks p {
@@ -71,6 +72,18 @@
   text-align: center;
   padding: 0;
   margin-bottom: 20px;
+}
+
+.menuCrumbs li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menuCrumbs li p {
+  margin: 5px 0 0 0;
+  color: #fff;
 }
 
 .menuCrumIcon {
@@ -121,5 +134,9 @@
 .menuCrumbsCollapsed {
   display: flex;
   flex-direction: column;
+}
+
+.menuCrumbsCollapsed li {
+  margin: 5px 0 5px 0;
 }
 /* ^^^^^^^^^^^^^^^^^^^^^^ */
