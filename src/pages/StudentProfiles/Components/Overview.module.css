@@ -27,7 +27,7 @@
   border-radius: 30px;
   width: 95%;
   height: 90%;
-  padding-right: 40px;
+  /* padding-right: 40px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,11 +35,13 @@
 /* ^^^^^^^^^^^^^^^^^^^^^ */
 /* -------- Card container */
 .container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Five columns */
+  gap: 20px; /* Adjust the gap as needed */
   justify-content: center;
-  flex-wrap: wrap;
   width: 90%;
   height: 90%;
+  margin: 0 auto; /* Center the grid */
 }
 /* ^^^^^^^^^^^^^^^^^^^^^ */
 /* ------ Student card */
