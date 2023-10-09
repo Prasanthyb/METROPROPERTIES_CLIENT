@@ -32,7 +32,6 @@
 /* ------- Project Tracker, Student Profiles, Help Requests, Project Submissions, Project Library links */
 .menuLinksContainer {
   display: flex;
-  justify-content: center;
 }
 
 .menuIcon {
@@ -43,19 +42,37 @@
 }
 
 .menuLinks {
-  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   /* border: 2px solid red; */
 }
 
 .menuLinks li {
   /* border: 2px solid green; */
-  margin: 17px 10px;
+  padding: 12px 0px 12px 10%;
   list-style: none;
   display: flex;
-
+  align-items: flex-start;
 }
 
-.menuLinks p {
+.menuLinks li:hover {
+  background-color: grey;
+}
+
+/* .menuLinksClicked {
+  This is the css rule applied when the changeMenuLinkBckgrndColor function is called as a result of clicking on a menu link
+  background-color: red;
+} */
+
+.menuLinks a {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.menuLinks a p {
   /* border: 2px solid pink; */
   font-size: 14px;
   color: #fff;
@@ -122,9 +139,14 @@
   justify-content: flex-start;
 }
 
+.menuLinksCollapsed {
+  display: flex;
+  justify-content: center;
+}
+
 .inActive {
   /* Width applied when menu is collapsed */
-  width: 5vw;
+  width: 7vw;
 }
 
 .menuTextEl {

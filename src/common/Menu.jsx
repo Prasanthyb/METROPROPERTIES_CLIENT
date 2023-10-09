@@ -19,6 +19,7 @@ export default function Menu() {
   const [menuText, setMenuText] = useState(false);
   const [menuIcons, setMenuIcons] = useState(false);
   const [arrowRight, setArrowRight] = useState(false);
+  // const [listItems, setListItems] = useState(false);
 
   const toggleMenu = () => {
     // toggleMenu function is applied to red arrow button within the menu
@@ -28,6 +29,10 @@ export default function Menu() {
     setArrowRight(!arrowRight); // Changes red arrow from flex-end to flex start, border radius from left to right side, and img of arrow pointing left to pointing right when menu is collapsed.
   };
 
+  // const changeMenuLinkBckGrndClr = () => {
+  //   setListItems(!listItems); // Changes background color of menu links to light blue when the links are clicked.
+  // }
+
   return (
     <>
       <div
@@ -35,7 +40,9 @@ export default function Menu() {
       >
         <div>
           {/* ---------------- Teacher profile image */}
-          <div className={Styles.teacherProfileImage}>
+          <div
+            className={Styles.teacherProfileImage}
+          >
             <img
               src="/images/teachers/JasminaSalvador.png"
               alt="Teacher profile"
@@ -47,63 +54,73 @@ export default function Menu() {
           <div className={Styles.menuLinksContainer}>
             <ul className={Styles.menuLinks}>
               {/* ------------- Progress Tracker link */}
-              <li>
-                <img
-                  className={Styles.menuIcon}
-                  src={ProgressTrackerIcon}
-                  alt="Progress tracker icon"
-                />
-                <p className={`${menuText ? Styles.menuTextEl : ""}`}>
-                  PROGRESS TRACKER
-                </p>
+              <li className={`${menuIcons ? Styles.menuLinksCollapsed : ""}`}>
+                <a href="/progresstracker">
+                  <img
+                    className={Styles.menuIcon}
+                    src={ProgressTrackerIcon}
+                    alt="Progress tracker icon"
+                  />
+                  <p className={`${menuText ? Styles.menuTextEl : ""}`}>
+                    PROGRESS TRACKER
+                  </p>
+                </a>
               </li>
               {/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */}
               {/* ------------- Student Profiles link */}
-              <li>
-                <img
-                  className={Styles.menuIcon}
-                  src={StudentProfilesIcon}
-                  alt="Student profiles icon"
-                />
-                <p className={`${menuText ? Styles.menuTextEl : ""}`}>
-                  STUDENT PROFILES
-                </p>
+              <li className={`${menuIcons ? Styles.menuLinksCollapsed : ""}`}>
+                <a href="/studentprofiles">
+                  <img
+                    className={Styles.menuIcon}
+                    src={StudentProfilesIcon}
+                    alt="Student profiles icon"
+                  />
+                  <p className={`${menuText ? Styles.menuTextEl : ""}`}>
+                    STUDENT PROFILES
+                  </p>
+                </a>
               </li>
               {/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */}
               {/* ------------- Help Requests link link */}
-              <li>
-                <img
-                  className={Styles.menuIcon}
-                  src={HelpRequestIconIcon}
-                  alt="Help requests icon"
-                />
-                <p className={`${menuText ? Styles.menuTextEl : ""}`}>
-                  HELP REQUESTS
-                </p>
+              <li className={`${menuIcons ? Styles.menuLinksCollapsed : ""}`}>
+                <a href="/helprequests" /*onClick={changeMenuLinkBckGrndClr} className={`${listItems ? Styles.menuLinksClicked : ""}`}*/>
+                  <img
+                    className={Styles.menuIcon}
+                    src={HelpRequestIconIcon}
+                    alt="Help requests icon"
+                  />
+                  <p className={`${menuText ? Styles.menuTextEl : ""}`}>
+                    HELP REQUESTS
+                  </p>
+                </a>
               </li>
               {/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */}
               {/* ------------- Project Submissions link */}
-              <li>
-                <img
-                  className={Styles.menuIcon}
-                  src={ProjectSubmissionsIcon}
-                  alt="Project Submissions icon"
-                />
-                <p className={`${menuText ? Styles.menuTextEl : ""}`}>
-                  PROJECT SUBMISSIONS
-                </p>
+              <li className={`${menuIcons ? Styles.menuLinksCollapsed : ""}`}>
+                <a href="/projectsubmissions">
+                  <img
+                    className={Styles.menuIcon}
+                    src={ProjectSubmissionsIcon}
+                    alt="Project Submissions icon"
+                  />
+                  <p className={`${menuText ? Styles.menuTextEl : ""}`}>
+                    PROJECT SUBMISSIONS
+                  </p>
+                </a>
               </li>
               {/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */}
               {/* ------------- Project Library link */}
-              <li>
-                <img
-                  className={Styles.menuIcon}
-                  src={ProjectLibraryIcon}
-                  alt="Project library icon"
-                />
-                <p className={`${menuText ? Styles.menuTextEl : ""}`}>
-                  PROJECT LIBRARY
-                </p>
+              <li className={`${menuIcons ? Styles.menuLinksCollapsed : ""}`}>
+                <a href="/projectlibrary">
+                  <img
+                    className={Styles.menuIcon}
+                    src={ProjectLibraryIcon}
+                    alt="Project library icon"
+                  />
+                  <p className={`${menuText ? Styles.menuTextEl : ""}`}>
+                    PROJECT LIBRARY
+                  </p>
+                </a>
               </li>
               {/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */}
             </ul>
