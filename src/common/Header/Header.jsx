@@ -19,7 +19,7 @@ export default function Header() {
             <div id={styles['links']}>
                 <NavLink className={styles.headerNavLink} to='/'>HOME</NavLink>
                 <NavLink className={styles.headerNavLink} to='/HelpRequests'>REQUESTS</NavLink>
-                <NavLink className={styles.headerNavLink} to='/StudentProjects'>PROJECTS</NavLink>
+                <NavLink className={styles.headerNavLink} to='/projects'>PROJECTS</NavLink>
             </div>
             {/* LOGIN ETC DIV */}
             <div id={styles['userSection']}>

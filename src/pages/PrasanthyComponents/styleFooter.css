@@ -2,14 +2,7 @@
     width:100%;
     background-color:white;
     height:500px;
-  
-  
-    
-    
-    
-}
-
-
+  }
 
 .footer-table {
     width: 100%;
@@ -20,11 +13,11 @@
     margin-top:0;
     
   }
-  .footer-table td {
+.footer-table td {
     vertical-align: top; 
   }
   
-  .footer-table h3 {
+.footer-table h3 {
     font-size: 18px;
     margin-bottom: 10px; 
     margin-left: 100px;
@@ -34,7 +27,7 @@
   }
   
  
-  .footer-table ul {
+.footer-table ul {
     list-style: none;
     padding: 0;
     text-align:left;
@@ -42,21 +35,18 @@
    
   }
   
-  .footer-table li {
-    margin-bottom: 5px; 
-     
+.footer-table li {
+    margin-bottom: 5px;     
   
-  }
+  }  
   
-  
-  .footer-table a {
+.footer-table a {
     color: #00a0e4;
     text-decoration: none;
-    transition: color 0.3s; 
-    
+    transition: color 0.3s;     
   }
   
-  .footer-table a:hover {
+.footer-table a:hover {
     color: #0077b6; 
   }
   

@@ -1,9 +1,21 @@
-import React from 'react';
-import './styleEmptyView.css';
+import React from "react";
 
 const EmptyView = () => (
-  <div className='emptyView-wrap'>
-    <img src="images/projects/empty.gif" alt='' />
+  <div
+    style={{
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      height: "100%",
+    }}>
+    <img
+      style={{
+        maxWidth: "500px",
+        width: "100%",
+      }}
+      src="images/projects/empty.gif"
+      alt=""
+    />
   </div>
 );
 

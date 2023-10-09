@@ -1,224 +1,201 @@
-import React from 'react';
-import {useEffect,useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import data from './Projects.json';
-import Card from './Card'
-import Buttons from './Buttons' ; 
+import Card from './Card';
+import Buttons from './Buttons';
 import FilterSection from './FilterSection';
-import './styleStudentProjects.css';
-
-import EmptyView from './EmptyView'
+import Styles from './styleStudentProjects.module.css';
+import EmptyView from './EmptyView';
 import BackToTopButton from './BackToTopButton';
-import NavBar from'./NavBar'
+import NavBar from './NavBar';
 import Footer from './Footer';
 
-
-
-
-
-
-
-
-
-
-
-
-
 const StudentProjects = () => {
+
+//----------------------- -State for the project list---------------------------------------
+
+  const [list, setList] = useState();
+
+  useEffect(() => {
+
+//------------------------- Fetch project data from an API----------------------------------
+
+    fetch('http://localhost:4000/api/projects')
+      .then((response) => response.json())
+      .then((response) => setList(response));
+  }, []);
+
+//--------------- ---------State for selected category and results found----------------------
+
   const [selectedCategory, setSelectedCategory] = useState(null);
-
-
-  const [list, setList] = useState(data.ProjectList);
   const [resultsFound, setResultsFound] = useState(true);
 
+//-------------------------------- State for various project filters----------------------------
 
-const[projects,setProjects]=useState(data.ActivityType); 
+  const [projects, setProjects] = useState(data.ActivityType);
+  const [projectsS, setProjectsS] = useState(data.Subscription);
+  const [projectsYL, setProjectsYL] = useState(data.YearLevel);
+  const [projectsSM, setProjectsSM] = useState(data.SubjectMatter);
 
-const handleSelectCategory = (event, value) =>
+//------------------------------------- Handle selecting a category-------------------------------
+
+  const handleSelectCategory = (event, value) =>
     !value ? null : setSelectedCategory(value);
-  
-  const handleChangeChecked=id=>{
-  const projectsStateList = projects;
-  const changeCheckedProjects=projectsStateList.map(item=>item.id===id?
-  {...item,checked:!item.checked}:item);
-  setProjects(changeCheckedProjects);
 
+//------------------------------ Handle checkbox changes for different filter categories------------
+
+  const handleChangeChecked = (id) => {
+    const projectsStateList = projects;
+    const changeCheckedProjects = projectsStateList.map((item) =>
+      item.id === id ? { ...item, checked: !item.checked } : item
+    );
+    setProjects(changeCheckedProjects);
   };
 
+  const handleChangeCheckedS = (id) => {
+    const projectsStateListS = projectsS;
+    const changeCheckedProjectsS = projectsStateListS.map((item) =>
+      item.id === id ? { ...item, checked: !item.checked } : item
+    );
+    setProjectsS(changeCheckedProjectsS);
+  };
 
-const[projectsS,setProjectsS]=useState(data.Subscription)
-  const handleChangeCheckedS=id=>{
-  const projectsStateListS = projectsS;
-  const changeCheckedProjectsS=projectsStateListS.map(item=>item.id===id?
-  {...item,checked:!item.checked}:item);
-  setProjectsS(changeCheckedProjectsS);
-};
+  const handleChangeCheckedYL = (id) => {
+    const projectsStateListYL = projectsYL;
+    const changeCheckedProjectsYL = projectsStateListYL.map((item) =>
+      item.id === id ? { ...item, checked: !item.checked } : item
+    );
+    setProjectsYL(changeCheckedProjectsYL);
+  };
 
+  const handleChangeCheckedSM = (id) => {
+    const projectsStateListSM = projectsSM;
+    const changeCheckedProjectsSM = projectsStateListSM.map((item) =>
+      item.id === id ? { ...item, checked: !item.checked } : item
+    );
+    setProjectsSM(changeCheckedProjectsSM);
+  };
 
-const[projectsYL,setProjectsYL]=useState(data.YearLevel)
-  const handleChangeCheckedYL=id=>{
-  const projectsStateListYL = projectsYL;
-  const changeCheckedProjectsYL=projectsStateListYL.map(item=>item.id===id?
-  {...item,checked:!item.checked}:item);
-  setProjectsYL(changeCheckedProjectsYL);
-};
+//--------------------------------------- Apply filters to the project list------------------------------------------------
 
+  const applyFilters = () => {
+    let updatedList = data.ProjectList;
 
+    if (selectedCategory) {
+      updatedList = updatedList.filter((item) => item.level === selectedCategory);
+    }
 
-const[projectsSM,setProjectsSM]=useState(data.SubjectMatter)
-  const handleChangeCheckedSM=id=>{
-  const projectsStateListSM = projectsSM;
-  const changeCheckedProjectsSM=projectsStateListSM.map(item=>item.id===id?
-  {...item,checked:!item.checked}:item);
-  setProjectsSM(changeCheckedProjectsSM);
-};
+    const projectCheckedS = projectsS
+      .filter((item) => item.checked)
+      .map((item) => item.label);
 
+    if (projectCheckedS.length) {
+      updatedList = updatedList.filter((item) =>
+        projectCheckedS.includes(item.suscription)
+      );
+    }
 
+    const projectChecked = projects
+      .filter((item) => item.checked)
+      .map((item) => item.label);
 
-const applyFilters=()=>{
-  
-let updatedList=data.ProjectList;
+    if (projectChecked.length) {
+      updatedList = updatedList.filter((item) =>
+        projectChecked.includes(item.activity_type)
+      );
+    }
 
-if (selectedCategory) {
-  updatedList = updatedList.filter(
-    (item) => item.level === selectedCategory
-  );
-}
+    const projectCheckedYL = projectsYL
+      .filter((item) => item.checked)
+      .map((item) => item.label);
 
+    if (projectCheckedYL.length) {
+      updatedList = updatedList.filter((item) =>
+        projectCheckedYL.includes(item.year_level)
+      );
+    }
 
-   const projectCheckedS=projectsS
-  .filter((item)=>item.checked)
-  .map((item)=>item.label);
-  
-  if (projectCheckedS.length){
-  updatedList=updatedList.filter((item)=>
-  projectCheckedS.includes(item.suscription)    
-  );
-  }
+    const projectCheckedSM = projectsSM
+      .filter((item) => item.checked)
+      .map((item) => item.label);
 
+    if (projectCheckedSM.length) {
+      updatedList = updatedList.filter((item) =>
+        projectCheckedSM.includes(item.subject_matter)
+      );
+    }
 
-  const projectChecked=projects
-  .filter((item)=>item.checked)
-  .map((item)=>item.label);
-  
-  if (projectChecked.length){
-  updatedList=updatedList.filter((item)=>
-  projectChecked.includes(item.type)    
-  );
-  }
+    setList(updatedList);
+    !updatedList.length ? setResultsFound(false) : setResultsFound(true);
+  };
 
+  useEffect(() => {
+    applyFilters();
+  }, [selectedCategory, projects, projectsS, projectsYL, projectsSM]);
 
+  return (
 
-  const projectCheckedYL=projectsYL
-  .filter((item)=>item.checked)
-  .map((item)=>item.label);
-  
-  if (projectCheckedYL.length){
-  updatedList=updatedList.filter((item)=>
-  projectCheckedYL.includes(item.yearlevel)    
-  );
-  }
+    <div className={Styles.main}>
+      <div className={Styles.div}>
+        <div className={Styles.navbar}>
 
+{/*------------------------------------------- -Render NavBar component------------------------------ */}
 
-  const projectCheckedSM=projectsSM
-  .filter((item)=>item.checked)
-  .map((item)=>item.label);
-  
-  if (projectCheckedSM.length){
-  updatedList=updatedList.filter((item)=>
-  projectCheckedSM.includes(item.subjectmatter)
-    
-  );
-  }
+          <NavBar />
+        </div>
 
+        <div className={Styles.filter}>
 
-setList(updatedList);
-!updatedList.length ? setResultsFound(false) : setResultsFound(true);
-};
+{/*---------------------------------------- Render FilterSection component with props-------------------- */}
 
-useEffect(()=>{
-applyFilters();
-},
-[selectedCategory,projects,projectsS,projectsYL,projectsSM]
-);
+          <FilterSection
+            projectsS={projectsS}
+            changeCheckedS={handleChangeCheckedS}
+            projects={projects}
+            changeChecked={handleChangeChecked}
+            projectsYL={projectsYL}
+            changeCheckedYL={handleChangeCheckedYL}
+            projectsSM={projectsSM}
+            changeCheckedSM={handleChangeCheckedSM}
+          />
+        </div>
 
+        <div className="list">
 
+{/*--------------------------------------------- Render Buttons component with props-------------------------- */}
 
-  return  (
-    <div>
-    <div className="div">
-
-
-    <div className="navbar">
-   
-   <NavBar/>
-     </div>
-
-
-    <div className="filter">
-
-    <FilterSection
-
-    projectsS={projectsS}
-    changeCheckedS={handleChangeCheckedS}
-
-    projects={projects}
-    changeChecked={handleChangeChecked}
-
-    projectsYL={projectsYL}
-    changeCheckedYL={handleChangeCheckedYL}
-
-    projectsSM={projectsSM}
-    changeCheckedSM={handleChangeCheckedSM}/>
-
-    </div>  
-    
-
-    
-
-   
-   
-
-    <div className="list">
-
-    <Buttons 
-    
-    selectedCategory={selectedCategory}
+          <Buttons
+            selectedCategory={selectedCategory}
             selectCategory={handleSelectCategory}
-    setList={setList}
-    
-    />
-    
-    </div>
+            setList={setList}
+          />
+        </div>
 
-    <div className="listp" >
-    
-    {resultsFound ? <Card list={list} /> : <EmptyView />}
-    
-    </div>
+        <div className={Styles.listp}>
 
-   <div className="outer-box">
-    <div className="footer">    
-    <BackToTopButton/>
-    </div>
-    
-    
-    </div>
-    
-    
+{/*------------------------------------------- Conditionally render Card or EmptyView------------------------------ */}
 
-   </div>
-   <div>
-    <div className="footerone">
-           <Footer/>
-           </div>
-           </div>
-           </div>
-  
-    
-    
+          {resultsFound ? <Card list={list} /> : <EmptyView />}
+        </div>
+
+        <div className={Styles.footer}>
+
+{/*--------------------------------------------- Render BackToTopButton component------------------------------------ */}
+
+          <BackToTopButton />
+        </div>
+      </div>
+      <div>
+        <div className={Styles.footerone}>
+
+{/*---------------------------------------------------- Render Footer component--------------------------------------- */}
+
+          <Footer />
+        </div>
+      </div>
+    </div>
   );
 };
-export default StudentProjects;
 
+export default StudentProjects;
 
 

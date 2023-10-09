@@ -1,0 +1,21 @@
+.label {
+  margin-bottom: 0.1rem;
+  margin-right: 40px;
+  margin-left: 0;
+  font-weight: 800;
+  border-bottom: 1px solid;
+  font-size: 15px;
+  color: black;
+}
+
+.inputgroup {
+  margin-bottom: 10px;
+  font-size: 5px;
+}
+
+.filter1 {
+  margin-top: 90px;
+}
+
+
+

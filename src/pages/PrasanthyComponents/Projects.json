@@ -1,287 +1,259 @@
 {
-    "ProjectList": [
-      {
-        "img": "images/projects/Project01.png",
-        "id": 1,
-        "subscription": "Free",
-        "title": "Indroduction",
-        "level": "BEGINNER",
-        "type": "Animation",
-        "yearlevel": "1-4",
-        "subjectmatter": "Language"
-      },
-      {
-        "img":"images/projects/Project02.png" ,
-        "id":2,
-        "suscription":"Free",
-        "title":"My Birthday",
-        "level":"BEGINNER",
-        "type":"Game",
-        "yearlevel":"5-6",
-        "subjectmatter":"Music"
-
+  "ProjectList": [
+    {
+      "project_pic": "images/projects/Project01.png",
+      "project_id": 1,
+      "subscription": "Free",
+      "name": "Indroduction",
+      "level": "BEGINNER",
+      "activity_type": "Animation",
+      "year_level": "1-4",
+      "subject_matter": "Language"
     },
     {
-        "img":"images/projects/Project03.png" ,
-        "id":3,
-        "suscription":"Premium",
-        "title":"10 Block Challenge",
-        "level":"INTERMEDIATE",
-        "type":"Animation",
-        "yearlevel":"7-8",
-        "subjectmatter":"Maths"
-
+      "project_pic": "images/projects/Project02.png",
+      "project_id": 2,
+      "suscription": "Free",
+      "name": "My Birthday",
+      "level": "BEGINNER",
+      "activity_type": "Game",
+      "year_level": "5-6",
+      "subject_matter": "Music"
     },
     {
-        "img":"images/projects/Project04.png" ,
-        "id":4,
-        "suscription":"Premium",
-        "title":"Build a Band",
-        "level":"INTERMEDIATE",
-        "type":"Game",
-        "yearlevel":"7-8",
-        "subjectmatter":"Music"
-
+      "project_pic": "images/projects/Project03.png",
+      "project_id": 3,
+      "suscription": "Premium",
+      "name": "10 Block Challenge",
+      "level": "INTERMEDIATE",
+      "activity_type": "Animation",
+      "year_level": "7-8",
+      "subject_matter": "Maths"
     },
     {
-        "img":"images/projects/Project05.png" ,
-        "id":5,
-        "suscription":"Premium",
-        "title":"The Bear and the Monkey",
-        "level":"BEGINNER",
-        "type":"Game",
-        "yearlevel":"1-4",
-        "subjectmatter":"Science"
-
+      "project_pic": "images/projects/Project04.png",
+      "project_id": 4,
+      "suscription": "Premium",
+      "name": "Build a Band",
+      "level": "INTERMEDIATE",
+      "activity_type": "Game",
+      "year_level": "7-8",
+      "subject_matter": "Music"
     },
     {
-        "img":"images/projects/Project06.png" ,
-        "id":6,
-        "suscription":"Premium",
-        "title":"Debugging",
-        "level":"ADVANCED",
-        "type":"Augmented Reality",
-        "yearlevel":"9-13",
-        "subjectmatter":"Computer Science"
-
+      "project_pic": "images/projects/Project05.png",
+      "project_id": 5,
+      "suscription": "Premium",
+      "name": "The Bear and the Monkey",
+      "level": "BEGINNER",
+      "activity_type": "Game",
+      "year_level": "1-4",
+      "subject_matter": "Science"
     },
     {
-        "img":"images/projects/Project07.png" ,
-        "id":7,
-        "suscription":"Free",
-        "title":"About me",
-        "level":"BEGINNER",
-        "type":"Animation",
-        "yearlevel":"1-4",
-        "subjectmatter":"Language"
-        
-
+      "project_pic": "images/projects/Project06.png",
+      "project_id": 6,
+      "suscription": "Premium",
+      "name": "Debugging",
+      "level": "ADVANCED",
+      "activity_type": "Augmented Reality",
+      "year_level": "9-13",
+      "subject_matter": "Computer Science"
     },
     {
-        "img":"images/projects/Project08.png" ,
-        "id":8,
-       "suscription":"Premium",
-        "title":"I am here!",
-        "level":"BEGINNER",
-        "type":"Animation",
-        "yearlevel":"5-6",
-        "subjectmatter":"Computer Science"
-
+      "project_pic": "images/projects/Project07.png",
+      "project_id": 7,
+      "suscription": "Free",
+      "name": "About me",
+      "level": "BEGINNER",
+      "activity_type": "Animation",
+      "year_level": "1-4",
+      "subject_matter": "Language"
     },
     {
-        "img":"images/projects/Project09.png" ,
-        "id":9,
-        "suscription":"Free",
-        "title":"Funny faces",
-        "level":"BEGINNER",
-        "type":"Game",
-        "yearlevel":"1-4",
-        "subjectmatter":"Art"
-
+      "project_pic": "images/projects/Project08.png",
+      "project_id": 8,
+      "suscription": "Premium",
+      "name": "I am here!",
+      "level": "BEGINNER",
+      "activity_type": "Animation",
+      "year_level": "5-6",
+      "subject_matter": "Computer Science"
     },
     {
-        "img":"images/projects/Project10.png" ,
-        "id":10,
-        "suscription":"Premium",
-        "title":"It tickles!",
-        "level":"INTERMEDIATE",
-        "type":"Animation",
-        "yearlevel":"7-8",
-        "subjectmatter":"Maths"
-
-
+      "project_pic": "images/projects/Project09.png",
+      "project_id": 9,
+      "suscription": "Free",
+      "name": "Funny faces",
+      "level": "BEGINNER",
+      "activity_type": "Game",
+      "year_level": "1-4",
+      "subject_matter": "Art"
     },
     {
-        "img":"images/projects/Project11.png",
-        "id":11,
-        "suscription":"Premium",
-        "title":"Penguin in a desert!",
-        "level":"BEGINNER",
-        "type":"Chatbot",
-        "yearlevel":"5-6",
-        "subjectmatter":"Science"
-
-
+      "project_pic": "images/projects/Project10.png",
+      "project_id": 10,
+      "suscription": "Premium",
+      "name": "It tickles!",
+      "level": "INTERMEDIATE",
+      "activity_type": "Animation",
+      "year_level": "7-8",
+      "subject_matter": "Maths"
     },
     {
-        "img":"images/projects/Project12.png",
-        "id":12,
-        "suscription":"Premium",
-        "title":"Time Travel",
-        "level":"ADVANCED",
-        "type":"Animation",
-        "yearlevel":"9-13",
-        "subjectmatter":"Science"
-
+      "project_pic": "images/projects/Project11.png",
+      "project_id": 11,
+      "suscription": "Premium",
+      "name": "Penguin in a desert!",
+      "level": "BEGINNER",
+      "activity_type": "Chatbot",
+      "year_level": "5-6",
+      "subject_matter": "Science"
     },
     {
-        "img":"images/projects/Project13.png" ,
-        "id":13,
-        "suscription":"Free",
-        "title":"Birthday Card",
-        "level":"BEGINNER",
-        "type":"Chatbot",
-        "yearlevel":"1-4",
-        "subjectmatter":"Art"
-
+      "project_pic": "images/projects/Project12.png",
+      "project_id": 12,
+      "suscription": "Premium",
+      "name": "Time Travel",
+      "level": "ADVANCED",
+      "activity_type": "Animation",
+      "year_level": "9-13",
+      "subject_matter": "Science"
     },
     {
-        "img":"images/projects/Project14.png" ,
-        "id":14,
-        "suscription":"Free",
-        "title":"The Lion and the Mouse",
-        "level":"BEGINNER",
-        "type":"Animation",
-        "yearlevel":"1-4",
-        "subjectmatter":"Art"
-
+      "project_pic": "images/projects/Project13.png",
+      "project_id": 13,
+      "suscription": "Free",
+      "name": "Birthday Card",
+      "level": "BEGINNER",
+      "activity_type": "Chatbot",
+      "year_level": "1-4",
+      "subject_matter": "Art"
     },
     {
-        "img":"images/projects/Project15.png" ,
-        "id":15,
-        "suscription":"Premium",
-        "title":"The Lion in the Forest",
-        "level":"ADVANCED",
-        "type":"Augmented Reality",
-        "yearlevel":"9-13",
-        "subjectmatter":"Computer Science"
-
+      "project_pic": "images/projects/Project14.png",
+      "project_id": 14,
+      "suscription": "Free",
+      "name": "The Lion and the Mouse",
+      "level": "BEGINNER",
+      "activity_type": "Animation",
+      "year_level": "1-4",
+      "subject_matter": "Art"
+    },
+    {
+      "project_pic": "images/projects/Project15.png",
+      "project_id": 15,
+      "suscription": "Premium",
+      "name": "The Lion in the Forest",
+      "level": "ADVANCED",
+      "activity_type": "Augmented Reality",
+      "year_level": "9-13",
+      "subject_matter": "Computer Science"
     }
-    ],
-    "Subscription": [
-      {
-        "id": 1,
-        "checked": false,
-        "label": "Free"
-      },
-      {
-        "id":2,
-        "checked":false,
-        "label":"Premium"
+  ],
+  "Subscription": [
+    {
+      "id": 1,
+      "checked": false,
+      "label": "Free"
+    },
+    {
+      "id": 2,
+      "checked": false,
+      "label": "Premium"
     }
-      
-    ],
-    "YearLevel": [
-      {
-        "id": 1,
-        "checked": false,
-        "label": "1-4"
-      },
-      {
-        "id": 2,
-        "checked":false,
-        "label": "5-6"
-      },
-      {
-        "id": 3,
-        "checked":false,
-        "label": "7-8"
-      },
-      {
-        "id": 4,
-        "checked":false,
-        "label": "9-13"
-      }
-      
-    ],
-    "SubjectMatter": [
-      {
-        "id": 1,
-        "checked": false,
-        "label": "Computer Science"
-      },
-      {
-        "id":2,
-        "checked":false,
-        "label":"Maths"
-        },
-        {
-            "id":3,
-            "checked":false,
-            "label":"Science"
-            },
-            {
-                "id":4,
-                "checked":false,
-                "label":"Language"
-                },
-                {
-                    "id":5,
-                    "checked":false,
-                    "label":"Art"
-                    },
-                    {
-                        "id":6,
-                        "checked":false,
-                        "label":"Music"
-                        }
-
-
-      
-    ],
-    "ActivityType": [
-      {
-        "id": 1,
-        "checked": false,
-        "label": "Animation"
-      },
-      {
-      
-        "id":2,
-        "checked":false,
-        "label":"Game"
-      },
-      {
-  
-        "id":3,
-        "checked":false,
-        "label":"Chatbot"
-      },
-      {
-  
-        "id":4,
-        "checked":false,
-        "label":"Augmented Reality"
-      }     
-
-      
-    ],
-    "ButtonsList": [
-      {
-        "id": 1,
-        "value": "BEGINNER",
-        "label": "BEGINNER"
-      },
-      {
-        "id": 2,
-        "value": "INTERMEDIATE",
-        "label": "INTERMEDIATE"
-      },
-      {
-        "id": 3,
-        "value": "ADVANCED",
-        "label": "ADVANCED"
-      }
-      
-    ]
-  }
+  ],
+  "YearLevel": [
+    {
+      "id": 1,
+      "checked": false,
+      "label": "1-4"
+    },
+    {
+      "id": 2,
+      "checked": false,
+      "label": "5-6"
+    },
+    {
+      "id": 3,
+      "checked": false,
+      "label": "7-8"
+    },
+    {
+      "id": 4,
+      "checked": false,
+      "label": "9-13"
+    }
+  ],
+  "SubjectMatter": [
+    {
+      "id": 1,
+      "checked": false,
+      "label": "Computer Science"
+    },
+    {
+      "id": 2,
+      "checked": false,
+      "label": "Maths"
+    },
+    {
+      "id": 3,
+      "checked": false,
+      "label": "Science"
+    },
+    {
+      "id": 4,
+      "checked": false,
+      "label": "Language"
+    },
+    {
+      "id": 5,
+      "checked": false,
+      "label": "Art"
+    },
+    {
+      "id": 6,
+      "checked": false,
+      "label": "Music"
+    }
+  ],
+  "ActivityType": [
+    {
+      "id": 1,
+      "checked": false,
+      "label": "Animation"
+    },
+    {
+      "id": 2,
+      "checked": false,
+      "label": "Game"
+    },
+    {
+      "id": 3,
+      "checked": false,
+      "label": "Chatbot"
+    },
+    {
+      "id": 4,
+      "checked": false,
+      "label": "Augmented Reality"
+    }
+  ],
+  "ButtonsList": [
+    {
+      "id": 1,
+      "value": "BEGINNER",
+      "label": "BEGINNER"
+    },
+    {
+      "id": 2,
+      "value": "INTERMEDIATE",
+      "label": "INTERMEDIATE"
+    },
+    {
+      "id": 3,
+      "value": "ADVANCED",
+      "label": "ADVANCED"
+    }
+  ]
+}
