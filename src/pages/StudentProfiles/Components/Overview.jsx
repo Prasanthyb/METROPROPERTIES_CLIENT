@@ -9,23 +9,13 @@ export default function Overview() {
   const [users, setUsers] = useState([]);
 
   useEffect(function () {
-    fetch("http://localhost:8000/api/studentprofiles")
+    fetch("http://localhost:4000/api/studentprofiles")
       .then((res) => res.json())
       .then((res) => {
         console.log(res);
         setUsers(res);
       });
   }, []);
-  // --------------------------------------------
-  // useEffect(function () {
-  //   fetch("http://localhost:4000/api/user")
-  //     .then((res) => res.json())
-  //     .then((res) => {
-  //       console.log(res);
-  //       setUsers(res);
-  //     });
-  // }, []);
-  // --------------------------------------------
 
   return (
     // ------------------------- overviewContainer provides ability to position the helpRequestsContainer
@@ -38,7 +28,7 @@ export default function Overview() {
               return (
                 <div key={user.student_id} className={Styles.card}>
                   <img src={user.profile_pic} alt="students" className={Styles.studentImage} />
-                  <p>{user.name}</p>
+                  <p>{user.name.toUpperCase()}</p>
                 </div>
               );
             })}

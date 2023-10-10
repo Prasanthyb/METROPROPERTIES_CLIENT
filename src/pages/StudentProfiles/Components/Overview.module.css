@@ -1,17 +1,4 @@
 /* -------- Overview container */
-/* .overviewContainer {
-    border: 4px solid yellow;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: calc(100vh - 120px);
-  } */
-  /* ^^^^^^^^^^^^^^^^^^^^^ */
-
-  /* ########################################################################################## */
-
-  /* -------- Overview container */
 .OverviewContainer {
   /* border: 4px solid yellow; */
   width: 100%;
@@ -27,38 +14,42 @@
   border-radius: 30px;
   width: 95%;
   height: 90%;
-  /* padding-right: 40px; */
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 /* ^^^^^^^^^^^^^^^^^^^^^ */
 /* -------- Card container */
 .container {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* Five columns */
-  gap: 20px; /* Adjust the gap as needed */
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  row-gap: 0px; 
+  column-gap: 40px;
   justify-content: center;
+  align-items: center;
   width: 90%;
   height: 90%;
-  margin: 0 auto; /* Center the grid */
+  margin: 0 auto; 
+  padding: 20px;
 }
+
 /* ^^^^^^^^^^^^^^^^^^^^^ */
 /* ------ Student card */
 .studentImage {
-  width: 85px;
+  width: 70%;
+  height: auto;
 }
 
 .card {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-self: center;
   background-color: white;
   text-align: center;
-  width: 175px;
-  height: 165px;
+  width: 70%;
+  height: 80%;
   padding: 25px;
-  margin: 10px 30px 10px 30px;
   border-radius: 10px;
   color: #fff;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -67,9 +58,11 @@
 .card p {
   margin: 19px 0 0 0;
   align-self: center;
-  font-size: 14px;
+  font-size: 10px;
+  font-weight: 700;
 }
 /* ^^^^^^^^^^^^^^^^^^^^^ */
+
 
 /* --------   SCROLL BAR  FOR INDIVIDUAL HELP REQUESTS CONTAINER  */
 

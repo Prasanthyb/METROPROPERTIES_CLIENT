@@ -1,11 +1,23 @@
 import React from "react";
 import Styles from "./Overview.module.css";
+import { useState, useEffect } from "react";
 // --------------------- Font Awesome library imports
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faReply, faCheck } from "@fortawesome/free-solid-svg-icons";
 // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 export default function Overview() {
+  const [users, setUsers] = useState([]);
+
+  useEffect(function () {
+    fetch("http://localhost:4000/api/helprequests")
+      .then((res) => res.json())
+      .then((res) => {
+        console.log(res);
+        setUsers(res);
+      });
+  }, []);
+
   return (
     // ------------------------- overviewContainer provides ability to position the helpRequestsContainer
     <div className={Styles.overviewContainer}>
@@ -30,227 +42,31 @@ export default function Overview() {
         <div className={Styles.individualRequestsContainer}>
           {/* --------------------------- Student request */}
           <div className={Styles.individualRequests}>
-            <input
-              type="checkbox"
-              id="Checkbox"
-              name="Checkbox"
-              value="checkboxValue"
-            />
+            {users &&
+              users.map(function (user) {
+                return (
+                  <div key={user.student_id} className={Styles.helpRequestCard}>
+                    <input
+                      type="checkbox"
+                      id="Checkbox"
+                      name="Checkbox"
+                      value="checkboxValue"
+                    />
 
-            <div className={Styles.individualStudent}>
-              <div className={Styles.studentImgContainer}>
-                <img
-                  src="/images/students/AidenAndrews.png"
-                  alt="Student profile"
-                />
-                <p>STUDENT needs help with their project</p>
-              </div>
+                    <div className={Styles.individualStudent}>
+                      <div className={Styles.studentImgContainer}>
+                        <img src={user.profile_pic} alt="Student profile" />
+                        <p>{user.name.split(' ')[0].toUpperCase()} needs help with their project</p>
 
-              <div className={Styles.dateTimeContainer}>
-                <p>Date</p>
-                <p>Time</p>
-              </div>
-            </div>
-          </div>
-          {/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */}
-          {/* --------------------------- Student request */}
-          <div className={Styles.individualRequests}>
-            <input
-              type="checkbox"
-              id="Checkbox"
-              name="Checkbox"
-              value="checkboxValue"
-            />
+                      </div>
 
-            <div className={Styles.individualStudent}>
-              <div className={Styles.studentImgContainer}>
-                <img
-                  src="/images/students/AliceKindellan.png"
-                  alt="Student profile"
-                />
-                <p>STUDENT needs help with their project</p>
-              </div>
-
-              <div className={Styles.dateTimeContainer}>
-                <p>Date</p>
-                <p>Time</p>
-              </div>
-            </div>
-          </div>
-          {/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */}
-          {/* --------------------------- Student request */}
-          <div className={Styles.individualRequests}>
-            <input
-              type="checkbox"
-              id="Checkbox"
-              name="Checkbox"
-              value="checkboxValue"
-            />
-
-            <div className={Styles.individualStudent}>
-              <div className={Styles.studentImgContainer}>
-                <img
-                  src="/images/students/CourtneyBristol.png"
-                  alt="Student profile"
-                />
-                <p>STUDENT needs help with their project</p>
-              </div>
-
-              <div className={Styles.dateTimeContainer}>
-                <p>Date</p>
-                <p>Time</p>
-              </div>
-            </div>
-          </div>
-          {/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */}
-          {/* --------------------------- Student request */}
-          <div className={Styles.individualRequests}>
-            <input
-              type="checkbox"
-              id="Checkbox"
-              name="Checkbox"
-              value="checkboxValue"
-            />
-
-            <div className={Styles.individualStudent}>
-              <div className={Styles.studentImgContainer}>
-                <img
-                  src="/images/students/HanuNepe.png"
-                  alt="Student profile"
-                />
-                <p>STUDENT needs help with their project</p>
-              </div>
-
-              <div className={Styles.dateTimeContainer}>
-                <p>Date</p>
-                <p>Time</p>
-              </div>
-            </div>
-          </div>
-          {/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */}
-          {/* --------------------------- Student request */}
-          <div className={Styles.individualRequests}>
-            <input
-              type="checkbox"
-              id="Checkbox"
-              name="Checkbox"
-              value="checkboxValue"
-            />
-
-            <div className={Styles.individualStudent}>
-              <div className={Styles.studentImgContainer}>
-                <img
-                  src="/images/students/HarryMcGrath.png"
-                  alt="Student profile"
-                />
-                <p>STUDENT needs help with their project</p>
-              </div>
-
-              <div className={Styles.dateTimeContainer}>
-                <p>Date</p>
-                <p>Time</p>
-              </div>
-            </div>
-          </div>
-          {/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */}
-          {/* --------------------------- Student request */}
-          <div className={Styles.individualRequests}>
-            <input
-              type="checkbox"
-              id="Checkbox"
-              name="Checkbox"
-              value="checkboxValue"
-            />
-
-            <div className={Styles.individualStudent}>
-              <div className={Styles.studentImgContainer}>
-                <img
-                  src="/images/students/JavierFuego.png"
-                  alt="Student profile"
-                />
-                <p>STUDENT needs help with their project</p>
-              </div>
-
-              <div className={Styles.dateTimeContainer}>
-                <p>Date</p>
-                <p>Time</p>
-              </div>
-            </div>
-          </div>
-          {/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */}
-          {/* --------------------------- Student request */}
-          <div className={Styles.individualRequests}>
-            <input
-              type="checkbox"
-              id="Checkbox"
-              name="Checkbox"
-              value="checkboxValue"
-            />
-
-            <div className={Styles.individualStudent}>
-              <div className={Styles.studentImgContainer}>
-                <img
-                  src="/images/students/LisaHoran.png"
-                  alt="Student profile"
-                />
-                <p>STUDENT needs help with their project</p>
-              </div>
-
-              <div className={Styles.dateTimeContainer}>
-                <p>Date</p>
-                <p>Time</p>
-              </div>
-            </div>
-          </div>
-          {/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */}
-          {/* --------------------------- Student request */}
-          <div className={Styles.individualRequests}>
-            <input
-              type="checkbox"
-              id="Checkbox"
-              name="Checkbox"
-              value="checkboxValue"
-            />
-
-            <div className={Styles.individualStudent}>
-              <div className={Styles.studentImgContainer}>
-                <img
-                  src="/images/students/LuciaMendez.png"
-                  alt="Student profile"
-                />
-                <p>STUDENT needs help with their project</p>
-              </div>
-
-              <div className={Styles.dateTimeContainer}>
-                <p>Date</p>
-                <p>Time</p>
-              </div>
-            </div>
-          </div>
-          {/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */}
-          {/* --------------------------- Student request */}
-          <div className={Styles.individualRequests}>
-            <input
-              type="checkbox"
-              id="Checkbox"
-              name="Checkbox"
-              value="checkboxValue"
-            />
-
-            <div className={Styles.individualStudent}>
-              <div className={Styles.studentImgContainer}>
-                <img
-                  src="/images/students/MarkOLeary.png"
-                  alt="Student profile"
-                />
-                <p>STUDENT needs help with their project</p>
-              </div>
-
-              <div className={Styles.dateTimeContainer}>
-                <p>Date</p>
-                <p>Time</p>
-              </div>
-            </div>
+                      <div className={Styles.dateTimeContainer}>
+                        {user.date_created}
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
           </div>
           {/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */}
         </div>

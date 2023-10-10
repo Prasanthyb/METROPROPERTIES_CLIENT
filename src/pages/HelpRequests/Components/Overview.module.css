@@ -56,11 +56,10 @@
 }
 /* ^^^^^^^^^^^^^^^^^^^^^ */
 /* -------- Styling applied to all individual requests made by students */
-.individualRequests {
-  /* border: 2px solid red; */
-  margin: 0 50px 50px 50px;
+.helpRequestCard {
   display: flex;
   align-items: center;
+  margin: 0 50px 50px 50px;
 }
 
 .individualRequests input {
