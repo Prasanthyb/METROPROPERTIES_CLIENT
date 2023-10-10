@@ -36,7 +36,7 @@
 /* ^^^^^^^^^^^^^^^^^^^^^ */
 /* ------ Student card */
 .studentImage {
-  width: 70%;
+  width: 50%;
   height: auto;
 }
 
@@ -44,12 +44,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   justify-self: center;
   background-color: white;
   text-align: center;
   width: 70%;
   height: 80%;
-  padding: 25px;
   border-radius: 10px;
   color: #fff;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -58,7 +58,7 @@
 .card p {
   margin: 19px 0 0 0;
   align-self: center;
-  font-size: 10px;
+  font-size: 14px;
   font-weight: 700;
 }
 /* ^^^^^^^^^^^^^^^^^^^^^ */
