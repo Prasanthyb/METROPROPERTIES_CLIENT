@@ -18,6 +18,30 @@ export default function Overview() {
       });
   }, []);
 
+  function formatDate(dateString, format) {
+    const date = new Date(dateString);
+    const dateOptions = {
+      weekday: "short",
+      day: "numeric",
+      month: "short",
+      year: "numeric",
+    };
+
+    const timeOptions = {
+      hour: "numeric",
+      minute: "numeric",
+      hour12: true,
+    };
+
+    if (format === "date") {
+      return date.toLocaleString("en-US", dateOptions);
+    } else if (format === "time") {
+      return date.toLocaleString("en-US", timeOptions);
+    } else {
+      return ""; // Handle unsupported format
+    }
+  }
+
   return (
     // ------------------------- overviewContainer provides ability to position the helpRequestsContainer
     <div className={Styles.overviewContainer}>
@@ -56,12 +80,19 @@ export default function Overview() {
                     <div className={Styles.individualStudent}>
                       <div className={Styles.studentImgContainer}>
                         <img src={user.profile_pic} alt="Student profile" />
-                        <p>{user.name.split(' ')[0].toUpperCase()} needs help with their project</p>
-
+                        <p>
+                          {user.name.split(" ")[0].toUpperCase()} needs help
+                          with their project
+                        </p>
                       </div>
 
                       <div className={Styles.dateTimeContainer}>
-                        {user.date_created}
+                        <div className={Styles.date}>
+                          {formatDate(user.date_created, "date")}
+                        </div>
+                        <div className={Styles.time}>
+                          {formatDate(user.date_created, "time")}
+                        </div>
                       </div>
                     </div>
                   </div>
