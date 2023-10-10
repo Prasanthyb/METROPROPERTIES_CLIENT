@@ -118,7 +118,7 @@ export default function Menu() {
               {/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */}
               {/* ------------- Project Library link */}
               <NavLink
-                to={"/projectlibrary"}
+                to={"/studentprojects"}
                 className={({ isActive }) => `${isActive ? Styles.active : ""} ${menuIcons ? Styles.menuLinksCollapsed : ""}`}
               >
                 <li>
