@@ -56,15 +56,6 @@
   align-items: flex-start;
 }
 
-.menuLinks li:hover {
-  background-color: grey;
-}
-
-/* .menuLinksClicked {
-  This is the css rule applied when the changeMenuLinkBckgrndColor function is called as a result of clicking on a menu link
-  background-color: red;
-} */
-
 .menuLinks a {
   text-decoration: none;
   margin: 0;
@@ -72,7 +63,17 @@
   display: flex;
 }
 
-.menuLinks a p {
+.menuLinks a:active {
+  /* This applies the background when the NavLink is clicked */
+  background-color: #b2e4fa;
+}
+
+.active {
+  /* This applies the background color to 'active' NavLink, ensure the color change remains after the NavLink has been clicked */
+  background-color: #B1E4F9;
+}
+
+.menuLinks p {
   /* border: 2px solid pink; */
   font-size: 14px;
   color: #fff;
@@ -162,3 +163,4 @@
   margin: 5px 0 5px 0;
 }
 /* ^^^^^^^^^^^^^^^^^^^^^^ */
+

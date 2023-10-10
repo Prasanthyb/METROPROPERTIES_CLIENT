@@ -1,6 +1,7 @@
 import React from "react";
 import Styles from "./Menu.module.css";
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 // ------------------------ ICON AND IMG IMPORTS FROM SRC FOLDER
 import ProgressTrackerIcon from "../assets/TeacherDashboard/progressTracker.png";
 import StudentProfilesIcon from "../assets/TeacherDashboard/studentProfiles.png";
@@ -29,10 +30,6 @@ export default function Menu() {
     setArrowRight(!arrowRight); // Changes red arrow from flex-end to flex start, border radius from left to right side, and img of arrow pointing left to pointing right when menu is collapsed.
   };
 
-  // const changeMenuLinkBckGrndClr = () => {
-  //   setListItems(!listItems); // Changes background color of menu links to light blue when the links are clicked.
-  // }
-
   return (
     <>
       <div
@@ -40,9 +37,7 @@ export default function Menu() {
       >
         <div>
           {/* ---------------- Teacher profile image */}
-          <div
-            className={Styles.teacherProfileImage}
-          >
+          <div className={Styles.teacherProfileImage}>
             <img
               src="/images/teachers/JasminaSalvador.png"
               alt="Teacher profile"
@@ -54,8 +49,11 @@ export default function Menu() {
           <div className={Styles.menuLinksContainer}>
             <ul className={Styles.menuLinks}>
               {/* ------------- Progress Tracker link */}
-              <li className={`${menuIcons ? Styles.menuLinksCollapsed : ""}`}>
-                <a href="/progresstracker">
+              <NavLink
+                to={"/progresstracker"}
+                className={({ isActive }) => `${isActive ? Styles.active : ""} ${menuIcons ? Styles.menuLinksCollapsed : ""}`}
+              >
+                <li>
                   <img
                     className={Styles.menuIcon}
                     src={ProgressTrackerIcon}
@@ -64,12 +62,15 @@ export default function Menu() {
                   <p className={`${menuText ? Styles.menuTextEl : ""}`}>
                     PROGRESS TRACKER
                   </p>
-                </a>
-              </li>
+                </li>
+              </NavLink>
               {/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */}
               {/* ------------- Student Profiles link */}
-              <li className={`${menuIcons ? Styles.menuLinksCollapsed : ""}`}>
-                <a href="/studentprofiles">
+              <NavLink
+                to={"/studentprofiles"}
+                className={({ isActive }) => `${isActive ? Styles.active : ""} ${menuIcons ? Styles.menuLinksCollapsed : ""}`}
+              >
+                <li>
                   <img
                     className={Styles.menuIcon}
                     src={StudentProfilesIcon}
@@ -78,12 +79,15 @@ export default function Menu() {
                   <p className={`${menuText ? Styles.menuTextEl : ""}`}>
                     STUDENT PROFILES
                   </p>
-                </a>
-              </li>
+                </li>
+              </NavLink>
               {/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */}
               {/* ------------- Help Requests link link */}
-              <li className={`${menuIcons ? Styles.menuLinksCollapsed : ""}`}>
-                <a href="/helprequests" /*onClick={changeMenuLinkBckGrndClr} className={`${listItems ? Styles.menuLinksClicked : ""}`}*/>
+              <NavLink
+                to={"/helprequests"}
+                className={({ isActive }) => `${isActive ? Styles.active : ""} ${menuIcons ? Styles.menuLinksCollapsed : ""}`}
+              >
+                <li>
                   <img
                     className={Styles.menuIcon}
                     src={HelpRequestIconIcon}
@@ -92,12 +96,15 @@ export default function Menu() {
                   <p className={`${menuText ? Styles.menuTextEl : ""}`}>
                     HELP REQUESTS
                   </p>
-                </a>
-              </li>
+                </li>
+              </NavLink>
               {/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */}
               {/* ------------- Project Submissions link */}
-              <li className={`${menuIcons ? Styles.menuLinksCollapsed : ""}`}>
-                <a href="/projectsubmissions">
+              <NavLink
+                to={"/projectsubmissions"}
+                className={({ isActive }) => `${isActive ? Styles.active : ""} ${menuIcons ? Styles.menuLinksCollapsed : ""}`}
+              >
+                <li className={`${menuIcons ? Styles.menuLinksCollapsed : ""}`}>
                   <img
                     className={Styles.menuIcon}
                     src={ProjectSubmissionsIcon}
@@ -106,12 +113,15 @@ export default function Menu() {
                   <p className={`${menuText ? Styles.menuTextEl : ""}`}>
                     PROJECT SUBMISSIONS
                   </p>
-                </a>
-              </li>
+                </li>
+              </NavLink>
               {/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */}
               {/* ------------- Project Library link */}
-              <li className={`${menuIcons ? Styles.menuLinksCollapsed : ""}`}>
-                <a href="/projectlibrary">
+              <NavLink
+                to={"/projectlibrary"}
+                className={({ isActive }) => `${isActive ? Styles.active : ""} ${menuIcons ? Styles.menuLinksCollapsed : ""}`}
+              >
+                <li>
                   <img
                     className={Styles.menuIcon}
                     src={ProjectLibraryIcon}
@@ -120,8 +130,8 @@ export default function Menu() {
                   <p className={`${menuText ? Styles.menuTextEl : ""}`}>
                     PROJECT LIBRARY
                   </p>
-                </a>
-              </li>
+                </li>
+              </NavLink>
               {/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */}
             </ul>
           </div>
