@@ -11,37 +11,37 @@ import Footer from './Footer';
 
 const StudentProjects = () => {
 
-//----------------------- -State for the project list---------------------------------------
+// ----------------------- -State for the project list---------------------------------------//
 
   const [list, setList] = useState();
 
   useEffect(() => {
 
-//------------------------- Fetch project data from an API----------------------------------
+//------------------------- Fetch project data from an API----------------------------------//
 
     fetch('http://localhost:4000/api/projects')
       .then((response) => response.json())
       .then((response) => setList(response));
   }, []);
 
-//--------------- ---------State for selected category and results found----------------------
+//--------------- ---------State for selected category and results found----------------------//
 
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [resultsFound, setResultsFound] = useState(true);
 
-//-------------------------------- State for various project filters----------------------------
+//-------------------------------- State for various project filters----------------------------//
 
   const [projects, setProjects] = useState(data.ActivityType);
   const [projectsS, setProjectsS] = useState(data.Subscription);
   const [projectsYL, setProjectsYL] = useState(data.YearLevel);
   const [projectsSM, setProjectsSM] = useState(data.SubjectMatter);
 
-//------------------------------------- Handle selecting a category-------------------------------
+//------------------------------------- Handle selecting a category-------------------------------//
 
   const handleSelectCategory = (event, value) =>
     !value ? null : setSelectedCategory(value);
 
-//------------------------------ Handle checkbox changes for different filter categories------------
+//------------------------------ Handle checkbox changes for different filter categories-----------//
 
   const handleChangeChecked = (id) => {
     const projectsStateList = projects;
@@ -75,7 +75,7 @@ const StudentProjects = () => {
     setProjectsSM(changeCheckedProjectsSM);
   };
 
-//--------------------------------------- Apply filters to the project list------------------------------------------------
+//--------------------------------------- Apply filters to the project list-------------------------------//
 
   const applyFilters = () => {
     let updatedList = data.ProjectList;
@@ -161,7 +161,7 @@ const StudentProjects = () => {
 
         <div className="list">
 
-{/*--------------------------------------------- Render Buttons component with props-------------------------- */}
+{/*--------------------------------------------- Render Buttons component with props------------------*/}
 
           <Buttons
             selectedCategory={selectedCategory}
@@ -172,14 +172,14 @@ const StudentProjects = () => {
 
         <div className={Styles.listp}>
 
-{/*------------------------------------------- Conditionally render Card or EmptyView------------------------------ */}
+{/*------------------------------------------ Conditionally render Card or EmptyView----------------*/}
 
           {resultsFound ? <Card list={list} /> : <EmptyView />}
         </div>
 
         <div className={Styles.footer}>
 
-{/*--------------------------------------------- Render BackToTopButton component------------------------------------ */}
+{/*--------------------------------------------- Render BackToTopButton component------------------- */}
 
           <BackToTopButton />
         </div>
@@ -187,7 +187,7 @@ const StudentProjects = () => {
       <div>
         <div className={Styles.footerone}>
 
-{/*---------------------------------------------------- Render Footer component--------------------------------------- */}
+{/*------------------------------------------------Render Footer component----------------------------- */}
 
           <Footer />
         </div>

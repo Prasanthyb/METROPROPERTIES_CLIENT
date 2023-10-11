@@ -3,7 +3,7 @@ import data from "./Projects.json";
 import Styles from "./styleButton.module.css";
 import ButtonToggle from "./ButtonToggle";
 
-// ------------------------------- Define the Buttons component------------------------------
+// -------------------------- Define the Buttons component------------------------------//
 
 const Buttons = ({ selectedCategory, selectCategory, setList }) => (
   <div>
@@ -19,7 +19,7 @@ const Buttons = ({ selectedCategory, selectCategory, setList }) => (
       </p>
     </div>
 
-    {/* ------------------------------Sorting based on level----------------------------------------------- */}
+    {/* ------------------------------Sorting based on level--------------------------------------- */}
 
     <div className={Styles.searchBar}>
       <ButtonToggle
@@ -28,7 +28,7 @@ const Buttons = ({ selectedCategory, selectCategory, setList }) => (
         selectToggle={selectCategory}
       />
 
-      {/* ------------------------------------handle the "Show" buttons---------------------------------------- */}
+      {/* -----------------------------handle the "Show" buttons------------------------------- */}
 
       <div className={Styles.buttoncontainer}>
         <div className={Styles.show}>SHOW</div>

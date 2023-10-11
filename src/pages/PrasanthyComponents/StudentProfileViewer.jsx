@@ -6,11 +6,11 @@ import { NavLink } from "react-router-dom";
 
 function StudentProfileViewer() {
 
-//------------------------- State to store student data----------------------
+//------------------------- State to store student data----------------------//
 
   const [students, setStudents] = useState([]);
 
-//------------------- Fetch student data from the API when the component mounts--------------
+//------------------- Fetch student data from the API when the component mounts--------------//
   useEffect(() => {
     const fetchData = async () => {
       try {

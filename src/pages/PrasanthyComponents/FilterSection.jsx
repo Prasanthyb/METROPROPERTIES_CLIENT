@@ -2,7 +2,7 @@ import React from "react";
 import Styles from "./styleFilterSection.module.css";
 import FilterCommon from "./FilterCommon";
 
-//-------------------- Define the FilterSection component----------------------
+//-------------------- Define the FilterSection component----------------------//
 
 const FilterSection = ({
   projectsSM,
@@ -72,6 +72,6 @@ const FilterSection = ({
   </div>
 );
 
-//--------------------------------- Export the FilterSection component------------------------------------
+//--------------------------------- Export the FilterSection component-----------------------------//
 
 export default FilterSection;

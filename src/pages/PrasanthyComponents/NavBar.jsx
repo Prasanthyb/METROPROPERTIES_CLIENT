@@ -6,18 +6,18 @@ import NZFlag from "../../assets/NavBar/NZFlag.png";
 import MaoriFlag from "../../assets/NavBar/MaoriFlag.png";
 import DropDownList from "./DropDownList";
 
-//----------------------------------- Navbar Component----------------------------------------
+//----------------------------------- Navbar Component----------------------------------------//
 
 const Navbar = () => {
-  //-------------------------------- State to manage the profile dropdown------------------------
+  //-------------------------------- State to manage the profile dropdown------------------------//
 
   const [openProfile, setOpenProfile] = useState(false);
 
-  //----------------------------- Ref to detect clicks outside the profile dropdown---------------
+  //----------------------------- Ref to detect clicks outside the profile dropdown---------------//
 
   const menuRef = useRef();
 
-  //---------------------------- Effect to close the profile dropdown when clicking outside it-------
+  //---------------------------- Effect to close the profile dropdown when clicking outside it-------//
 
   useEffect(() => {
     const handler = (e) => {
@@ -26,12 +26,14 @@ const Navbar = () => {
       }
     };
 
-    //----------When a 'mousedown' event occurs, the 'handler' function defined above will be called to check if the click was outside 'menuRef'------------
+    // --------------When a 'mousedown' event occurs, the 'handler' 
+    // function defined above will be called to check if the click was  outside 'menuRef'------------// 
+    
 
     document.addEventListener("mousedown", handler);
     return () => {
 
-      //------------------------------called when the component unmounts, removes the 'handler' function as an event listener--------------------
+      //------called when the component unmounts, removes the 'handler' function as an event listener------//
 
       document.removeEventListener("mousedown", handler);
     };
@@ -61,11 +63,11 @@ const Navbar = () => {
             <img src={MaoriFlag} alt="Country flag" />
           </div>
 
-          {/*--------------------------- Sets a ref attribute to menuRef, which allows you to reference this DOM element------------------ */}
+          {/*----- Sets a ref attribute to menuRef, which allows you to reference this DOM element-------- */}
 
           <div className={Styles.iconContainer} ref={menuRef}>
 
-            {/*-------------------------------- toggles the value of the openProfile state variable when clicked----------------------------- */}
+            {/*---------- toggles the value of the openProfile state variable when clicked----------------- */}
             
             <div
               className={Styles.imageContainer}
@@ -78,7 +80,7 @@ const Navbar = () => {
               <span className={Styles.name}>COURTNEY BRISTOL</span>
             </div>
 
-            {/*------------ conditional rendering. If the openProfile state variable is true, it renders a <DropDownList /> component------------*/}
+            {/*---- conditional rendering. If the openProfile state variable is true, it renders a <DropDownList /> component------------*/}
 
             {openProfile && <DropDownList />}
           </div>

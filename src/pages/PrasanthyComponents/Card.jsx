@@ -1,11 +1,11 @@
 import React from "react";
 import "./styleCard.css";
 
-//---------------- Define a functional component called 'Card' that takes a 'list' prop-------------------------
+//---------------- Define a functional component called 'Card' that takes a 'list' prop-----------------//
 
 const Card = ({ list }) => (
 
-  //------------------- Use a wrapping <div> element with CSS grid styling----------------------------------------
+  //------------------- Use a wrapping <div> element with CSS grid styling-------------------------------//
 
   <div
     className="list-wrap"
@@ -18,7 +18,7 @@ const Card = ({ list }) => (
     {list &&
       list.map((val) => (
         
-        //--------------------- Render each item in the 'list' as a 'listItem-wrap' <div> element-----------------------------
+        //------------ Render each item in the 'list' as a 'listItem-wrap' <div> element------------------//
 
         <div className="listItem-wrap" key={val.project_id}>
           <figure>
@@ -37,6 +37,6 @@ const Card = ({ list }) => (
   </div>
 );
 
-//--------------------------- Export the 'Card' component as the default export of this module-------------------------
+//------------- Export the 'Card' component as the default export of this module---------------------//
 
 export default Card;

@@ -3,7 +3,7 @@ import Checkbox from "@mui/material/Checkbox";
 import { styled } from "@mui/material/styles";
 import FormControlLabel from "@mui/material/FormControlLabel";
 
-//------------------ Create a styled component using Material UI's styling API--------------------------
+//------------------ Create a styled component using Material UI's styling API---------------------//
 
 const useStyles = styled({
   root: {
@@ -22,16 +22,16 @@ const useStyles = styled({
   },
 });
 
-//-------------------- Define the FilterCommon component-----------------------------------
+//-------------------- Define the FilterCommon component-----------------------------------//
 
 const FilterCommon = ({ project, changeChecked }) => {
 
-//------------------ Apply the styles to this component------------------------------------
+//------------------ Apply the styles to this component------------------------------------//
 
   const classes = useStyles();
   const { checked, label, id } = project;
 
-//------------------- Define the label's inline style---------------------------------------
+//------------------- Define the label's inline style---------------------------------------//
 
   const labelStyle = {
     color: "black",
@@ -47,7 +47,7 @@ const FilterCommon = ({ project, changeChecked }) => {
       <FormControlLabel
         control={
 
-//----------------- Checkbox component with custom styling--------------------------------------
+//----------------- Checkbox component with custom styling--------------------------------------//
 
           <Checkbox
             classes={{
@@ -60,7 +60,7 @@ const FilterCommon = ({ project, changeChecked }) => {
             inputProps={{ "aria-label": "checkbox with small size" }}
           />
         }
-  //------------------------- Label with custom style----------------------------------------------
+  //------------------------- Label with custom style----------------------------------------------//
   
         label={<span style={labelStyle}>{label}</span>}
       />

@@ -2,7 +2,7 @@ import React from "react";
 import { ToggleButtonGroup, styled } from "@mui/material";
 import MuiToggleButton from "@mui/material/ToggleButton";
 
-//--------------Define a functional component called ButtonToggle----------------
+//----------------------Define a functional component called ButtonToggle-----------
 
 const ButtonToggle = ({ options, value, selectToggle }) => {
 
@@ -23,7 +23,7 @@ const ButtonToggle = ({ options, value, selectToggle }) => {
 
   return (
 
-    //-------------- Create a ToggleButtonGroup component---------------------
+    //-------------- Create a ToggleButtonGroup component---------------------//
 
     <ToggleButtonGroup
       color="secondary"
@@ -54,6 +54,6 @@ const ButtonToggle = ({ options, value, selectToggle }) => {
   );
 };
 
-//----------------Export the ButtonToggle component as the default export-------------------
+//----------------Export the ButtonToggle component as the default export------------------//
 
 export default ButtonToggle;

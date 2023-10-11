@@ -1,7 +1,7 @@
 import React from "react";
 import "./styleFooter.css";
 const Footer = () => {
-  //--------------------------- Data for the footer----------------------
+  //--------------------------- Data for the footer----------------------//
 
   const footerData = [
     {
@@ -42,7 +42,7 @@ const Footer = () => {
   ];
 
   return (
-  //------------------------- Footer container with a table structure----------------------
+  //------------------------- Footer container with a table structure----------------------//
 
     <footer className="footer">
       <table className="footer-table">

@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-//----------------------- Define a reusable function to scroll to the top of the page----------------------
+//----------------------- Define a reusable function to scroll to the top of the page------------------//
 
 const scrollToTop = () => {
   window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
