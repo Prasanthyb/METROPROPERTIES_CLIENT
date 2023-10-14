@@ -32,7 +32,6 @@
   margin: 0 auto; 
   padding: 20px;
 }
-
 /* ^^^^^^^^^^^^^^^^^^^^^ */
 /* ------ Student card */
 .studentImage {
@@ -62,26 +61,3 @@
   font-weight: 700;
 }
 /* ^^^^^^^^^^^^^^^^^^^^^ */
-
-
-/* --------   SCROLL BAR  FOR INDIVIDUAL HELP REQUESTS CONTAINER  */
-
-::-webkit-scrollbar {
-  width: 24px;
-}
-
-::-webkit-scrollbar-track {
-  background-color: #fff;
-  border-radius: 30px;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #43c0f6;
-  width: 16px;
-  border-radius: 30px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: #0ee1da;
-}
-/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
