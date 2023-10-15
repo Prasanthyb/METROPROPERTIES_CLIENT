@@ -8,7 +8,8 @@ import { faReply, faCheck } from "@fortawesome/free-solid-svg-icons";
 
 export default function Overview() {
   const [users, setUsers] = useState([]);
-  const [checked, setChecked] = useState(false);
+  // const [checked, setChecked] = useState(false);
+  const [selectedCheckboxes, setSelectedCheckboxes] = useState([]);
 
   useEffect(() => {
     fetch("http://localhost:4000/api/helprequests")
@@ -16,27 +17,46 @@ export default function Overview() {
       .then((res) => {
         setUsers(res);
       });
-  }, [checked]); // Use the 'checked' state as a dependency to re-fetch on changes
+  }, []);
 
-  const markHelpRequestAsDone = (requestId) => {
-    fetch(`http://localhost:4000/api/markhelprequestasdone/${requestId}`, {
-      method: "DELETE",
-    })
-      .then((response) => {
-        if (response.ok) {
-          console.log(`Help request ${requestId} has been deleted`);
-          // Update the state to remove the deleted request
-          setUsers(users.filter((user) => user.student_id !== requestId));
-          // Toggle the 'checked' state to trigger a re-fetch
-          setChecked(!checked);
-        } else {
-          console.error(`Help request ${requestId} could not be deleted`);
-        }
+  const toggleCheckbox = (studentId) => {
+    if (selectedCheckboxes.includes(studentId)) {
+      setSelectedCheckboxes(selectedCheckboxes.filter((id) => id !== studentId));
+    } else {
+      setSelectedCheckboxes([...selectedCheckboxes, studentId]);
+    }
+  };
+
+  const markHelpRequestAsDone = () => {
+    const deleteRequests = selectedCheckboxes.map((studentId) =>
+      fetch(`http://localhost:4000/api/markhelprequestasdone/${studentId}`, {
+        method: "DELETE",
       })
-      .catch((error) => {
-        console.error('Network error:', error);
-      });
-  }
+        .then((response) => {
+          if (response.ok) {
+            console.log(`Help request ${studentId} has been marked as done`);
+          } else {
+            console.error(`Help request ${studentId} could not be marked as done`);
+          }
+        })
+        .catch((error) => {
+          console.error('Network error:', error);
+        })
+    );
+  
+    // After all delete requests are completed, fetch the updated list of help requests
+    Promise.all(deleteRequests).then(() => {
+      fetch("http://localhost:4000/api/helprequests")
+        .then((res) => res.json())
+        .then((res) => {
+          setUsers(res); // Update the users state with the new data
+        });
+    });
+  
+    // Clear the selected checkboxes after marking as done
+    setSelectedCheckboxes([]);
+  };
+
 
   function formatDate(dateString, format) {
     const date = new Date(dateString);
@@ -72,14 +92,14 @@ export default function Overview() {
         </div>
         {/* --------------------------- Reply / Mark As Done buttons top right hand side of help requests container */}
         <div className={Styles.helpRequestMarkReply}>
-          <p>
-            <FontAwesomeIcon icon={faReply} className={Styles.faIcon} />
-            REPLY
-          </p>
-          <p>
-            <FontAwesomeIcon icon={faCheck} className={Styles.faIcon} />
-            MARK AS DONE
-          </p>
+          <button className={Styles.replyButton}>
+              <FontAwesomeIcon icon={faReply} className={Styles.faIcon} />
+              REPLY
+          </button>
+          <button onClick={markHelpRequestAsDone} className={Styles.markAsDoneButton}>
+              <FontAwesomeIcon icon={faCheck} className={Styles.faIcon} />
+               MARK AS DONE
+          </button>
         </div>
         {/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */}
         {/* --------------------------- Individual requests container */}
@@ -90,26 +110,19 @@ export default function Overview() {
               users.map(function (user) {
                 return (
                   <div key={user.student_id} className={Styles.helpRequestCard}>
-                    {/* <input
-                      type="checkbox"
-                      id="Checkbox"
-                      name="Checkbox"
-                      value="checkboxValue"
-                      onClick={markHelpRequestAsDone}
-                    /> */}
                     <input
                       type="checkbox"
                       id={`Checkbox-${user.student_id}`}
                       name={`Checkbox-${user.student_id}`}
                       value={user.student_id}
-                      onClick={() => markHelpRequestAsDone(user.student_id)}
+                      checked={selectedCheckboxes.includes(user.student_id)}
+                      onChange={() => toggleCheckbox(user.student_id)}
                     />
                     <div className={Styles.individualStudent}>
                       <div className={Styles.studentImgContainer}>
                         <img src={user.profile_pic} alt="Student profile" />
                         <p>
-                          {user.name.split(" ")[0].toUpperCase()} needs help
-                          with their project
+                          {user.name.split(" ")[0].toUpperCase()} needs help with their project
                         </p>
                       </div>
 

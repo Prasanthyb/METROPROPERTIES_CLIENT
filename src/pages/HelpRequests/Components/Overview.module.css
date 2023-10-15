@@ -34,14 +34,38 @@
   justify-content: flex-end;
 }
 
-.helpRequestMarkReply p {
-  margin-right: 103px;
-  font-weight: bold;
-}
-
 .faIcon {
   margin: 0 10px 0 10px;
 }
+
+.markAsDoneButton {
+  margin-right: 100px;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.replyButton {
+  margin-right: 60px;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
 /* ^^^^^^^^^^^^^^^^^^^^^ */
 /* -------  Indivudual requests container => holds all individual requests made by students */
 .individualRequestsContainer {
