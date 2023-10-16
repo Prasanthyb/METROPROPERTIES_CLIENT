@@ -8,7 +8,6 @@ import { faReply, faCheck } from "@fortawesome/free-solid-svg-icons";
 
 export default function Overview() {
   const [users, setUsers] = useState([]);
-  // const [checked, setChecked] = useState(false);
   const [selectedCheckboxes, setSelectedCheckboxes] = useState([]);
 
   useEffect(() => {
