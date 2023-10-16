@@ -34,6 +34,18 @@
 }
 /* ^^^^^^^^^^^^^^^^^^^^^ */
 /* ------ Student card */
+.navLink {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  height: 100%;
+}
+
+.navLink:hover {
+  transform: scale(1.07);
+  transition: transform 0.4s ease;
+}
+
 .studentImage {
   width: 50%;
   height: auto;
@@ -47,11 +59,16 @@
   justify-self: center;
   background-color: white;
   text-align: center;
-  width: 70%;
+  width: 80%;
   height: 80%;
   border-radius: 10px;
   color: #fff;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.card:hover {
+  /* background-color: red; */
+  box-shadow: rgba(177,228,249, 1) 0px 0px 15px;
 }
 
 .card p {

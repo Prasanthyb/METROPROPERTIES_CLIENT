@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Styles from "./Overview.module.css";
 // --------------------- Font Awesome library imports
@@ -26,10 +27,12 @@ export default function Overview() {
           {users &&
             users.map(function (user) {
               return (
-                <div key={user.student_id} className={Styles.card}>
+                <NavLink className={Styles.navLink}>
+                  <div key={user.student_id} className={Styles.card}>
                   <img src={user.profile_pic} alt="students" className={Styles.studentImage} />
                   <p>{user.name.toUpperCase()}</p>
                 </div>
+                </NavLink>
               );
             })}
         </div>
