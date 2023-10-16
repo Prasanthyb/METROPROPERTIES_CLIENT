@@ -8,40 +8,40 @@ import EmptyView from './EmptyView';
 import BackToTopButton from './BackToTopButton';
 import NavBar from './NavBar';
 import Footer from './Footer';
+import axios from "axios";
 
 const StudentProjects = () => {
 
-// ----------------------- -State for the project list---------------------------------------//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ State for the project list~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 
   const [list, setList] = useState();
 
   useEffect(() => {
 
-//------------------------- Fetch project data from an API----------------------------------//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Fetch project data from an API~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 
     fetch('http://localhost:4000/api/projects')
       .then((response) => response.json())
       .then((response) => setList(response));
   }, []);
 
-//--------------- ---------State for selected category and results found----------------------//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ State for selected category and results found~~~~~~~~~~~~~~~~~~~//
 
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [resultsFound, setResultsFound] = useState(true);
 
-//-------------------------------- State for various project filters----------------------------//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ State for various project filters~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 
   const [projects, setProjects] = useState(data.ActivityType);
   const [projectsS, setProjectsS] = useState(data.Subscription);
   const [projectsYL, setProjectsYL] = useState(data.YearLevel);
   const [projectsSM, setProjectsSM] = useState(data.SubjectMatter);
 
-//------------------------------------- Handle selecting a category-------------------------------//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~` Handle selecting a category~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 
-  const handleSelectCategory = (event, value) =>
-    !value ? null : setSelectedCategory(value);
+  const handleSelectCategory = (event, value) => !value ? null : setSelectedCategory(value);
 
-//------------------------------ Handle checkbox changes for different filter categories-----------//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Handle checkbox changes for different filter categories~~~~~~~~~~~~~~~~~~~//
 
   const handleChangeChecked = (id) => {
     const projectsStateList = projects;
@@ -75,9 +75,23 @@ const StudentProjects = () => {
     setProjectsSM(changeCheckedProjectsSM);
   };
 
-//--------------------------------------- Apply filters to the project list-------------------------------//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Apply filters to the project list~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 
-  const applyFilters = () => {
+  const applyFilters = async () => {    
+    try {
+      const response = await axios.post('http://localhost:4000/api/filterData', {
+    subscription: projectsS,
+    activityType: projects,
+      }, {
+        headers: {
+          "Content-Type": "application/json"
+        }
+      });
+     let updatedList = response.data;
+    } catch (error) {
+      console.error('Error filtering data:', error);
+    }
+
     let updatedList = data.ProjectList;
 
     if (selectedCategory) {
@@ -94,16 +108,6 @@ const StudentProjects = () => {
       );
     }
 
-    const projectChecked = projects
-      .filter((item) => item.checked)
-      .map((item) => item.label);
-
-    if (projectChecked.length) {
-      updatedList = updatedList.filter((item) =>
-        projectChecked.includes(item.activity_type)
-      );
-    }
-
     const projectCheckedYL = projectsYL
       .filter((item) => item.checked)
       .map((item) => item.label);
@@ -111,6 +115,16 @@ const StudentProjects = () => {
     if (projectCheckedYL.length) {
       updatedList = updatedList.filter((item) =>
         projectCheckedYL.includes(item.year_level)
+      );
+    }
+
+    const projectChecked = projects
+      .filter((item) => item.checked)
+      .map((item) => item.label);
+
+    if (projectChecked.length) {
+      updatedList = updatedList.filter((item) =>
+        projectChecked.includes(item.activity_type)
       );
     }
 
@@ -138,14 +152,14 @@ const StudentProjects = () => {
       <div className={Styles.div}>
         <div className={Styles.navbar}>
 
-{/*------------------------------------------- -Render NavBar component------------------------------ */}
+{/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Render NavBar component~~~~~~~~~~~~~~~~~~~~~~~~~~ */}
 
           <NavBar />
         </div>
 
         <div className={Styles.filter}>
 
-{/*---------------------------------------- Render FilterSection component with props-------------------- */}
+{/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Render FilterSection component with props~~~~~~~~~~~~~~~~~~~ */}
 
           <FilterSection
             projectsS={projectsS}
@@ -161,8 +175,7 @@ const StudentProjects = () => {
 
         <div className="list">
 
-{/*--------------------------------------------- Render Buttons component with props------------------*/}
-
+{/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Render Buttons component with props~~~~~~~~~~~~~~~~~~~ */}
           <Buttons
             selectedCategory={selectedCategory}
             selectCategory={handleSelectCategory}
@@ -172,14 +185,14 @@ const StudentProjects = () => {
 
         <div className={Styles.listp}>
 
-{/*------------------------------------------ Conditionally render Card or EmptyView----------------*/}
+{/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Conditionally render Card or EmptyView~~~~~~~~~~~~~~~~~~~~~~~~ */}
 
           {resultsFound ? <Card list={list} /> : <EmptyView />}
         </div>
 
         <div className={Styles.footer}>
 
-{/*--------------------------------------------- Render BackToTopButton component------------------- */}
+{/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Render BackToTopButton component~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */}
 
           <BackToTopButton />
         </div>
@@ -187,7 +200,7 @@ const StudentProjects = () => {
       <div>
         <div className={Styles.footerone}>
 
-{/*------------------------------------------------Render Footer component----------------------------- */}
+{/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Render Footer component~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */}
 
           <Footer />
         </div>
@@ -197,5 +210,3 @@ const StudentProjects = () => {
 };
 
 export default StudentProjects;
-
-
