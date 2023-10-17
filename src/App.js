@@ -16,7 +16,7 @@ import StudentProjects from './pages/PrasanthyComponents/StudentProjects';
 import StudentProfileViewer from './pages/PrasanthyComponents/StudentProfileViewer';
 import ErrorPage from './pages/PrasanthyComponents/ErrorPage';
 
-
+import StudentProfiles from './pages/StudentProfiles/StudentProfiles'
 
 
 function App() {
@@ -36,7 +36,6 @@ function App() {
       <Route path = "/studentprofiles" element={<StudentProfiles/>} />
       <Route path = "/studentprojects" element={<StudentProjects />} />
       <Route path = "/studentprofileviewer" element={<StudentProfileViewer/>} />
-      <Route path = "/features" element={<Features />} />
       <Route path = "*" element={<ErrorPage/>} />
        
       
