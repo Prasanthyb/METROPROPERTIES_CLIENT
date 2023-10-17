@@ -10,11 +10,13 @@
 .levelUpWorksLogoContainer {
   display: flex;
   align-items: center;
+  margin-left: 38px;
 }
 
 .levelUpWorksLogoContainer img {
   height: 60px;
   width: 145.99px;
+
 }
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^ */
 /* -------- StudentTeacherNavBar buttons */
