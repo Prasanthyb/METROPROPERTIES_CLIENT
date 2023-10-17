@@ -1,8 +1,7 @@
 .parent
 {
  margin-top:0;
- text-align: center;
-  
+ text-align: center;  
 }
 .img{
   height:150px;
@@ -28,13 +27,7 @@
   text-align:center;
   
 }
-.editprofilebutton:hover {
-  background-color: #2980b9;
-}
-.editprofilebutton:disabled {
-  background-color: #ccc; 
-  cursor: not-allowed; 
-}
+
 .changephotobutton{
   width: 150px;
    height: 30px;
@@ -43,26 +36,42 @@
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
-  transition: background-color 0.3s ease;
+ 
   font-size:12px;
   font-weight:bold;
   text-align:center;
   
 }
-.changephotobutton:hover {
-  background-color: #2980b9;
+
+
+
+.navbar{
+  &:link,
+  &:visited
+  {
+    
+  color:white;
+  transition: color 0.3s linear;   
+  text-decoration:none;
+
+  }
+color:white;
+
+
+&:hover,
+&:active{
+color:blue;
 }
-.changephotobutton:disabled {
-  background-color: #ccc; 
-  cursor: not-allowed; 
+
 }
+
 
 .outerDiv {
   background-color: white;
   color: #fff;
   height: 400px;
   width: 800px;
-  margin: 50px 50px 100px 200px;
+  margin: 100px 50px 70px 250px;
   padding: 5px;
 }
 .leftDiv {
@@ -84,6 +93,9 @@
   border-radius:20px;
   border:solid;
 }
+h2{
+  color:black;
+}
 .clear
 {
   clear:both;
@@ -92,9 +104,9 @@
 .container {
   
   display: flex;
-text-align:left;
-margin-left:20px;
-font-weight:600;
+  text-align:left;
+  margin-left:20px;
+  font-weight:600;
 }
 
 .item-list {
@@ -115,29 +127,28 @@ font-weight:600;
 
 
 .custom-button {
-  background-color: red;
+  background-color:#E72660;
   color: white; 
   padding: 5px 10px; 
   border: none;
-  border-radius: 20px; 
+  border-radius: 5px; 
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 12px;
   cursor: pointer;
-  margin-top:20px;
-  margin-left:650px;
-  filter:drop-shadow(5px 8px 9px orange);
+  font-weight:solid;
+  margin-top:0px;
+  margin-left:420px;
+  margin-bottom:100px;
+  
 }
 
 .custom-button:hover {
-  background-color: darkred;
-}
-.navbar{
+  background-color: skyblue;
   
-  margin-top:0;
- 
 }
+
 .footer{
     
   margin-bottom:200px;
@@ -147,4 +158,9 @@ font-weight:600;
   width:100%
  
   
+}
+.label {
+  display: inline-block;
+  width: 280px;
+  text-align: left;
 }

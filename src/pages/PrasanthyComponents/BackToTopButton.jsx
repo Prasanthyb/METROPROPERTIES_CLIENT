@@ -1,55 +1,61 @@
-import React from 'react';
-import {useState,useEffect} from 'react';
+import React from "react";
+import { NavLink } from "react-router-dom";
+
+//----------------------- Define a reusable function to scroll to the top of the page------------------//
+
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+};
 
 const BackToTopButton = () => {
-    const [BackToTopButton, setBackToTopButton]=useState(false)
-    useEffect(()=>{
-window.addEventListener("scroll",()=>{
-
-    if(window.scrollY>50){
-        setBackToTopButton(true)
-    }else{
-        setBackToTopButton(false)
-    }
-
-})
-    },[])
-
-
-    const scrollUp=()=>{
-        window.scrollTo({
-            top:650,
-            behaviour:"smooth"
-        })
-    }
-
   return (
     <div className="App">
-    {BackToTopButton && (
-        <button style={{
-            left:"30px",
-            backgroundColor: "yellow",
-            right:"25px",
-            height:"20px",
-            width:"112px",
-            fontSize:"15 px",
-            cursor:"pointer",
-            border: "1px solid black",
-            borderRadius: "5px",
-            color: "black",
-            filter: 'drop-shadow(5px 8px 9px rgb(42, 116, 126))'
-           
+      <div className="button-container" style={{ display: "flex" }}>
 
-        }}
-      
-        onClick={scrollUp}
-        >
-        Back To Top
+        {/*--------------------------Back to Top Button------------------------------------ */}
+
+        <button
+          style={{
+            backgroundColor: "#FFBF00",
+            color: "#fff",
+            border: "none",
+            padding: "10px 10px",
+            cursor: "pointer",
+            height: "25px",
+            width: "180px",
+            borderRadius: "5px",
+            fontSize: "14px",
+            fontWeight: "bold",
+            transition: "color 0.2s",
+            marginLeft: "950px",
+          }}
+          onClick={scrollToTop}>
+          BACK TO TOP
         </button>
-    )}
-      
+
+        {/* Go to Dashboard Button */}
+        <NavLink to="/projects">
+          <button
+            style={{
+              backgroundColor: "#FF007F",
+              color: "#fff",
+              border: "none",
+              padding: "10px 20px",
+              cursor: "pointer",
+              height: "25px",
+              width: "180px",
+              borderRadius: "5px",
+              fontSize: "14px",
+              fontWeight: "bold",
+              transition: "color 0.2s",
+              marginLeft: "50px",
+            }}>
+            GO TO DASHBOARD
+          </button>
+        </NavLink>
+      </div>
     </div>
   );
-}
+};
 
 export default BackToTopButton;

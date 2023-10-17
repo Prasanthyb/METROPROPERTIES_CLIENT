@@ -1,75 +1,77 @@
-import React from 'react';
-import  './styleFilterSection.css';
+import React from "react";
+import Styles from "./styleFilterSection.module.css";
+import FilterCommon from "./FilterCommon";
 
-import FilterCommon from './FilterCommon';
+//-------------------- Define the FilterSection component----------------------//
 
+const FilterSection = ({
+  projectsSM,
+  changeCheckedSM,
+  projectsYL,
+  changeCheckedYL,
+  projectsS,
+  changeCheckedS,
+  projects,
+  changeChecked,
+}) => (
+  <div className="filter">
+    <div className={Styles.filter1}>
 
+{/*------------------------ Subscription Filter------------------------------------------- */}
 
+      <div className={Styles.inputgroup}>
+        <p className={Styles.label}>SUBSCRIPTION</p>
+        {projectsS.map((project) => (
+          <FilterCommon
+            key={project.id}
+            project={project}
+            changeChecked={changeCheckedS}
+          />
+        ))}
+      </div>
 
+{/*---------------------------- Activity Type Filter----------------------------------------- */}
 
+      <div className={Styles.inputgroup}>
+        <p className={Styles.label}>ACTIVITY TYPE</p>
+        {projects.map((project) => (
+          <FilterCommon
+            key={project.id}
+            project={project}
+            changeChecked={changeChecked}
+          />
+        ))}
+      </div>
 
+{/*------------------------------- Year-Level Filter-------------------------------------------- */}
 
+      <div className={Styles.inputgroup}>
+        <p className={Styles.label}>YEAR-LEVEL</p>
+        {projectsYL.map((project) => (
+          <FilterCommon
+            key={project.id}
+            project={project}
+            changeChecked={changeCheckedYL}
+          />
+        ))}
+      </div>
 
+{/*-------------------------------- Subject Matter Filter------------------------------------------ */}
 
+      <div className={Styles.inputgroup}>
+        <p className={Styles.label}>SUBJECT MATTER</p>
+        {projectsSM.map((project) => (
+          <FilterCommon
+            key={project.id}
+            project={project}
+            changeChecked={changeCheckedSM}
+          />
+        ))}
+      </div>
+    </div>
+  </div>
+);
 
-const FilterSection = ({projectsSM,changeCheckedSM,projectsYL,
-  
-  changeCheckedYL,projectsS,changeCheckedS,projects,changeChecked}) => 
-   (
-
-  
-    <div className="filter">
- <div className="input-group">
-    <p className="label">SUBSCRIPTION</p>    
-    {projectsS.map((project) => (
-        <FilterCommon 
-          key={project.id}
-          project={project}
-          changeChecked={changeCheckedS}
-    />
-    ))}
-     </div>
-     
-
-    
-
-    <div className="input-group">
-    <p className="label">ACTIVITY TYPE</p>
-    {projects.map((project) => (
-        <FilterCommon
-          key={project.id}
-          project={project}
-          changeChecked={changeChecked}
-    />
-    ))}
-     </div>
-     <div className="input-group">
-    <p className="label">YEAR-LEVEL</p>
-    {projectsYL.map((project) => (
-        <FilterCommon
-          key={project.id}
-          project={project}
-          changeChecked={changeCheckedYL}
-    />
-    ))}
-     </div>
-
-     <div className="input-group">
-    <p className="label">SUBJECT MATTER</p>
-    {projectsSM.map((project) => (
-        <FilterCommon
-          key={project.id}
-          project={project}
-          changeChecked={changeCheckedSM}
-    />
-    ))}
-     </div>
-
-
-     </div>
-    
-  
-  );
-
+//--------------------------------- Export the FilterSection component-----------------------------//
 
 export default FilterSection;

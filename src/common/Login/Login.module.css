@@ -1,0 +1,77 @@
+#loginBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #FFFFFF;
+    /* border: 2px solid #43C0F6; */
+    border-radius: 4px;
+    display: block;
+    padding: 22px;
+}
+
+#closeButton {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#closeButton > img {
+    height: 32px;
+    width: 32px;
+    padding: 6px;
+    cursor: pointer;
+}
+
+#loginContainer {
+    background-color: #767676;
+    display: grid;
+    /* Using grid here just so that I can use the gap to display the grey line */
+    grid-column-gap: 4px;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* Should affect any child img including the ones from the teacher and student divs */
+#loginContainer img {
+    height: 300px;
+    width: 300px;
+    padding: 12px;
+}
+
+#studentLoginDiv {
+    grid-column: 1/2;
+}
+
+#teacherLoginDiv {
+    grid-column: 2/3;
+}
+
+#studentLoginDiv, #teacherLoginDiv {
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lsButtonContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.lsButton {
+    cursor: pointer;
+    margin: 0px 12px;
+    color: #B6B6B6;
+}
+
+.active {
+    color: #767676;
+    border-bottom: 4px solid;
+}
+
+.loginButton {
+    border-color: #43C0F6;
+}
+
+.signupButton {
+    border-color: #F91C85;
+}

@@ -1,0 +1,19 @@
+.modalForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modalForm > input {
+    margin: 8px;
+}
+
+.pinkButton {
+    border: solid #F91C85;
+    border-radius: 8px;
+    color: white;
+    background-color: #F91C85;
+    margin: 0px 12px;
+    padding: 2px 10px;
+    cursor: pointer;
+}
