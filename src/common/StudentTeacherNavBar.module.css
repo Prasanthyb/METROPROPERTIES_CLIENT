@@ -42,11 +42,11 @@
 }
 
 .helpCentreBtn {
-  background-color: #f81c85;
+  background-color: #f81c85 !important;
 }
 
 .moreProjectsBtn {
-  background-color: #43c0f6;
+  background-color: #43c0f6 !important;
 }
 /* ^^^^^^^^^^^^^^^^^^^^^^ */
 /* ------ Country flag styles */
