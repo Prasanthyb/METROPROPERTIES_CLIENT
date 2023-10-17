@@ -49,10 +49,10 @@ const Navbar = () => {
         <NavLink className={Styles.navbar} to="/">
           HOME
         </NavLink>
-        <NavLink className={Styles.navbar} to="/projects">
+        <NavLink className={Styles.navbar} to="/studentprojects">
           PROJECTS
         </NavLink>
-        <NavLink className={Styles.navbar} to="/projects">
+        <NavLink className={Styles.navbar} to="/studentprojects">
           TEACHERS
         </NavLink>
 

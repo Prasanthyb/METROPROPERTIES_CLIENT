@@ -11,7 +11,7 @@ import './App.css';
 import HelpRequests from './pages/HelpRequests/HelpRequests';
 import Home from './pages/Home/Home';
 
-
+import StudentProfiles from './pages/StudentProfiles/StudentProfiles' 
 import StudentProjects from './pages/PrasanthyComponents/StudentProjects';
 import StudentProfileViewer from './pages/PrasanthyComponents/StudentProfileViewer';
 import ErrorPage from './pages/PrasanthyComponents/ErrorPage';
@@ -36,7 +36,7 @@ function App() {
       <Route path = "/studentprofiles" element={<StudentProfiles/>} />
       <Route path = "/studentprojects" element={<StudentProjects />} />
       <Route path = "/studentprofileviewer" element={<StudentProfileViewer/>} />
-      <Route path = "/features" element={<Features />} />
+    
       <Route path = "*" element={<ErrorPage/>} />
        
       

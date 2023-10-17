@@ -94,7 +94,7 @@ function StudentProfileViewer() {
       <div>
         <div>
           <button className="custom-button">
-            <NavLink className="navbar" to="/projects">
+            <NavLink className="navbar" to="/studentprojects">
               BACK TO PROJECTS
             </NavLink>
           </button>
