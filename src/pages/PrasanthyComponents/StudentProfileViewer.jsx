@@ -3,11 +3,12 @@ import "./styleStudentProfileViewer.css";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
 import { NavLink } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 function StudentProfileViewer() {
 
 //------------------------- State to store student data----------------------//
-
+  const { id } = useParams();
   const [students, setStudents] = useState([]);
 
 //------------------- Fetch student data from the API when the component mounts--------------//
@@ -15,7 +16,7 @@ function StudentProfileViewer() {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "http://localhost:4000/api/studentprofileviewer"
+          `http://localhost:4000/api/studentprofileviewer/${id}`
         );
         const data = await response.json();
         setStudents(data);
@@ -24,7 +25,7 @@ function StudentProfileViewer() {
       }
     };
     fetchData();
-  }, []);
+  }, [id]);
 
   return (
     <div className="parent">
@@ -94,7 +95,7 @@ function StudentProfileViewer() {
       <div>
         <div>
           <button className="custom-button">
-            <NavLink className="navbar" to="/studentprojects">
+            <NavLink className="navbar" to="/projects">
               BACK TO PROJECTS
             </NavLink>
           </button>
