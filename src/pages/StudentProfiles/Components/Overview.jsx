@@ -27,7 +27,7 @@ export default function Overview() {
           {users &&
             users.map(function (user) {
               return (
-                <NavLink className={Styles.navLink}>
+                <NavLink className={Styles.navLink} to={`/student/${user.student_id}`} key={user.student_id}>
                   <div key={user.student_id} className={Styles.card}>
                   <img src={user.profile_pic} alt="students" className={Styles.studentImage} />
                   <p>{user.name.toUpperCase()}</p>
