@@ -1,17 +1,18 @@
 import React from "react";
 import Styles from "./Menu.module.css";
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 // ------------------------ ICON AND IMG IMPORTS FROM SRC FOLDER
-import ProgressTrackerIcon from "../../../assets/TeacherDashboard/progressTracker.png";
-import StudentProfilesIcon from "../../../assets/TeacherDashboard/studentProfiles.png";
-import HelpRequestIconIcon from "../../../assets/TeacherDashboard/helpRequests.png";
-import ProjectSubmissionsIcon from "../../../assets/TeacherDashboard/projectSubmissions.png";
-import ProjectLibraryIcon from "../../../assets/TeacherDashboard/projectLibrary.png";
-import ProfileIcon from "../../../assets/profile.png";
-import SettingsIcon from "../../../assets/settings.png";
-import LogoutIcon from "../../../assets/logout.png";
-import ArrowLeft from "../../../assets/arrowLeft.png";
-import ArrowRight from "../../../assets/arrowRight.png";
+import ProgressTrackerIcon from "../assets/TeacherDashboard/progressTracker.png";
+import StudentProfilesIcon from "../assets/TeacherDashboard/studentProfiles.png";
+import HelpRequestIconIcon from "../assets/TeacherDashboard/helpRequests.png";
+import ProjectSubmissionsIcon from "../assets/TeacherDashboard/projectSubmissions.png";
+import ProjectLibraryIcon from "../assets/TeacherDashboard/projectLibrary.png";
+import ProfileIcon from "../assets/profile.png";
+import SettingsIcon from "../assets/settings.png";
+import LogoutIcon from "../assets/logout.png";
+import ArrowLeft from "../assets/arrowLeft.png";
+import ArrowRight from "../assets/arrowRight.png";
 // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 export default function Menu() {
@@ -19,6 +20,7 @@ export default function Menu() {
   const [menuText, setMenuText] = useState(false);
   const [menuIcons, setMenuIcons] = useState(false);
   const [arrowRight, setArrowRight] = useState(false);
+  // const [listItems, setListItems] = useState(false);
 
   const toggleMenu = () => {
     // toggleMenu function is applied to red arrow button within the menu
@@ -47,64 +49,89 @@ export default function Menu() {
           <div className={Styles.menuLinksContainer}>
             <ul className={Styles.menuLinks}>
               {/* ------------- Progress Tracker link */}
-              <li>
-                <img
-                  className={Styles.menuIcon}
-                  src={ProgressTrackerIcon}
-                  alt="Progress tracker icon"
-                />
-                <p className={`${menuText ? Styles.menuTextEl : ""}`}>
-                  PROGRESS TRACKER
-                </p>
-              </li>
+              <NavLink
+                to={"/progresstracker"}
+                className={({ isActive }) => `${isActive ? Styles.active : ""} ${menuIcons ? Styles.menuLinksCollapsed : ""}`}
+              >
+                <li>
+                  <img
+                    className={Styles.menuIcon}
+                    src={ProgressTrackerIcon}
+                    alt="Progress tracker icon"
+                  />
+                  <p className={`${menuText ? Styles.menuTextEl : ""}`}>
+                    PROGRESS TRACKER
+                  </p>
+                </li>
+              </NavLink>
               {/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */}
               {/* ------------- Student Profiles link */}
-              <li>
-                <img
-                  className={Styles.menuIcon}
-                  src={StudentProfilesIcon}
-                  alt="Student profiles icon"
-                />
-                <p className={`${menuText ? Styles.menuTextEl : ""}`}>
-                  STUDENT PROFILES
-                </p>
-              </li>
+              <NavLink
+                to={"/studentprofiles"}
+                className={({ isActive }) => `${isActive ? Styles.active : ""} ${menuIcons ? Styles.menuLinksCollapsed : ""}`}
+              >
+                <li>
+                  <img
+                    className={Styles.menuIcon}
+                    src={StudentProfilesIcon}
+                    alt="Student profiles icon"
+                  />
+                  <p className={`${menuText ? Styles.menuTextEl : ""}`}>
+                    STUDENT PROFILES
+                  </p>
+                </li>
+              </NavLink>
               {/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */}
               {/* ------------- Help Requests link link */}
-              <li>
-                <img
-                  className={Styles.menuIcon}
-                  src={HelpRequestIconIcon}
-                  alt="Help requests icon"
-                />
-                <p className={`${menuText ? Styles.menuTextEl : ""}`}>
-                  HELP REQUESTS
-                </p>
-              </li>
+              <NavLink
+                to={"/helprequests"}
+                className={({ isActive }) => `${isActive ? Styles.active : ""} ${menuIcons ? Styles.menuLinksCollapsed : ""}`}
+              >
+                <li>
+                  <img
+                    className={Styles.menuIcon}
+                    src={HelpRequestIconIcon}
+                    alt="Help requests icon"
+                  />
+                  <p className={`${menuText ? Styles.menuTextEl : ""}`}>
+                    HELP REQUESTS
+                  </p>
+                </li>
+              </NavLink>
               {/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */}
               {/* ------------- Project Submissions link */}
-              <li>
-                <img
-                  className={Styles.menuIcon}
-                  src={ProjectSubmissionsIcon}
-                  alt="Project Submissions icon"
-                />
-                <p className={`${menuText ? Styles.menuTextEl : ""}`}>
-                  PROJECT SUBMISSIONS
-                </p>
-              </li>
+              <NavLink
+                to={"/projectsubmissions"}
+                className={({ isActive }) => `${isActive ? Styles.active : ""} ${menuIcons ? Styles.menuLinksCollapsed : ""}`}
+              >
+                <li className={`${menuIcons ? Styles.menuLinksCollapsed : ""}`}>
+                  <img
+                    className={Styles.menuIcon}
+                    src={ProjectSubmissionsIcon}
+                    alt="Project Submissions icon"
+                  />
+                  <p className={`${menuText ? Styles.menuTextEl : ""}`}>
+                    PROJECT SUBMISSIONS
+                  </p>
+                </li>
+              </NavLink>
               {/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */}
               {/* ------------- Project Library link */}
-              <li>
-                <img
-                  className={Styles.menuIcon}
-                  src={ProjectLibraryIcon}
-                  alt="Project library icon"
-                />
-                <p className={`${menuText ? Styles.menuTextEl : ""}`}>
-                  PROJECT LIBRARY
-                </p>
-              </li>
+              <NavLink
+                to={"/studentprojects"}
+                className={({ isActive }) => `${isActive ? Styles.active : ""} ${menuIcons ? Styles.menuLinksCollapsed : ""}`}
+              >
+                <li>
+                  <img
+                    className={Styles.menuIcon}
+                    src={ProjectLibraryIcon}
+                    alt="Project library icon"
+                  />
+                  <p className={`${menuText ? Styles.menuTextEl : ""}`}>
+                    PROJECT LIBRARY
+                  </p>
+                </li>
+              </NavLink>
               {/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */}
             </ul>
           </div>
