@@ -1,5 +1,6 @@
 import React from "react";
 import Styles from "./StudentTeacherNavBar.module.css";
+import { NavLink } from "react-router-dom";
 // ---------------- Logo image import
 import LevelUpWorksLogoBlue from "../assets/NavBar/LevelUpWorks-blue.png";
 // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -11,10 +12,9 @@ import MaoriFlag from "../assets/NavBar/MaoriFlag.png";
 export default function navBar() {
   return (
     <div className={Styles.StudentTeacherNavBarContainer}>
-      <div className={Styles.levelUpWorksLogoContainer}>
-        <img src={LevelUpWorksLogoBlue} alt="Company Logo" />
-      </div>
-
+      <NavLink to={"/"} className={Styles.levelUpWorksLogoContainer}>
+      <img src={LevelUpWorksLogoBlue} alt="Company Logo" />
+      </NavLink>
       <div className={Styles.StudentTeacherNavBarBtnsContainer}>
         <button className={Styles.helpCentreBtn}>Help Centre</button>
         <button className={Styles.moreProjectsBtn}>More Projects</button>

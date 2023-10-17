@@ -1,5 +1,5 @@
 import React from "react";
-import Menu from "./Components/Menu";
+import Menu from "../../common/Menu";
 import Overview from "./Components/Overview";
 import Styles from "./HelpRequests.module.css";
 // ####### COMMON COMPONENTS IMPORTS #######

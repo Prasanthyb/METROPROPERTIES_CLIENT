@@ -1,1 +1,0 @@
-// This is a place holder page for my StudentProfiles page

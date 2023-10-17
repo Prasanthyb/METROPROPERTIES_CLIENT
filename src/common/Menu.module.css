@@ -10,7 +10,7 @@
 .menuContainer {
   /* border: 2px solid green; */
   background-color: #43c0f6;
-  width: 15vw;
+  width: 17vw;
   display: flex;
   transition: 0.3s ease-in-out;
   flex-direction: column;
@@ -32,7 +32,6 @@
 /* ------- Project Tracker, Student Profiles, Help Requests, Project Submissions, Project Library links */
 .menuLinksContainer {
   display: flex;
-  justify-content: center;
 }
 
 .menuIcon {
@@ -43,17 +42,44 @@
 }
 
 .menuLinks {
-  font-size: 14px;
-  color: white;
-  font-weight: bold;
-  line-height: 1.9;
-  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* border: 2px solid red; */
 }
 
 .menuLinks li {
-  margin: 17px 0;
+  /* border: 2px solid green; */
+  padding: 12px 0px 12px 10%;
   list-style: none;
   display: flex;
+  align-items: flex-start;
+}
+
+.menuLinks a {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.menuLinks a:active {
+  /* This applies the background when the NavLink is clicked */
+  background-color: #b2e4fa;
+}
+
+.active {
+  /* This applies the background color to 'active' NavLink, ensure the color change remains after the NavLink has been clicked */
+  background-color: #B1E4F9;
+}
+
+.menuLinks p {
+  /* border: 2px solid pink; */
+  font-size: 14px;
+  color: #fff;
+  font-weight: bold;
+  margin: 0;
+  line-height: 1.9;
 }
 /* ^^^^^^^^^^^^^^^^^^^^^^ */
 /* -------- Menu crumbs at bottom of menu */
@@ -64,6 +90,18 @@
   text-align: center;
   padding: 0;
   margin-bottom: 20px;
+}
+
+.menuCrumbs li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menuCrumbs li p {
+  margin: 5px 0 0 0;
+  color: #fff;
 }
 
 .menuCrumIcon {
@@ -102,9 +140,14 @@
   justify-content: flex-start;
 }
 
+.menuLinksCollapsed {
+  display: flex;
+  justify-content: center;
+}
+
 .inActive {
   /* Width applied when menu is collapsed */
-  width: 5vw;
+  width: 7vw;
 }
 
 .menuTextEl {
@@ -115,4 +158,9 @@
   display: flex;
   flex-direction: column;
 }
+
+.menuCrumbsCollapsed li {
+  margin: 5px 0 5px 0;
+}
 /* ^^^^^^^^^^^^^^^^^^^^^^ */
+
