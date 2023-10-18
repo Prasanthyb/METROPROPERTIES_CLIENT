@@ -15,7 +15,7 @@ import Header from '../../common/Header/Header';
 
 import { useState } from 'react';
 
-export default function Home() {
+export default function Home(props) {
     const [currentScreen, setCurrentScreen] = useState(0);
 
     function handleScreenChange(newScreen) {
@@ -28,13 +28,13 @@ export default function Home() {
         <div id={styles['home']}>
             <div id={styles['headerDiv']}>
                 {/* Wrapped so it can be fixed to the top of the screen */}
-                <Header></Header>
+                <Header currentUser={props.currentUser} updateCurrentUser={props.updateCurrentUser}></Header>
             </div>
 
             {/* <--HERO IMAGE SECTION--> */}
             {/* Look who came crawling back to React */}
 
-            <HeroSection></HeroSection>
+            <HeroSection currentUser={props.currentUser} updateCurrentUser={props.updateCurrentUser}></HeroSection>
 
             {/* <--SLIDESHOW SECTION--> */}
             {/* Using a grid for layout I can use individual components for the buttons, markers and screen.
@@ -76,7 +76,7 @@ export default function Home() {
             </div>
 
             <div id={styles['enquireSection']}>
-                <EnquireSection></EnquireSection>
+                <EnquireSection currentUser={props.currentUser} updateCurrentUser={props.updateCurrentUser}></EnquireSection>
             </div>
 
             <Footer></Footer>
