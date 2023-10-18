@@ -172,7 +172,9 @@ export default function Menu() {
                 src={ProfileIcon}
                 alt="Profile icon"
               />
+              <NavLink className={Styles.navLink} to={`/teacher/101`}>
               <p className={`${menuText ? Styles.menuTextEl : ""}`}>Profile</p>
+              </NavLink>
             </li>
             <li>
               <img

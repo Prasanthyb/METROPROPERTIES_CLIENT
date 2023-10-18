@@ -17,7 +17,7 @@ const DropDownList = () => {
 
         <li style={{ fontSize: "16px", padding: "8px 0", fontWeight: "bold" }}>
           <Link
-            to="/studentprofileviewer"
+            to="/student/5"
             style={{ textDecoration: "none", color: "black" }}>
             My Profile
           </Link>

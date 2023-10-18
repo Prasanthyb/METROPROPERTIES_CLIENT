@@ -53,6 +53,10 @@
   transition: color 0.2s, transform 0.3s; 
 }
 
+.MarkAsDoneButtonCheckboxesSelected {
+  color: red !important;
+}
+
 .replyButton {
   margin-right: 60px !important;
   font-weight: bold !important;

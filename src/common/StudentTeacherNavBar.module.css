@@ -10,11 +10,13 @@
 .levelUpWorksLogoContainer {
   display: flex;
   align-items: center;
+  margin-left: 38px;
 }
 
 .levelUpWorksLogoContainer img {
   height: 60px;
   width: 145.99px;
+
 }
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^ */
 /* -------- StudentTeacherNavBar buttons */
@@ -40,11 +42,11 @@
 }
 
 .helpCentreBtn {
-  background-color: #f81c85;
+  background-color: #f81c85 !important;
 }
 
 .moreProjectsBtn {
-  background-color: #43c0f6;
+  background-color: #43c0f6 !important;
 }
 /* ^^^^^^^^^^^^^^^^^^^^^^ */
 /* ------ Country flag styles */

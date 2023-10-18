@@ -83,6 +83,12 @@
 }
 /* ^^^^^^^^^^^^^^^^^^^^^^ */
 /* -------- Menu crumbs at bottom of menu */
+.navLink {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  height: 100%;
+}
 .menuCrumbs {
   list-style: none;
   display: flex;
