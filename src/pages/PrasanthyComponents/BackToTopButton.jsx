@@ -34,7 +34,7 @@ const BackToTopButton = () => {
         </button>
 
         {/* Go to Dashboard Button */}
-        <NavLink to="/projects">
+        <NavLink to="/studentprojects">
           <button
             style={{
               backgroundColor: "#FF007F",
