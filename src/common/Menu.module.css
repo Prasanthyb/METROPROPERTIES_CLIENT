@@ -83,6 +83,12 @@
 }
 /* ^^^^^^^^^^^^^^^^^^^^^^ */
 /* -------- Menu crumbs at bottom of menu */
+.navLink {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  height: 100%;
+}
 .menuCrumbs {
   list-style: none;
   display: flex;
@@ -116,7 +122,7 @@
 }
 
 .menuBtn {
-  background-color: #b2e4fa;
+  background-color: #b2e4fa !important;
   border: none;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;

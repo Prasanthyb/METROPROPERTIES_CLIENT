@@ -9,6 +9,7 @@ import { faReply, faCheck } from "@fortawesome/free-solid-svg-icons";
 export default function Overview() {
   const [users, setUsers] = useState([]);
   const [selectedCheckboxes, setSelectedCheckboxes] = useState([]);
+  const [markDoneButton, setMarkDoneButton] = useState(false);
 
   useEffect(() => {
     fetch("http://localhost:4000/api/helprequests")
@@ -19,12 +20,18 @@ export default function Overview() {
   }, []);
 
   const toggleCheckbox = (studentId) => {
+    let updatedCheckboxes;
+  
     if (selectedCheckboxes.includes(studentId)) {
-      setSelectedCheckboxes(selectedCheckboxes.filter((id) => id !== studentId));
+      updatedCheckboxes = selectedCheckboxes.filter((id) => id !== studentId);
     } else {
-      setSelectedCheckboxes([...selectedCheckboxes, studentId]);
+      updatedCheckboxes = [...selectedCheckboxes, studentId];
     }
+  
+    setSelectedCheckboxes(updatedCheckboxes);
+    setMarkDoneButton(updatedCheckboxes.length > 0);
   };
+  
 
   const markHelpRequestAsDone = () => {
     const deleteRequests = selectedCheckboxes.map((studentId) =>
@@ -45,6 +52,7 @@ export default function Overview() {
   
     // After all delete requests are completed, fetch the updated list of help requests
     Promise.all(deleteRequests).then(() => {
+      setMarkDoneButton(false);
       fetch("http://localhost:4000/api/helprequests")
         .then((res) => res.json())
         .then((res) => {
@@ -55,7 +63,6 @@ export default function Overview() {
     // Clear the selected checkboxes after marking as done
     setSelectedCheckboxes([]);
   };
-
 
   function formatDate(dateString, format) {
     const date = new Date(dateString);
@@ -95,7 +102,7 @@ export default function Overview() {
               <FontAwesomeIcon icon={faReply} className={Styles.faIcon} />
               REPLY
           </button>
-          <button onClick={markHelpRequestAsDone} className={Styles.markAsDoneButton}>
+          <button onClick={markHelpRequestAsDone} className={`${Styles.markAsDoneButton} ${markDoneButton ? Styles.MarkAsDoneButtonCheckboxesSelected : ""}`}>
               <FontAwesomeIcon icon={faCheck} className={Styles.faIcon} />
                MARK AS DONE
           </button>
