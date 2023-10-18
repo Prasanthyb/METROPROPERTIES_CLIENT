@@ -5,6 +5,9 @@ import HelpRequests from './pages/HelpRequests/HelpRequests';
 import Home from './pages/Home/Home';
 import StudentProjects from './pages/PrasanthyComponents/StudentProjects';
 import StudentProfileViewer from './pages/PrasanthyComponents/StudentProfileViewer';
+// NEW CODE
+import TeacherProfileViewer from './pages/TeacherProfileViewer/TeacherProfileViewer';
+// ^^^^^^^^
 import ErrorPage from './pages/PrasanthyComponents/ErrorPage';
 import StudentProfiles from './pages/StudentProfiles/StudentProfiles'
 
@@ -17,6 +20,9 @@ function App() {
       <Route path = "/studentprofiles" element={<StudentProfiles/>} />
       <Route path = "/studentprojects" element={<StudentProjects />} />
       <Route path = "/student/:id" element={<StudentProfileViewer/>} />
+      {/* NEW CODE */}
+      <Route path ="/teacher/:id" element={<TeacherProfileViewer/>} />
+      {/* ^^^^^^^^^^^^^^^^^^^^ */}
       <Route path = "*" element={<ErrorPage/>} />
     </Routes>
   );
