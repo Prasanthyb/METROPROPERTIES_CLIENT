@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 import Login from '../../../common/Login/Login';
 
-export default function EnquireSection() {
+export default function EnquireSection(props) {
     // State for login modal
     const [modalOpenState, setModalOpenState] = useState(false);
     function closeModal() {
@@ -17,7 +17,7 @@ export default function EnquireSection() {
 
     return (
         <div id={styles['enquireGrid']}>
-            <Login modalOpenState={modalOpenState} openModal={openModal} closeModal={closeModal}></Login>
+            <Login currentUser={props.currentUser} updateCurrentUser={props.updateCurrentUser} modalOpenState={modalOpenState} openModal={openModal} closeModal={closeModal}></Login>
             <div id={styles['imageSection']}>
                 <img alt='Classroom' src={classroom}></img>
             </div>

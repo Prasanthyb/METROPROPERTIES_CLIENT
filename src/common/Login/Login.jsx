@@ -47,8 +47,8 @@ export default function Login(props) {
                             <h3 onClick={()=>handleSuChange(true)} className={`${styles.signupButton} ${styles.lsButton} ${suSelected? styles.active : null}`}>SIGN UP</h3>
                         </div>
                         {/* Using a "calledFrom" property that tells the form if it was called from the student or teacher side. */}
-                        {!suSelected && (<LoginForm calledFrom='student'></LoginForm>)}
-                        {suSelected && (<SignupForm calledFrom='student'></SignupForm>)}
+                        {!suSelected && (<LoginForm currentUser={props.currentUser} updateCurrentUser={props.updateCurrentUser} calledFrom='student'></LoginForm>)}
+                        {suSelected && (<SignupForm currentUser={props.currentUser} updateCurrentUser={props.updateCurrentUser} calledFrom='student'></SignupForm>)}
                     </div>
                     <div id={styles['teacherLoginDiv']}>
                         <img alt='Teachers' src={teacherImg}></img>
@@ -57,8 +57,8 @@ export default function Login(props) {
                             <h3 onClick={()=>handleSuChange(false)} className={`${styles.loginButton} ${styles.lsButton} ${suSelected? null : styles.active}`}>LOG IN</h3>
                             <h3 onClick={()=>handleSuChange(true)} className={`${styles.signupButton} ${styles.lsButton} ${suSelected? styles.active : null}`}>SIGN UP</h3>
                         </div>
-                        {!suSelected && (<LoginForm calledFrom='teacher'></LoginForm>)}
-                        {suSelected && (<SignupForm calledFrom='teacher'></SignupForm>)}
+                        {!suSelected && (<LoginForm currentUser={props.currentUser} updateCurrentUser={props.updateCurrentUser} calledFrom='teacher'></LoginForm>)}
+                        {suSelected && (<SignupForm currentUser={props.currentUser} updateCurrentUser={props.updateCurrentUser} calledFrom='teacher'></SignupForm>)}
                     </div>
                 </div>
             </Box>

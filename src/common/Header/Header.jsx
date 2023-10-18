@@ -1,6 +1,6 @@
 import styles from './Header.module.css';
 import {NavLink} from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import logo from '../../assets/NavBar/LevelUpWorks-white.png';
 import maoriFlag from '../../assets/NavBar/MaoriFlag.png';
@@ -11,7 +11,7 @@ import {faUserCircle} from "@fortawesome/free-regular-svg-icons";
 
 import Login from '../Login/Login';
 
-export default function Header() {
+export default function Header(props) {
     // State for login modal
     const [modalOpenState, setModalOpenState] = useState(false);
     function closeModal() {
@@ -22,9 +22,15 @@ export default function Header() {
         console.log(modalOpenState);
     }
 
+    useEffect(()=>{
+        if(props.currentUser.id>-1) {
+
+        }
+    }, [])
+
     return (
         <div id={styles['header']}>
-            <Login modalOpenState={modalOpenState} openModal={openModal} closeModal={closeModal}></Login>
+            <Login currentUser={props.currentUser} updateCurrentUser={props.updateCurrentUser} modalOpenState={modalOpenState} openModal={openModal} closeModal={closeModal}></Login>
             {/* LOGO DIV */}
             <div id={styles['imgSection']}>
                 <img alt='LevelUp Works Logo' src={logo}></img>
@@ -50,10 +56,12 @@ export default function Header() {
                 </div>
                 {/* On reviewing design spec. special attention will be needed in this area to handle logging in etc.
                     For example a ternary could potentially be used i.e !signedIn? && <loginDiv>  */}
-                <div id={styles['loginButtons']} onClick={openModal}>
+                {props.currentUser.id<0 && <div id={styles['loginButtons']} onClick={openModal}>
                     <FontAwesomeIcon icon={faUserCircle} size='xl'/>
                     REGISTER | LOGIN
-                </div>
+                </div>}
+
+                {props.currentUser.id>0 && <div></div>}
             </div>
         </div>
     );

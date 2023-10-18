@@ -1,11 +1,16 @@
 import styles from './ModalForms.module.css';
 import { useState, useEffect } from 'react';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 export default function LoginForm(props) {
+    const navigate = useNavigate();
     // Now that I've set up some login logic - I have had the database return the name and ID of the logged in user.
     // I ***SHOULD*** be able to lift this state later on so we can have site wide log in but I'm unsure currently
     // how to properly use this information.
-    const [currentUser, setCurrentUser] = useState();
+    // const [currentUser, setCurrentUser] = useState(); <---- STATE LIFTED TO APP.JS, HOPEFULLY
+    function handleUserChange(newId, newType) {
+        props.updateCurrentUser(newId, newType);
+    }
     // 08/10/23
     // Currently there is a minor issue where if you login on one form, then the other it cannot clear the response message
     // from the other form. Once (if ever) user sign in is properly handled with a redirect, this probably won't be an issue
@@ -46,13 +51,18 @@ export default function LoginForm(props) {
             if(status===200){
                 console.log(response);
                 const id = response[0][`${props.calledFrom}_id`];
-                setCurrentUser(id);
+                handleUserChange(id, props.calledFrom);
                 serverResponseEL.innerHTML = (`<h5 style='color: green'>Welcome, ${response[0].name}</h5>`);
             }
         });
     }
 
-    useEffect(()=>{console.log(currentUser);}, [currentUser]);
+    useEffect(()=>{
+        console.log(`${props.currentUser.id}, ${props.currentUser.type}`);
+        if(props.currentUser.id>-1) {
+            setTimeout(navigate(`${props.currentUser.type}/${props.currentUser.id}`), 5000);
+        }
+    }, [props.currentUser]);
 
     return(
         <div>

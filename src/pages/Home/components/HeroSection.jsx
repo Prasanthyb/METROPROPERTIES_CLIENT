@@ -16,7 +16,7 @@ export default function HeroSection(props) {
 
     return(
         <div id={styles['heroGrid']}>
-            <Login modalOpenState={modalOpenState} openModal={openModal} closeModal={closeModal}></Login>
+            <Login currentUser={props.currentUser} updateCurrentUser={props.updateCurrentUser} modalOpenState={modalOpenState} openModal={openModal} closeModal={closeModal}></Login>
             <div id={styles['heroBackground']}></div>
             <div id={styles['heroContent']}>
                 <div id={styles['heroText']}>
