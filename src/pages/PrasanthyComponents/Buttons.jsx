@@ -28,7 +28,7 @@ const Buttons = ({ selectedCategory, selectCategory, setList }) => (
         selectToggle={selectCategory}
       />
 
-      {/* -----------------------------handle the "Show" buttons------------------------------- */}
+      {/* -----------------------------Handle the "Show" buttons------------------------------- */}
 
       <div className={Styles.buttoncontainer}>
         <div className={Styles.show}>SHOW</div>
