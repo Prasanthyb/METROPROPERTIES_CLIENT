@@ -24,11 +24,11 @@ font-size:20px;
   color:black;
   font-size:18px;
 }
-.buttoncontainer{
- margin-left:26rem;
- margin-top:10px;
- display: flex;
- alignItems: center;
+.buttoncontainer {
+  margin-left: 26rem;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
 }
 .sort {
 height: 16px;

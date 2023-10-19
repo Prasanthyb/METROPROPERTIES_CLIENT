@@ -1,6 +1,7 @@
 import React from "react";
 import "./styleFooter.css";
 const Footer = () => {
+  
   //--------------------------- Data for the footer----------------------//
 
   const footerData = [

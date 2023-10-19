@@ -25,7 +25,7 @@ const StudentProjects = () => {
       .then((response) => setList(response));
   }, []);
 
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ State for selected category and results found~~~~~~~~~~~~~~~~~~~//
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ State for selected level and results found~~~~~~~~~~~~~~~~~~~//
 
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [resultsFound, setResultsFound] = useState(true);
@@ -50,6 +50,7 @@ const StudentProjects = () => {
     );
     setProjects(changeCheckedProjects);
   };
+  
 
   const handleChangeCheckedS = (id) => {
     const projectsStateListS = projectsS;
@@ -57,6 +58,7 @@ const StudentProjects = () => {
       item.id === id ? { ...item, checked: !item.checked } : item
     );
     setProjectsS(changeCheckedProjectsS);
+    
   };
 
   const handleChangeCheckedYL = (id) => {
@@ -88,6 +90,7 @@ const StudentProjects = () => {
         }
       });
      let updatedList = response.data;
+
     } catch (error) {
       console.error('Error filtering data:', error);
     }
