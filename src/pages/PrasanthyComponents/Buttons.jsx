@@ -1,55 +1,34 @@
 import React from "react";
-import data from "./Projects.json";
+import data from "./Properties.json";
 import Styles from "./styleButton.module.css";
-import ButtonToggle from "./ButtonToggle";
 
-// -------------------------- Define the Buttons component------------------------------//
+// -------------------------- Define the Buttons component ------------------------------//
 
 const Buttons = ({ selectedCategory, selectCategory, setList }) => (
   <div>
     <div className={Styles.projectbar}>
       <p>
-        <h4>PROJECTS</h4>
+        <h4>FILTER</h4>
       </p>
-      <p>
-        <h5>
-          Welcome to the Project Library. You can use the filters on the left to
-          help you search for specific projects.
-        </h5>
-      </p>
+      <p></p>
     </div>
 
-    {/* ------------------------------Sorting based on level--------------------------------------- */}
-
-    <div className={Styles.searchBar}>
-      <ButtonToggle
-        options={data.ButtonsList}
-        value={selectedCategory}
-        selectToggle={selectCategory}
-      />
-
-      {/* -----------------------------Handle the "Show" buttons------------------------------- */}
-
-      <div className={Styles.buttoncontainer}>
-        <div className={Styles.show}>SHOW</div>
-        <button
-          type="submit"
-          className={Styles.sort}
-          onClick={() => setList(data.ProjectList.slice(10))}>
-          5
-        </button>
-        <button
-          type="submit"
-          className={Styles.sort}
-          onClick={() => setList(data.ProjectList.slice(5))}>
-          10
-        </button>
-        <button
-          type="submit"
-          className={Styles.sort}
-          onClick={() => setList(data.ProjectList)}>
-          All
-        </button>
+    {/* ------------------------------ Sorting based on level --------------------------------------- */}
+    <div>
+     
+      <div className={Styles.searchBar}>
+      <h5>SELECT YOUR DESIRED PRICE RANGE</h5>
+        <select
+          value={selectedCategory}
+          onChange={(e) => selectCategory(e, e.target.value)}
+        >
+          <option value="">Select</option>
+          {data.ButtonsList.map((option) => (
+            <option key={option.value} value={option.value}>
+              {option.label}
+            </option>
+          ))}
+        </select>
       </div>
     </div>
   </div>

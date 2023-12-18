@@ -2,8 +2,6 @@ import React from "react";
 import Styles from "./styleFilterSection.module.css";
 import FilterCommon from "./FilterCommon";
 
-//-------------------- Define the FilterSection component----------------------//
-
 const FilterSection = ({
   projectsSM,
   changeCheckedSM,
@@ -14,64 +12,73 @@ const FilterSection = ({
   projects,
   changeChecked,
 }) => (
-  <div className="filter">
-    <div className={Styles.filter1}>
 
-{/*------------------------ Subscription Filter------------------------------------------- */}
-
-      <div className={Styles.inputgroup}>
-        <p className={Styles.label}>SUBSCRIPTION</p>
-        {projectsS.map((project) => (
-          <FilterCommon
-            key={project.id}
-            project={project}
-            changeChecked={changeCheckedS}
-          />
-        ))}
-      </div>
-
-{/*---------------------------- Activity Type Filter----------------------------------------- */}
+    <div className={Styles.filter}>
+      <div className={Styles.filter1}>
 
       <div className={Styles.inputgroup}>
-        <p className={Styles.label}>ACTIVITY TYPE</p>
-        {projects.map((project) => (
-          <FilterCommon
-            key={project.id}
-            project={project}
-            changeChecked={changeChecked}
-          />
-        ))}
-      </div>
+          <p className={Styles.label}>PROPERTY TYPE</p>
+          <div className={Styles.checkboxGrid}>
+            {projectsSM.map((project) => (
+              <FilterCommon
+                key={project.id}
+                project={project}
+                changeChecked={changeCheckedSM}
+              />
+            ))}
+          </div>
+        </div>
 
-{/*------------------------------- Year-Level Filter-------------------------------------------- */}
+      
+        
 
-      <div className={Styles.inputgroup}>
-        <p className={Styles.label}>YEAR-LEVEL</p>
-        {projectsYL.map((project) => (
-          <FilterCommon
-            key={project.id}
-            project={project}
-            changeChecked={changeCheckedYL}
-          />
-        ))}
-      </div>
+      
+        <div className={Styles.inputgroup}>
+          <p className={Styles.label}>BEDROOM</p>
+          <div className={Styles.checkboxGrid}>
+            {projects.map((project) => (
+              <FilterCommon
+                key={project.id}
+                project={project}
+                changeChecked={changeChecked}
+              />
+            ))}
+          </div>
+        </div>
 
-{/*-------------------------------- Subject Matter Filter------------------------------------------ */}
+       
+        <div className={Styles.inputgroup}>
+          <p className={Styles.label}>BATHROOM</p>
+          <div className={Styles.checkboxGrid}>
+            {projectsYL.map((project) => (
+              <FilterCommon
+                key={project.id}
+                project={project}
+                changeChecked={changeCheckedYL}
+              />
+            ))}
+          </div>
+        </div>
 
-      <div className={Styles.inputgroup}>
-        <p className={Styles.label}>SUBJECT MATTER</p>
-        {projectsSM.map((project) => (
-          <FilterCommon
-            key={project.id}
-            project={project}
-            changeChecked={changeCheckedSM}
-          />
-        ))}
+        <div className={Styles.inputgroup}>        
+          <p className={Styles.label}>PET FRIENDLY</p>
+          <div className={Styles.checkboxGrid}>
+            {projectsS.map((project) => (
+              <FilterCommon
+                key={project.id}
+                project={project}
+                changeChecked={changeCheckedS}
+              />
+            ))}
+          </div>
+        </div>
+        
+
+
       </div>
     </div>
-  </div>
+   
+ 
 );
-
-//--------------------------------- Export the FilterSection component-----------------------------//
 
 export default FilterSection;

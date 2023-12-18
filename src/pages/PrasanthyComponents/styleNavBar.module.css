@@ -1,103 +1,57 @@
-.StudentTeacherNavBarContainer {
-  display: flex;
-  justify-content: space-between;
-  background-color: rgb(62, 172, 240);
-  height: 65px;
-  width: 100%;
-}
-
-.levelUpWorksLogoContainer {
-  display: flex;
-  align-items: center;
-}
-
-.levelUpWorksLogoContainer img {
-  height: 60px;
-  width: 145.99px;
-}
-
-.StudentTeacherNavBarBtnsContainer {
-  margin: 0 80px 0 0;
-  display: flex;
-  align-items: center;
-}
+/* Navbar.css */
 
 .navbar {
-  &:link,
-  &:visited {
-    display: flex;
-    gap: 4rem;
-    display: inline-block;
-    font-size: 0.9rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    color: white;
-    transition: color 0.3s linear;
-    margin: 0 100px 0 100px;
-    text-decoration: none;
-  }
-  color: white;
-
-  &:hover,
-  &:active {
-    color: blue;
-  }
-}
-
-.container {
-  margin-right: 5px;
-  width: 300px;
-}
-
-.flagsContainer {
   display: flex;
-  align-self: flex-end;
-  color: white;
-  font-weight: 500;
-  gap: 10px;
-  font-size: 12px;
-  margin-top: 1px;
-  margin-left: 145px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: white;
+  margin-left:12.3rem;
+  color: black;
+  width:73.5rem;
+  height: 150px;
+  font-size: 18px;
+  font-family: "Inter", sans-serif;
 }
 
-.langBtn {
-  background-color: rgb(62, 172, 240);
+.image {
+  width: 220px;
+  height: 61px;
 }
 
-.imageContainer {
+.nav_links {
+  list-style: none;
+  padding: 0;
+  margin-right: 5rem;
   display: flex;
-  width: 300px;
-  height: 40px;
-  font-size: 14px;
-  margin-left: 130px;
+  gap: 30px;
+
 }
 
-.img {
-  width: 40px;
-  height: 40px;
+.nav_links li {
+  margin-right: 15px;
   cursor: pointer;
+  transition: color 0.3s ease;
+  font-size: 28px;
+  position: relative;
+  
 }
 
-.name {
-  display: flex;
-  margin-left: 5px;
-  margin-top: 15px;
-  cursor: pointer;
-  color: white;
-
-  &:hover,
-  &:active {
-    color: blue;
-  }
+.nav_links li:hover {
+  color: #007bff;
 }
-    
-  
-  
-  
-  
-  
-  
-    
-    
-  
- 
+
+.nav_links li:hover:before {
+  content: "";
+  position: absolute;
+  top: -5px; 
+  left: -5px; 
+  right: -5px; 
+  bottom: -5px; 
+  border: 2px solid red;
+  border-radius: 5px; 
+  pointer-events: none; 
+}
+.nav_links li:first-child a {
+  text-decoration: none;
+}

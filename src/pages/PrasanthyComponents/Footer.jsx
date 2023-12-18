@@ -5,41 +5,23 @@ const Footer = () => {
   //--------------------------- Data for the footer----------------------//
 
   const footerData = [
+    
     {
-      header: "COMPANY",
-      items: ["About Us", "Careers", "Partners"],
-    },
-    {
-      header: "COURSES",
+      header: "QUICK LINKS",
       items: [
-        "Register",
-        "Login",
-        "Projects",
-        "Teachers",
-        "Parents",
-        "Resources",
+        "PROPERTY OWNERS",
+        "TENANTS",
+        "NEWS",
+        "ABOUT US"
+        
       ],
     },
     {
-      header: "SUPPORT",
-      items: ["FAQs", "Helpdesk", "Contact Us"],
-    },
-    {
-      header: "LEGAL",
-      items: ["Terms & Conditions", "Privacy Policy"],
-    },
-    {
-      header: "LevelUp Works",
-      items: [
-        "LevelUp Works is an Auckland-based",
-        "enterprise dedicated to developing game-",
-        "based learning software to help teachers in",
-        "response to the NewZealand Digital ",
-        "Technologies & Hangarau Matihiko.",
-        "alan@levelupworks.com",
-        "(021)668 185.",
-      ],
-    },
+      header: "CONTACT US",
+      items: ["093914642", "info@metronz.co.nz", "Level 33,ANZ Centre,23-29 Albert Street,Acckland CBD,1010"],
+    }
+          
+    
   ];
 
   return (
@@ -47,6 +29,7 @@ const Footer = () => {
 
     <footer className="footer">
       <table className="footer-table">
+      <img  src="/logo.png" alt="" />
         <tbody>
           <tr>
   {/*--------------------------Map through the footer data to create columns-------------------*/}

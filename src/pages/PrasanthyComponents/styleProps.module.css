@@ -1,0 +1,103 @@
+* {
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  background-color: rgb(62, 172, 240);
+}
+
+.div {
+  margin-top: 0;
+  background-color: white;
+  width: 100%;
+}
+
+.navbar {
+  margin-left: 0;
+}
+
+
+
+.listp {
+  margin-bottom: 50px;
+}
+
+.outerbox {
+  width: 200px;
+  height: 35px;
+  background-color: white;
+  margin-top: 5px;
+  float: left;
+  margin-left: 800px;
+}
+
+.footer {
+  margin-top: 0;
+  float: left;
+}
+
+.footerone {
+  margin-bottom: 200px;
+  float: right;
+  margin-top: 50px;
+  width: 100%;
+}
+section {
+  width: 80%;
+  margin: auto;
+  margin-top: 5%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+}
+.cards {
+  width: 250px;
+  padding: 20px;
+}
+.cards:hover {
+  box-shadow: 0 10px 10px 10px rbga(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+figure {
+  width: 400PX;
+  height:200px;
+  display: flex;
+  gap:10px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius:20px;
+  overflow: hidden;
+  transition: all 0.5s linear;
+
+  &::after {
+    content: "";
+    position: absolute;
+  
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all 0.2s linear;
+    cursor: pointer;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+
+  &:hover img {
+    transform: scale(1.2);
+  }
+
+  img {
+    max-width: 90%;
+   
+    height: 20rem;
+    transition: all 0.2s linear;
+  }
+}
+
+

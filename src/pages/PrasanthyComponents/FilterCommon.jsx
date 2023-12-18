@@ -8,7 +8,7 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 const useStyles = styled({
   root: {
     "&$checked": {
-      color: "#000",
+      color: "black",
     },
   },
   checked: {},

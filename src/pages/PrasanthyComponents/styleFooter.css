@@ -6,11 +6,12 @@
 
 .footer-table {
     width: 100%;
-    background-color:rgb(62, 172, 240);
+    background-color:rgb(1, 7, 10);
     color: white; 
     padding: 20px; 
     height:500px;
     margin-top:0;
+  
     
   }
 .footer-table td {

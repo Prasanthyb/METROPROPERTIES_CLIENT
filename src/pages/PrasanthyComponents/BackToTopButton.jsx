@@ -16,43 +16,24 @@ const BackToTopButton = () => {
 
         <button
           style={{
-            backgroundColor: "#FFBF00",
+            backgroundColor: "black",
             color: "#fff",
             border: "none",
             padding: "10px 10px",
             cursor: "pointer",
-            height: "25px",
+            height: "30px",
             width: "180px",
             borderRadius: "5px",
             fontSize: "14px",
             fontWeight: "bold",
             transition: "color 0.2s",
-            marginLeft: "950px",
+            marginLeft: "68rem",
           }}
           onClick={scrollToTop}>
           BACK TO TOP
         </button>
 
-        {/* Go to Dashboard Button */}
-        <NavLink to="/studentprojects">
-          <button
-            style={{
-              backgroundColor: "#FF007F",
-              color: "#fff",
-              border: "none",
-              padding: "10px 20px",
-              cursor: "pointer",
-              height: "25px",
-              width: "180px",
-              borderRadius: "5px",
-              fontSize: "14px",
-              fontWeight: "bold",
-              transition: "color 0.2s",
-              marginLeft: "50px",
-            }}>
-            GO TO DASHBOARD
-          </button>
-        </NavLink>
+        
       </div>
     </div>
   );

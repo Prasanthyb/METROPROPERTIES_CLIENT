@@ -1,0 +1,34 @@
+/* Add this CSS to your styles file or in your component */
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  /* Your existing navbar styles */
+  /* Example: */
+  .navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    /* Add any other styles you need */
+  }
+  
+  /* Your existing footer styles */
+  /* Example: */
+  .footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    /* Add any other styles you need */
+  }
+  

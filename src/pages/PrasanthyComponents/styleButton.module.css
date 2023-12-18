@@ -1,59 +1,31 @@
 .searchBar{
   display:flex;
   align-items:center;
- 
-  padding:1.5rem 1rem;
-  margin-left:250px;
-}
-
-
-.projectbar{
-  margin:70px 10px 1px 265px;
+  justify-content: center;
+  padding:1px 20px;
   
-}   
+  margin-bottom:10px;
+}
+
+
+
 p h4{
-color:black;
-margin-right:200rem;
+  display:flex;
+  align-items:center;
+  justify-content: center;
+margin-top:20px;
+margin-bottom:50px;
 font-weight:bold;
-font-size:20px;
+font-size:40px;
 
-}   
-.projectbar p h5
-{
-  margin-top:10px;
-  color:black;
-  font-size:18px;
-}
-.buttoncontainer {
-  margin-left: 26rem;
-  margin-top: 10px;
-  display: flex;
-  align-items: center;
-}
-.sort {
-height: 16px;
-width: 40px;
-background-color: #D0D0D0;
-border: 2px solid #808080; 
-font-weight: bold; 
-cursor: pointer;
-}
-.sort:hover {
+}  
+h5{
+  margin-left: 1rem;
+  font-style: italic;
+  color: red;
+  
+} 
 
-color: white;
-background-color:lightblue;
 
-}
-button:focus{
-  color:white;
-  background-color:blue;
-
- }
- .show {
-  color: black;
-  margin-right: 25px;
-  font-weight: bold; 
-  font-size:16px;
-}
 
  
