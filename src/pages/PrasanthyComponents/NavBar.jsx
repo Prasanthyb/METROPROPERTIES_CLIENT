@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import classes from './styleNavBar.module.css';
+import classes from './cssFiles/styleNavBar.module.css';
 import { Link } from "react-router-dom";
 
 const Navbar = () => {

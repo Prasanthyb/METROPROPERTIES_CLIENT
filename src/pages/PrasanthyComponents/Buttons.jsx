@@ -1,6 +1,6 @@
 import React from "react";
 import data from "./Properties.json";
-import Styles from "./styleButton.module.css";
+import Styles from "./cssFiles/styleButton.module.css";
 
 // -------------------------- Define the Buttons component ------------------------------//
 

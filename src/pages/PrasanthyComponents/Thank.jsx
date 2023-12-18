@@ -3,7 +3,7 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
-import './styleThank.css'; // Replace with your actual CSS file name
+import './cssFiles/styleThank.css'; 
 
 const Thank = () => {
   const location = useLocation();
@@ -13,6 +13,7 @@ const Thank = () => {
     <div className="container">
       <Navbar className="navbar" />
       <div className="content">
+      <img src="/thank.png" alt="" />
         <p style={{ fontSize: "50px", color: "green" }}>
           Thank You!
           <span style={{ fontSize: "40px", color: "blue", fontStyle: "italic" }}>
@@ -33,7 +34,7 @@ const Thank = () => {
 
 
 
-        <Link to="/view">
+        <Link to="/search">
         <button 
   style={{ fontSize: "40px", backgroundColor: "skyblue", color: "black",margin: "30px auto" }}
 >
@@ -42,7 +43,7 @@ const Thank = () => {
 
         </Link>
       </div>
-      <Footer className="footer" />
+      <img src="/footer.png" alt="" />
     </div>
   );
 }

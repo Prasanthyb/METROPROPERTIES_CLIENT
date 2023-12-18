@@ -1,5 +1,5 @@
 import React from "react";
-import Styles from "./styleFilterSection.module.css";
+import Styles from "./cssFiles/styleFilterSection.module.css";
 import FilterCommon from "./FilterCommon";
 
 const FilterSection = ({

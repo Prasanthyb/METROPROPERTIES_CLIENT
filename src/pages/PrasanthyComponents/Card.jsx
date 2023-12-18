@@ -1,5 +1,5 @@
 import React from "react";
-import "./styleProps.module.css";
+import "./cssFiles/styleProps.module.css";
 
 const Card = ({ item, handleClick }) => {
   const { property_pic,name,level,bedroom} = item;

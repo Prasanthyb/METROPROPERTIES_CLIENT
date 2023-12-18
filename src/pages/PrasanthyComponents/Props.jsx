@@ -3,24 +3,30 @@ import data from './Properties.json';
 import Card from './Card';
 import Buttons from './Buttons';
 import FilterSection from './FilterSection';
-import Styles from './styleProps.module.css';
+import Styles from './cssFiles/styleProps.module.css';
 import EmptyView from './EmptyView';
 import BackToTopButton from './BackToTopButton';
 import Footer from './Footer';
 import axios from "axios";
 
 const Props = ({ handleClick }) => {
-  const [list, setList] = useState(data.PropertyList);
+  const [list, setList] = useState([]);
+  useEffect(() => {
+    
+    axios.get('http://localhost:4000/products')
+      .then((response) => {
+        console.log(response.data);
+        setList(response.data.products);
+      })
+      .catch((error) => {
+        console.error('Error fetching featured data:', error);
+      });
 
-  // useEffect(() => {
-  //   fetch('http://localhost:4000/products')
-  //     .then((response) => response.json())
-  //     .then((response) => {
-  //       console.log(response); // Log the entire response
-  //       setList(response.data.products);
-  //     })
-  //     .catch((error) => console.error('Error fetching data:', error));
-  // }, []);
+    
+  }, []); 
+
+
+ 
 
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [resultsFound, setResultsFound] = useState(true);
@@ -150,15 +156,11 @@ const Props = ({ handleClick }) => {
         <section>
           {/* Conditionally render Card or EmptyView */}
           {resultsFound ? 
-            list.map((item) => (
-              <Card item={item} key={item.id} handleClick={handleClick} 
-              
-              
-              
-              />
-            )) 
-            : <EmptyView />
-          }
+  list.map((item) => (
+    <Card item={item} key={item.id} handleClick={handleClick} />
+  )) 
+  : <EmptyView />
+}
           </section>
 
         <div className={Styles.footer}>

@@ -7,6 +7,7 @@ const EmptyView = () => (
       justifyContent: "center",
       alignItems: "center",
       height: "100%",
+      
     }}>
     <img
       style={{

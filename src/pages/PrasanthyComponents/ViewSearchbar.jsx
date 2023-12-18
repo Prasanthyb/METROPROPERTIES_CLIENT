@@ -2,7 +2,6 @@ import React , {useState} from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import HeaderView from './HeaderView';
-import Props from './Props';
 import Searchbar from './Searchbar';
 import Cart from './Cart';
 import "./cssFiles/styleView.css"
@@ -51,7 +50,7 @@ const View = () => {
 		<HeaderView size={cart.length} setShow={setShow} />
 
 		{
-			show ? <Props className="props" handleClick={handleClick} /> : <Cart cart={cart} setCart={setCart} handleChange={handleChange} />
+			show ? <Searchbar className="props" handleClick={handleClick} /> : <Cart cart={cart} setCart={setCart} handleChange={handleChange} />
 		}
 
 		{

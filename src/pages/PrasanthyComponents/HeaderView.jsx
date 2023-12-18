@@ -1,6 +1,6 @@
 
 import React from 'react';
-import './styleHeaderView.css';
+import './cssFiles/styleHeaderView.css';
 
 const HeaderView = ({size,setShow}) => {
   return (
