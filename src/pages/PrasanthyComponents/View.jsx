@@ -17,7 +17,7 @@ const View = () => {
 	const handleClick = (item)=>{
 		let isPresent = false;
 		cart.forEach((product)=>{
-			if (item.id === product.id)
+			if (item.id === product._id)
 			isPresent = true;
 		})
 		if (isPresent){

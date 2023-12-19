@@ -62,7 +62,44 @@ const Searchbar = ({ handleClick }) => {
       {/* Search bar section */}
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <div style={{ position: 'relative' }}>
-          {/* ... (rest of your search bar JSX) */}
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+        <div style={{ position: 'relative' }}>
+          <img style={{ width: '100%', borderRadius: '8px', marginBottom: '20px' }} src="/image10.png" alt="" />
+          <p style={{
+            position: 'absolute',
+            top: '35%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            padding: '10px 30px',
+            fontSize: '52px',
+            marginBottom: '10px',
+            border: 'none',
+            borderRadius: '4px',
+            cursor: 'pointer',
+            color: 'black',
+            fontWeight: 'bold'
+          }}>
+            Start Your rental search
+          </p>
+          <div className="search-container" style={{ display: 'flex', justifyContent: 'center', position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}>
+            <div className="search-bar">
+              <input
+                type="text"
+                placeholder="Start typing a property"
+                value={searchText}
+                onChange={handleInputChange}
+                style={{ padding: '10px 30px', fontSize: '22px', width: '30rem', height: '2rem', border: 'none', borderRadius: '4px', cursor: 'pointer', backgroundColor: 'white', color: '#000', fontWeight: 'bold' }}
+              />
+              {/* Use Link component for the search button */}
+              <Link to="/view" style={{ textDecoration: 'none' }}>
+                <button className="search-button" onClick={handleSearch} style={{ padding: '6px 30px', fontSize: '22px', margin: '2px', border: 'none', borderRadius: '4px', cursor: 'pointer', backgroundColor: 'red', color: '#fff', fontWeight: 'bold' }}>
+                  Search
+                </button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
         </div>
       </div>
 
