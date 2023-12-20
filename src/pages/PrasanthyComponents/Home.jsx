@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from "./Navbar";
-import Footer from "./Footer";
-import Properties from "./Properties";
+import './cssFiles/styleHome.css'; 
+
 
 const Home = () => {
   return (
@@ -10,45 +10,21 @@ const Home = () => {
       <Navbar />
       <div style={{ position: 'relative' }}>
         <img style={{ width: '100%',height:"30rem", borderRadius: '8px', marginBottom: '20px' }} src="/metro.png" alt="" />
+<div>
 
-        <p style={{
-          position: 'absolute',
-          top: '10%',
-          left: '30%',
-          transform: 'translate(-50%, -50%)',
-          padding: '10px 30px',
-          fontSize: '52px',
-          marginBottom: '10px',
-          border: 'none',
-          borderRadius: '4px',
-          cursor: 'pointer',
-
-          color: 'black',
-          fontWeight: 'bold'
-        }}>
-          Metro Property<br />
-          Management Services
-        </p>
-        <p style={{
-          position: 'absolute',
-          top: '30%',
-          left: '30%',
-          transform: 'translate(-50%, -50%)',
-          padding: '10px 30px',
-          fontSize: '22px',
-          marginBottom: '10px',
-          border: 'none',
-          borderRadius: '4px',
-          cursor: 'pointer',
-
-          color: 'black',
-          fontWeight: 'bold'
-        }}>
-          Lorem ipsum dolor sit amet consectetur.Nunc justo purus sit<br />
-          urna vulputate libero cras.Adipiscing sed egestas risus blandit
-        </p>
+        <p className="responsive-heading">
+  Metro Property <br/>
+  Management Services
+</p>
+</div>
+<div >
+<p className="second-paragraph">
+  Lorem ipsum dolor sit amet consectetur. Nunc justo purus sit
+  urna vulputate libero cras. Adipiscing sed egestas risus blandit
+</p>
+</div>
         
-        <div style={{ position: 'absolute', top: '50%', left: '30%', transform: 'translate(-50%, -50%)', display: 'flex', flexDirection: 'row' }}>
+        <div style={{ position: 'absolute', top: '70%', left: '30%', transform: 'translate(-50%, -50%)', display: 'flex', flexDirection: 'row' }}>
         <Link to="/search">
           <button style={{ padding: '10px 30px', fontSize: '22px', margin: '10px', border: 'none', borderRadius: '4px', cursor: 'pointer', backgroundColor: 'red', color: '#fff', fontWeight: 'bold' }}>
             List a Property

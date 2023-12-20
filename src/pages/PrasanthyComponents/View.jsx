@@ -55,7 +55,7 @@ const View = () => {
 		}
 
 		{
-			warning && <div className='warning'>Property is already added to your Booked View</div>
+			warning && <div className='warning'>Property is already <br/>added to your Booked View</div>
 		}
 		<img src="/footer.png" alt="" />
 	</React.Fragment>

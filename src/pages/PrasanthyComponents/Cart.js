@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
+import './cssFiles/styleCart.css'; // Import the CSS file
 
 const Cart = ({ cart, setCart, handleChange }) => {
   const [date, setDate] = useState('');
@@ -53,19 +54,9 @@ const Cart = ({ cart, setCart, handleChange }) => {
     <div>
       <article>
         {cart?.map((item) => (
-          <div className="cart_box" key={item.id}  style={{ marginLeft: '30rem',
-          fontWeight: 'bold',
-          marginBottom: '10px',
-          marginTop: '20px',
-          fontSize: '25px', }}>
-          <div className="cart_img" >
-              <img src={item.property_pic} alt={item.name}
-               style={{
-    width: '300px',    
-    height: '250px',   
-    borderRadius: '10px', 
-     
-  }} />
+          <div className="cart_box" key={item.id}>
+            <div className="cart_img">
+              <img src={item.property_pic} alt={item.name} />
               <p>{item.name}</p>
               <span>{item.level}</span>
             </div>
@@ -75,8 +66,6 @@ const Cart = ({ cart, setCart, handleChange }) => {
               <button
                 className="removebutton"
                 onClick={() => handleRemove(item.id)}
-                style={{ fontSize: "25px", backgroundColor: "brown",
-                 color: "white",margin: "30px auto" }}
               >
                 Remove
               </button>
@@ -84,25 +73,12 @@ const Cart = ({ cart, setCart, handleChange }) => {
           </div>
         ))}
       </article>
-      <div
-        style={{
-          marginLeft: '40rem',
-          fontWeight: 'bold',
-          marginBottom: '10px',
-          marginTop: '20px',
-          fontSize: '30px',
-        }}
-      >
+
+      <div className="details-heading">
         <p>Your Details</p>
       </div>
 
-      <StyledContactForm
-        style={{
-          marginLeft: '30rem',
-          fontWeight: 'bold',
-          marginBottom: '30px',
-        }}
-      >
+      <StyledContactForm className="contact-form">
         <form ref={form} onSubmit={sendEmail}>
           <label>Name</label>
           <input type="text" name="user_name" />
@@ -176,7 +152,7 @@ const StyledContactForm = styled.div`
 
     label {
       margin-top: 1rem;
-      fontWeight: 20px;
+      font-weight: 20px;
     }
 
     input[type='submit'] {

@@ -1,4 +1,4 @@
-.warning{
+.warning {
     height: 40px;
     width: 250px;
     position: absolute;
@@ -11,6 +11,26 @@
     padding: 5px;
     border-radius: 5px;
 }
-.props{
-    width:100%;
+
+.props {
+    width: 100%;
+}
+
+/* Media Query for Tablets */
+@media screen and (max-width: 768px) {
+    .warning {
+        width: 100%;
+        max-width: 250px;
+        position: relative;
+        right: auto;
+        top: auto;
+    }
+}
+
+/* Media Query for Phones */
+@media screen and (max-width: 480px) {
+    .warning {
+        width: 100%;
+        max-width: 100%;
+    }
 }

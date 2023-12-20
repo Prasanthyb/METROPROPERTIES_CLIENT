@@ -99,5 +99,35 @@ figure {
     transition: all 0.2s linear;
   }
 }
+/* Add this CSS at the end of your existing CSS */
+
+@media (max-width: 1200px) {
+  section {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .cards {
+    width: 200px;
+  }
+}
+
+@media (max-width: 900px) {
+  section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cards {
+    width: 100%;
+  }
+
+  figure {
+    width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
 
 
