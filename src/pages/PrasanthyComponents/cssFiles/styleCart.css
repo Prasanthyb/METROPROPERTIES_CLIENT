@@ -37,11 +37,11 @@ body {
   }
   
   .removebutton {
-    font-size: 25px;
-    background-color: brown;
+    font-size:16px;
+    background-color:black;
     color: white;
     margin: 30px auto;
-    padding: 10px 20px;
+    padding: 10px 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;

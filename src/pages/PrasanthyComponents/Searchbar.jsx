@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import BackToTopButton from './BackToTopButton';
-
 import Card from './Card';
 import Styles from './cssFiles/styleProps.module.css';
 
@@ -65,22 +64,14 @@ const Searchbar = ({ handleClick }) => {
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <div style={{ position: 'relative' }}>
           <img style={{ width: '100%', borderRadius: '8px', marginBottom: '20px' }} src="/image10.png" alt="" />
-          <p style={{
-            position: 'absolute',
-            top: '35%',
-            left: '50%',
-            transform: 'translate(-50%, -50%)',
-            padding: '10px 30px',
-            fontSize: '52px',
-            marginBottom: '10px',
-            border: 'none',
-            borderRadius: '4px',
-            cursor: 'pointer',
-            color: 'black',
-            fontWeight: 'bold'
-          }}>
-            Start Your rental search
-          </p>
+          
+          <div className={Styles.searching} 
+          style={{ fontSize: '42px',           
+         cursor: 'pointer', 
+          color: '#000', fontWeight: 'bold' }}>    
+            Start Your Rental Search          
+          </div>
+          
           <div className="search-container" style={{ display: 'flex', justifyContent: 'center', position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}>
             <div className="search-bar">
               <input
@@ -129,6 +120,7 @@ const Searchbar = ({ handleClick }) => {
           style={{
             fontSize: '42px',
             marginLeft: '40%',
+            marginTop:"20px",
             border: 'none',
             borderRadius: '4px',
             cursor: 'pointer',
@@ -147,6 +139,8 @@ const Searchbar = ({ handleClick }) => {
       <div>
         <p
           style={{
+            marginTop:"30px",
+          
             fontSize: '42px',
             marginLeft: '40%',
             border: 'none',

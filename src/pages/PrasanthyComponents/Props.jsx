@@ -6,13 +6,12 @@ import FilterSection from './FilterSection';
 import Styles from './cssFiles/styleProps.module.css';
 import EmptyView from './EmptyView';
 import BackToTopButton from './BackToTopButton';
-
 import axios from "axios";
 
 const Props = ({ handleClick }) => {
   const [list, setList] = useState([]);
-  useEffect(() => {
-    
+  
+  useEffect(() => {    
     axios.get('http://localhost:4000/products')
       .then((response) => {
         console.log(response.data);

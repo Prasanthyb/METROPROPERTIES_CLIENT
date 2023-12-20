@@ -15,7 +15,7 @@ nav{
     justify-content: space-between;
 }
 .my_shop{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: bold;
     color: blue;
     font-family: cursive;
@@ -26,8 +26,9 @@ nav{
 }
 
 .cart span:nth-child(1){
-    font-size: 2rem;
+    font-size: 1.2rem;
     color: blue;
+    font-family: cursive;
 }
 
 .cart span:nth-child(2){
