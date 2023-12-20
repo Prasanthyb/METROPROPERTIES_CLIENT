@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import BackToTopButton from './BackToTopButton';
-import Footer from "./Footer";
+
 import Card from './Card';
 import Styles from './cssFiles/styleProps.module.css';
 
@@ -166,6 +166,9 @@ const Searchbar = ({ handleClick }) => {
           <BackToTopButton />
         </div>
       </div>
+      <div className="footerimage">
+		<img src="/footer.png" alt="" />
+		</div>
     </div>
   );
 }

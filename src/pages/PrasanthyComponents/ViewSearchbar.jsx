@@ -1,6 +1,6 @@
 import React , {useState} from 'react';
 import Navbar from './Navbar';
-import Footer from './Footer';
+
 import HeaderView from './HeaderView';
 import Searchbar from './Searchbar';
 import Cart from './Cart';
@@ -56,7 +56,7 @@ const View = () => {
 		{
 			warning && <div className='warning'>Property is already added to your Booked View</div>
 		}
-		<img src="/footer.png" alt="" />
+		
 	</React.Fragment>
 	
   )

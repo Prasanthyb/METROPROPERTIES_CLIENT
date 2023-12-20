@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
-import './cssFiles/styleCart.css'; // Import the CSS file
+import './cssFiles/styleCart.css'; 
 
 const Cart = ({ cart, setCart, handleChange }) => {
   const [date, setDate] = useState('');

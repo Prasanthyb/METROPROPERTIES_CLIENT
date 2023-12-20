@@ -1,4 +1,4 @@
-/* Add this CSS to your styles file or in your component */
+
 .container {
     display: flex;
     flex-direction: column;
@@ -14,8 +14,7 @@
     text-align: center;
   }
   
-  /* Your existing navbar styles */
-  /* Example: */
+ 
   .navbar {
     background-color: #333;
     color: #fff;
@@ -23,12 +22,48 @@
     /* Add any other styles you need */
   }
   
-  /* Your existing footer styles */
-  /* Example: */
+  
   .footer {
     background-color: #333;
     color: #fff;
     padding: 10px;
     /* Add any other styles you need */
   }
-  
+  .footerimage {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.footerimage img {
+    width: 100%;
+    height: auto;
+}
+
+/* Media Query for Tablets */
+@media screen and (max-width: 768px) {
+    .warning {
+        width: 100%;
+        max-width: 250px;
+        position: relative;
+        right: auto;
+        top: auto;
+    }
+
+    .footerimage img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Media Query for Phones */
+@media screen and (max-width: 480px) {
+    .warning {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .footerimage img {
+        width: 100%;
+        height: auto;
+    }
+}

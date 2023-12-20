@@ -6,7 +6,7 @@ import FilterSection from './FilterSection';
 import Styles from './cssFiles/styleProps.module.css';
 import EmptyView from './EmptyView';
 import BackToTopButton from './BackToTopButton';
-import Footer from './Footer';
+
 import axios from "axios";
 
 const Props = ({ handleClick }) => {

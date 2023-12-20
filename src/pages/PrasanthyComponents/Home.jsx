@@ -50,7 +50,9 @@ const Home = () => {
           <img style={{ width: '100%', borderRadius: '8px' }} src="/News.png" alt="" />
         </div>
       
-      <img src="/footer.png" alt="" />
+        <div className="footerimage">
+		<img src="/footer.png" alt="" />
+		</div>
     </>
   );
 }

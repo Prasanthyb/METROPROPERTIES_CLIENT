@@ -1,9 +1,9 @@
 import React from 'react';
 import Navbar from './Navbar';
-import Footer from './Footer';
+
 import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
-import './cssFiles/styleThank.css'; 
+import './cssFiles/styleThank.css';
 
 const Thank = () => {
   const location = useLocation();
@@ -13,7 +13,7 @@ const Thank = () => {
     <div className="container">
       <Navbar className="navbar" />
       <div className="content">
-      <img src="/thank.png" alt="" />
+        <img src="/thank.png" alt="" />
         <p style={{ fontSize: "50px", color: "green" }}>
           Thank You!
           <span style={{ fontSize: "40px", color: "blue", fontStyle: "italic" }}>
@@ -21,29 +21,27 @@ const Thank = () => {
             {userName}
           </span>
         </p>
-        <p style={{ fontSize: "30px", textDecoration: "underline", 
-        color: "brown", margin: "30px auto" }}>
-  A confirmation email has been sent to you.
-</p>
+        <p style={{ fontSize: "30px", textDecoration: "underline", color: "brown", margin: "30px auto" }}>
+          A confirmation email has been sent to you.
+        </p>
 
-<p style={{ fontSize: '30px', textAlign: 'center', whiteSpace: 'pre-line' }}>
-  We're thrilled to confirm your upcoming viewing appointment.<br />
-  Your interest is greatly appreciated,<br />
-  and we look forward to showcasing the property to you.
-</p>
-
-
+        <p style={{ fontSize: '30px', textAlign: 'center', whiteSpace: 'pre-line' }}>
+          We're thrilled to confirm your upcoming viewing appointment.<br />
+          Your interest is greatly appreciated,<br />
+          and we look forward to showcasing the property to you.
+        </p>
 
         <Link to="/search">
-        <button 
-  style={{ fontSize: "40px", backgroundColor: "skyblue", color: "black",margin: "30px auto" }}
->
-  Continue Search
-</button>
-
+          <button style={{ fontSize: "40px", backgroundColor: "skyblue", color: "black", margin: "30px auto" }}>
+            Continue Search
+          </button>
         </Link>
+
+        <div className="footerimage">
+          <img src="/footer.png" alt="" />
+        </div>
       </div>
-      <img src="/footer.png" alt="" />
+    
     </div>
   );
 }
