@@ -150,3 +150,11 @@ body {
         height: auto;
     }
 }
+.footerb {
+  margin-top: 50px;
+  margin-bottom:80px;
+  position: sticky;
+  bottom: 0;
+ 
+  margin-left:35rem; 
+}
