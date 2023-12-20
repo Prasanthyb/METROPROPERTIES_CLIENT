@@ -4,10 +4,10 @@
 }
 
 .main {
-  background-color: rgb(62, 172, 240);
+  background-color: white;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  ;
 }
 
 .div {
@@ -36,7 +36,8 @@
 }
 
 .footer {
-  margin-top: auto;
+  margin-top: 50px;
+  margin-bottom:80px;
   position: sticky;
   bottom: 0;
  
@@ -105,7 +106,7 @@ figure {
     transition: all 0.2s linear;
   }
 }
-/* Add this CSS at the end of your existing CSS */
+
 
 @media (max-width: 1200px) {
   section {
@@ -136,4 +137,29 @@ figure {
   }
 }
 
+.searching{
+  position: absolute;
+  top: 35%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  padding: 10px 30px;
+  margin-bottom: 10px;
+  border: none;  
+  cursor: pointer;
+  color: black;
+  font-weight: bold;
+}
+@media screen and (max-width: 600px) {
+ .searching {
+    font-size: 36px;
+    padding: 8px 20px;
+  }
+}
 
+/* Media query for larger screens */
+@media screen and (min-width: 1200px) {
+  .searching {
+    font-size: 24px;
+    padding: 12px 40px;
+  }
+}
