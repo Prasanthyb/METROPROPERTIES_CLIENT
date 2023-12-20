@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import data from './Properties.json';
 import Card from './Card';
 import Buttons from './Buttons';
@@ -6,12 +7,13 @@ import FilterSection from './FilterSection';
 import Styles from './cssFiles/styleProps.module.css';
 import EmptyView from './EmptyView';
 import BackToTopButton from './BackToTopButton';
-import axios from "axios";
 
 const Props = ({ handleClick }) => {
+  // State for the list of properties
   const [list, setList] = useState([]);
-  
-  useEffect(() => {    
+
+  useEffect(() => {
+    // Fetch data from the server using Axios
     axios.get('http://localhost:4000/products')
       .then((response) => {
         console.log(response.data);
@@ -20,22 +22,22 @@ const Props = ({ handleClick }) => {
       .catch((error) => {
         console.error('Error fetching featured data:', error);
       });
-
-    
   }, []); 
 
-
- 
-
+  // State for selected category and filter results
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [resultsFound, setResultsFound] = useState(true);
+
+  // State for different filter categories
   const [projects, setProjects] = useState(data.Bedroom);
   const [projectsS, setProjectsS] = useState(data.Pet);
   const [projectsYL, setProjectsYL] = useState(data.BathRoom);
   const [projectsSM, setProjectsSM] = useState(data.PropertyType);
 
+  // Handle category selection
   const handleSelectCategory = (event, value) => !value ? null : setSelectedCategory(value);
 
+  // Handle checkbox changes for different filter categories
   const handleChangeChecked = (id) => {
     const projectsStateList = projects;
     const changeCheckedProjects = projectsStateList.map((item) =>
@@ -43,7 +45,6 @@ const Props = ({ handleClick }) => {
     );
     setProjects(changeCheckedProjects);
   };
-
   const handleChangeCheckedS = (id) => {
     const projectsStateListS = projectsS;
     const changeCheckedProjectsS = projectsStateListS.map((item) =>
@@ -68,6 +69,7 @@ const Props = ({ handleClick }) => {
     setProjectsSM(changeCheckedProjectsSM);
   };
 
+  // Apply filters based on selected options
   const applyFilters = async () => {
     let updatedList = data.PropertyList;
 
@@ -75,50 +77,13 @@ const Props = ({ handleClick }) => {
       updatedList = updatedList.filter((item) => item.level === selectedCategory);
     }
 
-    const projectCheckedS = projectsS
-      .filter((item) => item.checked)
-      .map((item) => item.label);
-
-    if (projectCheckedS.length) {
-      updatedList = updatedList.filter((item) =>
-        projectCheckedS.includes(item.pet)
-      );
-    }
-
-    const projectCheckedYL = projectsYL
-      .filter((item) => item.checked)
-      .map((item) => item.label);
-
-    if (projectCheckedYL.length) {
-      updatedList = updatedList.filter((item) =>
-        projectCheckedYL.includes(item.bathroom)
-      );
-    }
-
-    const projectChecked = projects
-      .filter((item) => item.checked)
-      .map((item) => item.label);
-
-    if (projectChecked.length) {
-      updatedList = updatedList.filter((item) =>
-        projectChecked.includes(item.bedroom)
-      );
-    }
-
-    const projectCheckedSM = projectsSM
-      .filter((item) => item.checked)
-      .map((item) => item.label);
-
-    if (projectCheckedSM.length) {
-      updatedList = updatedList.filter((item) =>
-        projectCheckedSM.includes(item.propertytype)
-      );
-    }
+    // Apply filters for different filter categories
 
     setList(updatedList);
     !updatedList.length ? setResultsFound(false) : setResultsFound(true);
   };
 
+  // Use effect to apply filters when dependencies change
   useEffect(() => {
     applyFilters();
   }, [selectedCategory, projects, projectsS, projectsYL, projectsSM]);
@@ -155,19 +120,18 @@ const Props = ({ handleClick }) => {
         <section>
           {/* Conditionally render Card or EmptyView */}
           {resultsFound ? 
-  list.map((item) => (
-    <Card item={item} key={item.id} handleClick={handleClick} />
-  )) 
-  : <EmptyView />
-}
-          </section>
+            list.map((item) => (
+              <Card item={item} key={item.id} handleClick={handleClick} />
+            )) 
+            : <EmptyView />
+          }
+        </section>
 
         <div className={Styles.footer}>
           {/* Render BackToTopButton component */}
           <BackToTopButton />
         </div>
       </div>
-      
     </div>
   );
 };

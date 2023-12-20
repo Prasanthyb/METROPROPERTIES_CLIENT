@@ -54,6 +54,7 @@ const Searchbar = ({ handleClick }) => {
   // Handle search button click
   const handleSearch = () => {
     console.log('Searching for:', searchText);
+    // Add logic for handling search
   };
 
   return (
@@ -61,36 +62,34 @@ const Searchbar = ({ handleClick }) => {
       {/* Search bar section */}
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <div style={{ position: 'relative' }}>
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-        <div style={{ position: 'relative' }}>
-          <img style={{ width: '100%', borderRadius: '8px', marginBottom: '20px' }} src="/image10.png" alt="" />
-          
-          <div className={Styles.searching} 
-          style={{ fontSize: '42px',           
-         cursor: 'pointer', 
-          color: '#000', fontWeight: 'bold' }}>    
-            Start Your Rental Search          
-          </div>
-          
-          <div className="search-container" style={{ display: 'flex', justifyContent: 'center', position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}>
-            <div className="search-bar">
-              <input
-                type="text"
-                placeholder="Start typing a property"
-                value={searchText}
-                onChange={handleInputChange}
-                style={{ padding: '10px 30px', fontSize: '22px', width: '30rem', height: '2rem', border: 'none', borderRadius: '4px', cursor: 'pointer', backgroundColor: 'white', color: '#000', fontWeight: 'bold' }}
-              />
-              {/* Use Link component for the search button */}
-              <Link to="/view" style={{ textDecoration: 'none' }}>
-                <button className="search-button" onClick={handleSearch} style={{ padding: '6px 30px', fontSize: '22px', margin: '2px', border: 'none', borderRadius: '4px', cursor: 'pointer', backgroundColor: 'red', color: '#fff', fontWeight: 'bold' }}>
-                  Search
-                </button>
-              </Link>
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            <div style={{ position: 'relative' }}>
+              <img style={{ width: '100%', borderRadius: '8px', marginBottom: '20px' }} src="/image10.png" alt="" />
+
+              <div className={Styles.searching}
+                style={{ fontSize: '42px', cursor: 'pointer', color: '#000', fontWeight: 'bold' }}>
+                Start Your Rental Search
+              </div>
+
+              <div className="search-container" style={{ display: 'flex', justifyContent: 'center', position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}>
+                <div className="search-bar">
+                  <input
+                    type="text"
+                    placeholder="Start typing a property"
+                    value={searchText}
+                    onChange={handleInputChange}
+                    style={{ padding: '10px 30px', fontSize: '22px', width: '30rem', height: '2rem', border: 'none', borderRadius: '4px', cursor: 'pointer', backgroundColor: 'white', color: '#000', fontWeight: 'bold' }}
+                  />
+                  {/* Use Link component for the search button */}
+                  <Link to="/view" style={{ textDecoration: 'none' }}>
+                    <button className="search-button" onClick={handleSearch} style={{ padding: '6px 30px', fontSize: '22px', margin: '2px', border: 'none', borderRadius: '4px', cursor: 'pointer', backgroundColor: 'red', color: '#fff', fontWeight: 'bold' }}>
+                      Search
+                    </button>
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
         </div>
       </div>
 
@@ -120,7 +119,7 @@ const Searchbar = ({ handleClick }) => {
           style={{
             fontSize: '42px',
             marginLeft: '40%',
-            marginTop:"20px",
+            marginTop: "20px",
             border: 'none',
             borderRadius: '4px',
             cursor: 'pointer',
@@ -139,8 +138,8 @@ const Searchbar = ({ handleClick }) => {
       <div>
         <p
           style={{
-            marginTop:"30px",
-          
+            marginTop: "30px",
+
             fontSize: '42px',
             marginLeft: '40%',
             border: 'none',
@@ -161,8 +160,8 @@ const Searchbar = ({ handleClick }) => {
         </div>
       </div>
       <div className="footerimage">
-		<img src="/footer.png" alt="" />
-		</div>
+        <img src="/footer.png" alt="" />
+      </div>
     </div>
   );
 }

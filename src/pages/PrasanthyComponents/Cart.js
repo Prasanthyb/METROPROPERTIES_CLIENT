@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
-import './cssFiles/styleCart.css'; 
+import './cssFiles/styleCart.css';
 
 const Cart = ({ cart, setCart, handleChange }) => {
   const [date, setDate] = useState('');
@@ -46,26 +46,53 @@ const Cart = ({ cart, setCart, handleChange }) => {
   };
 
   const handleRemove = (id) => {
-    const arr = cart.filter((item) => item.id !== id);
+    const arr = cart.filter((item) => item._id !== id);
     setCart(arr);
   };
 
   return (
     <div>
+      {/* Displaying items in the cart */}
       <article>
         {cart?.map((item) => (
           <div className="cart_box" key={item.id}>
             <div className="cart_img">
               <img src={item.property_pic} alt={item.name} />
-              <p>{item.name}</p>
-              <span>{item.level}</span>
-            </div>
+              </div>
 
-            <div>
-              <span>{item.price}</span>
+      {/* Details container */}
+      <div
+        className="details"
+        style={{
+          display: "flex", 
+          flexDirection: "row",
+          color: "black",
+          fontWeight: "bold",
+          marginLeft: "50px",
+        }}
+      >
+        {/* First detail */}
+        <div>
+          <img src={item.icon1} alt="" />
+          {item.number1}
+        </div>
+
+        {/* Second detail */}
+        <div>
+          <img src={item.icon2} alt="" />
+          {item.number2}
+        </div>
+
+        {/* Third detail */}
+        <div>
+          <img src={item.icon3} alt="" />
+          {item.number3}
+        </div>
+
+
               <button
                 className="removebutton"
-                onClick={() => handleRemove(item.id)}
+                onClick={() => handleRemove(item._id)}
               >
                 Remove
               </button>
@@ -74,6 +101,7 @@ const Cart = ({ cart, setCart, handleChange }) => {
         ))}
       </article>
 
+      {/* User details form */}
       <div className="details-heading">
         <p>Your Details</p>
       </div>
@@ -111,6 +139,7 @@ const Cart = ({ cart, setCart, handleChange }) => {
 
 export default Cart;
 
+// Styled component for the contact form
 const StyledContactForm = styled.div`
   width: 400px;
 
