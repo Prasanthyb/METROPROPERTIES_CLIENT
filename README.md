@@ -1,13 +1,13 @@
-                                                     Metro Properties
-## Developed 5 pages
+  ## Metro Properties
+
+ Developed 5 pages
    Frontend-React
    Server-Node Express
    Database-Mongodb
    Container-Docker
+ Frontend
 
-# Frontend::
-
- Packages used: 
+ Packages used
 
                react-router-dom
                  material UI
@@ -16,31 +16,34 @@
                   emailjs-com
                  react-datetime-picker
 
-# Backend::
+Backend
 
-Packages used: 
+Packages used
 
             Express Generator
                 nodemon
                  mongoose
                  colors
                  morgan
-# Testing::
+Testing
 
            jest
          jest-coverage
 
-# Database::
+# Database
 
          Mongodb
 
- # Container::
+Container
 
           Docker-compose
 
-      Built 4 containers for 
+      Built 3 containers for 
         frontend,sever,Database 
-               and an Outer container          
+  Docker-compose files
+              2 files are there
+              we can run server alone and the project as a whole.       
+                       
 
 
 
