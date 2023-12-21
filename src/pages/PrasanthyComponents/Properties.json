@@ -2,7 +2,7 @@
   "PropertyList": [
     {
       "property_pic": "images/properties/apartment1.jpg",
-      "id": 1,
+      "_id": 1,
       "pet": "Yes",
       "name": "Apartment",
       "level": "$500-$1000",
@@ -18,7 +18,7 @@
     },
     {
       "property_pic": "images/properties/apartment2.jpg",
-      "id": 2,
+      "_id": 2,
       "pet": "Yes",
       "name": "Apartment",
       "level": "$200-$500",
@@ -34,7 +34,7 @@
     },
     {
       "property_pic": "images/properties/apartment3.jpg",
-      "id": 3,
+      "_id": 3,
       "pet": "No",
       "name": "Apartment",
       "level": "$1000-$2500",
@@ -50,7 +50,7 @@
     },
     {
       "property_pic": "images/properties/apartment4.jpg",
-      "id": 4,
+      "_id": 4,
       "pet": "No",
       "name": "Apartment",
       "level": "above $2500",
@@ -66,7 +66,7 @@
     },
     {
       "property_pic": "images/properties/boatshed.jpg",
-      "id": 5,
+      "_id": 5,
       "pet": "No",
       "name": "Boatshed",
       "level": "$100-$200",
@@ -82,7 +82,7 @@
     },
     {
       "property_pic": "images/properties/boatshed1.jpg",
-      "id": 6,
+      "_id": 6,
       "pet": "Yes",
       "name": "Boatshed",
       "level": "$200-$500",
@@ -98,7 +98,7 @@
     },
     {
       "property_pic": "images/properties/boatshed2.jpg",
-      "id": 7,
+      "_id": 7,
       "pet": "No",
       "name": "Boatshed",
       "level": "$200-$500",
@@ -114,7 +114,7 @@
     },
     {
       "property_pic": "images/properties/carpark1.jpg",
-      "id": 8,
+      "_id": 8,
       "pet": "No",
       "name": "Carpark",
       "level": "$100-$200",
@@ -130,7 +130,7 @@
     },
     {
       "property_pic": "images/properties/carpark2.jpg",
-      "id": 9,
+      "_id": 9,
       "pet": "No",
       "name": "Carpark",
       "level": "$200-$500",
@@ -146,7 +146,7 @@
     },
     {
       "property_pic": "images/properties/carpark3.jpg",
-      "id": 10,
+      "_id": 10,
       "pet": "No",
       "name": "Carpark",
       "level": "$500-$1000",
@@ -163,7 +163,7 @@
 
     {
       "property_pic": "images/properties/house1.jpg",
-      "id": 11,
+      "_id": 11,
       "pet": "Yes",
       "name": "House",
       "level": "$500-$1000",
@@ -179,7 +179,7 @@
     },
     {
       "property_pic": "images/properties/house2.jpg",
-      "id": 12,
+      "_id": 12,
       "pet": "Yes",
       "name": "House",
       "level": "$1000-$2500",
@@ -195,7 +195,7 @@
     },
     {
       "property_pic": "images/properties/house3.jpg",
-      "id": 13,
+      "_id": 13,
       "pet": "No",
       "name": "House",
       "level": "$500-$1000",
@@ -211,7 +211,7 @@
     },
     {
       "property_pic": "images/properties/house4.jpg",
-      "id": 14,
+      "_id": 14,
       "pet": "Yes",
       "name": "House",
       "level": "above $2500",
@@ -227,7 +227,7 @@
     },
     {
       "property_pic": "images/properties/retirementliving.jpg",
-      "id": 15,
+      "_id": 15,
       "pet": "Yes",
       "name": "Retirement Living",
       "level": "$1000-$2500",
@@ -243,7 +243,7 @@
     },
     {
       "property_pic": "images/properties/retirementliving1.jpg",
-      "id": 16,
+      "_id": 16,
       "pet": "Yes",
       "name": "Retirement Living",
       "level": "$500-$1000",
@@ -259,7 +259,7 @@
     },
     {
       "property_pic": "images/properties/retirementliving2.jpg",
-      "id": 17,
+      "_id": 17,
       "pet": "No",
       "name": "Retirement Living",
       "level": "$100-$200",
@@ -275,7 +275,7 @@
     },
     {
       "property_pic": "images/properties/section1.jpg",
-      "id": 18,
+      "_id": 18,
       "pet": "No",
       "name": "Section",
       "level":"$100-$200",
@@ -291,7 +291,7 @@
     },
     {
       "property_pic": "images/properties/section2.jpg",
-      "id": 19,
+      "_id": 19,
       "pet": "Yes",
       "name": "Section",
       "level": "above $2500",
@@ -307,7 +307,7 @@
     },
     {
       "property_pic": "images/properties/section3.jpg",
-      "id": 20,
+      "_id": 20,
       "pet": "Yes",
       "name": "Section",
       "level": "$1000-$2500",
@@ -323,7 +323,7 @@
     },
     {
       "property_pic": "images/properties/studio1.jpg",
-      "id":21,
+      "_id":21,
       "pet": "Yes",
       "name": "Studio",
       "level": "$100-$200",
@@ -339,7 +339,7 @@
     },
     {
       "property_pic": "images/properties/studio2.jpg",
-      "id":22,
+      "_id":22,
       "pet": "Yes",
       "name": "Studio",
       "level": "$200-$500",
@@ -355,7 +355,7 @@
     },
     {
       "property_pic": "images/properties/studio3.jpg",
-      "id":23,
+      "_id":23,
       "pet": "No",
       "name": "Studio",
       "level": "$500-$1000",
@@ -371,7 +371,7 @@
     },
     {
       "property_pic": "images/properties/studio4.jpg",
-      "id":24,
+      "_id":24,
       "pet": "Yes",
       "name": "Studio",
       "level": "$1000-$2500",
@@ -387,7 +387,7 @@
     },
     {
       "property_pic": "images/properties/studio5.jpg",
-      "id":25,
+      "_id":25,
       "pet": "No",
       "name": "Studio",
       "level": "$200-$500",
@@ -403,7 +403,7 @@
     },
     {
       "property_pic": "images/properties/townhouse1.jpg",
-      "id":26,
+      "_id":26,
       "pet": "Yes",
       "name": "Townhouse",
       "level": "$1000-$2500",
@@ -419,7 +419,7 @@
     },
     {
       "property_pic": "images/properties/townhouse2.jpg",
-      "id":27,
+      "_id":27,
       "pet": "No",
       "name": "Townhouse",
       "level": "$100-$200",
@@ -435,7 +435,7 @@
     },
     {
       "property_pic": "images/properties/townhouse3.jpg",
-      "id":28,
+      "_id":28,
       "pet": "Yes",
       "name": "Townhouse",
       "level": "$500-$1000",
@@ -451,7 +451,7 @@
     },
     {
       "property_pic": "images/properties/unit1.jpg",
-      "id":29,
+      "_id":29,
       "pet": "No",
       "name": "Unit",
       "level": "$200-$500",
@@ -467,7 +467,7 @@
     },
     {
       "property_pic": "images/properties/unit2.jpg",
-      "id":30,
+      "_id":30,
       "pet": "Yes",
       "name": "Unit",
       "level": "$1000-$2500",
@@ -483,7 +483,7 @@
     },
     {
       "property_pic": "images/properties/unit3.jpg",
-      "id":31,
+      "_id":31,
       "pet": "No",
       "name": "Unit",
       "level": "$500-$1000",
@@ -499,7 +499,7 @@
     },
     {
       "property_pic": "images/properties/unit4.jpg",
-      "id":32,
+      "_id":32,
       "pet": "Yes",
       "name": "Unit",
       "level": "above $2500",
@@ -518,7 +518,7 @@
   "Recentsearches": [
     {
       "property_pic": "images/properties/studio11.jpg",
-      "id": 1,
+      "_id": 1,
       "pet": "Yes",
       "name": "Studio",
       "level": "$500-$1000",
@@ -534,7 +534,7 @@
     },
     {
       "property_pic": "images/properties/house11.jpg",
-      "id": 2,
+      "_id": 2,
       "pet": "Yes",
       "name": "House",
       "level": "$1000-$2500",
@@ -550,7 +550,7 @@
     },
     {
       "property_pic": "images/properties/apartment11.jpg",
-      "id": 3,
+      "_id": 3,
       "pet": "No",
       "name": "Apartment",
       "level": "above $2500",
@@ -566,7 +566,7 @@
     },
     {
       "property_pic": "images/properties/section11.jpg",
-      "id":4,
+      "_id":4,
       "pet": "Yes",
       "name": "Section",
       "level": "$1000-$2500",
@@ -586,7 +586,7 @@
     "Featuredlistings": [
       {
         "property_pic": "images/properties/townhouse22.jpg",
-        "id": 1,
+        "_id": 1,
         "pet": "Yes",
         "name": "Townhouse",
         "level": "$500-$1000",
@@ -602,7 +602,7 @@
       },
       {
         "property_pic": "images/properties/studio22.jpg",
-        "id": 2,
+        "_id": 2,
         "pet": "Yes",
         "name": "Studio",
         "level": "$200-$500",
@@ -618,7 +618,7 @@
       },
       {
         "property_pic": "images/properties/retirementliving22.jpg",
-        "id": 3,
+        "_id": 3,
         "pet": "No",
         "name": "Retirement Living",
         "level": "$1000-$2500",
@@ -634,7 +634,7 @@
       },
       {
         "property_pic": "images/properties/carpark22.jpg",
-        "id":4,
+        "_id":4,
         "pet": "Yes",
         "name": "Carpark",
         "level": "$100-$200",
@@ -655,7 +655,7 @@
       "Newlistings": [
         {
           "property_pic": "images/properties/house33.jpg",
-          "id":1,
+          "_id":1,
           "pet": "No",
           "name": "House",
           "level": "$1000-$2500",
@@ -671,7 +671,7 @@
         },
         {
           "property_pic": "images/properties/unit33.jpg",
-          "id":2,
+          "_id":2,
           "pet": "Yes",
           "name": "Unit",
           "level": "$500-$1000",
@@ -687,7 +687,7 @@
         },
         {
           "property_pic": "images/properties/boatshed33.jpg",
-          "id":3,
+          "_id":3,
           "pet": "No",
           "name": "Boatshed",
           "level": "$100-$200",
@@ -704,7 +704,7 @@
         },
         {
           "property_pic": "images/properties/retirementliving33.jpg",
-          "id":4,
+          "_id":4,
           "pet": "Yes",
           "name": "Retirement Living ",
           "level": "above $2500",

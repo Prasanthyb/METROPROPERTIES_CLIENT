@@ -18,7 +18,7 @@ const imgStyle = {
 const ErrorPage = () => {
   return (
     <div>
-      <img style={imgStyle} src="/images/students/error.svg" />
+      <img style={imgStyle} src="/error.svg" />
       <div>
         <NavLink to="/">
           <button style={buttonStyle}>GO BACK</button>

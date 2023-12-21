@@ -11,7 +11,7 @@ const HeaderView = ({size,setShow}) => {
             </span>
             <div className="cart" onClick={()=>setShow(false)}>
                 <span>
-                    BOOKED VIEWS
+                    BOOK A VIEW
                 </span>
                 <span>{size}</span>
             </div>

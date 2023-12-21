@@ -54,7 +54,7 @@ const Searchbar = ({ handleClick }) => {
   // Handle search button click
   const handleSearch = () => {
     console.log('Searching for:', searchText);
-    // Add logic for handling search
+   
   };
 
   return (
