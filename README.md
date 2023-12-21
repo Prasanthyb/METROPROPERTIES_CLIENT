@@ -15,6 +15,8 @@
                  fontawesome                 
                   emailjs-com
                  react-datetime-picker
+                 media queries for responsiveness
+                 
 
 Backend
 
