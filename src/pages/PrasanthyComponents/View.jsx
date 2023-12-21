@@ -36,7 +36,7 @@ const View = () => {
   };
 
   // Handler for changing the quantity of items in the cart
-  const handleChange = (item, d) => {
+  const handleChange = (item, change) => {
     let ind = -1;
     // Find the index of the item in the cart
     cart.forEach((data, index) => {
@@ -45,7 +45,7 @@ const View = () => {
 
     const tempArr = cart;
     // Update the quantity of the item in the cart
-    tempArr[ind].amount += d;
+    tempArr[ind].amount += change;
 
     if (tempArr[ind].amount === 0) tempArr[ind].amount = 1;
 
