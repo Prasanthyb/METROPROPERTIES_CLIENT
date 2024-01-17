@@ -1,13 +1,20 @@
-  ## Metro Properties
+  # Welcome to  Metro Properties -A rental property application
 
- Developed 5 pages
-   Frontend-React
-   Server-Node Express
-   Database-Mongodb
-   Container-Docker
- Frontend
+  # Server Repo in https://github.com/Prasanthyb/METROPROPERTIES_SERVER.git
 
- Packages used
+# Developed 5 pages -Search,Sort and filter all products, Find the most suitable from a large number of properties, Book view for selected properties, also a contact form is provided using EMAIL JS
+
+  # Frontend-   React
+    
+     # Server-Node Express
+       
+      #  Database-Mongodb
+      
+        # Container-Docker
+        
+ # Frontend
+
+## Packages used
 
                react-router-dom
                  material UI
@@ -18,16 +25,16 @@
                  media queries for responsiveness
                  
 
-Backend
+# Backend
 
-Packages used
+## Packages used
 
             Express Generator
                 nodemon
                  mongoose
                  colors
                  morgan
-Testing
+# Testing
 
            jest
          jest-coverage
@@ -36,7 +43,7 @@ Testing
 
          Mongodb
 
-Container
+# Container
 
           Docker-compose
 
